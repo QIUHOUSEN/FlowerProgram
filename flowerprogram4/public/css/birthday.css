@@ -1,0 +1,484 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'HansHandItalic';
+}
+
+@font-face {
+    font-family: 'HansHandItalic';
+    src: url('../fonts/fontawesome-webfont.eot');
+    src: url('../fonts/fontawesome-webfont.svg'),
+    url('../fonts/fontawesome-webfont.ttf'),
+    url('../fonts/fontawesome-webfont.woff') ,
+    url('../fonts/fontawesome-webfont.woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/*外框*/
+#wrapper{
+    width: 1349px;
+    margin: 0 auto;
+    background-color: #dfdcdd;
+}
+/*清除浮动*/
+.blank{
+    height: 0px;
+    width: 1349px;
+    clear: both;
+}
+#header{
+    width: 1349px;
+    height: 110px;
+    background-color: black;
+    margin: 0 auto;
+}
+/*内容*/
+
+.birthday{
+    width: 1000px;
+    height: 550px;
+    background-color: white;
+    box-shadow: 0px 0px 0px lightgray,
+    6px 6px 8px lightgray,
+    6px 6px 8px lightgray,
+    -6px 6px 8px lightgray;
+    opacity: 1;
+    margin: 50px auto;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.birthday_head_line{
+    position: relative;
+}
+
+.birthday_head_line p{
+    font-size: 13px;
+    position: absolute;
+    right: 80px;
+    top: -10px;
+}
+
+.head_h{
+    width: 850px;
+    height: 50px ;
+    line-height: 50px;
+    text-align: center;
+    background-color: #e3d7d3;
+    margin-left: 75px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #a83248;
+}
+p{
+    color:#989879;
+}
+span{
+    color:#989879;
+}
+.birthday_block p{
+    font-size: 14px;
+}
+
+
+@-webkit-keyframes animation_1 {
+    from{left: -500px;top:110px}
+    to{left: 70px;top: 110px}
+}
+@-webkit-keyframes animation_2 {
+    from{left: -500px;top:110px}
+    to{left: 370px;top: 110px}
+}
+@-webkit-keyframes animation_3 {
+    from{left: -500px;top:110px}
+    to{left: 670px;top: 110px}
+}
+@-webkit-keyframes animation_4 {
+    from{width: 0px}
+    to{width:300px}
+}
+
+/*内容模块*/
+
+/*改成position需要删减掉的模式
+.birthday_picture .birthday_block:first-child{
+    margin-left:9.5%;
+}
+*/
+.birthday_block{
+    width: 270px;
+    height: 400px;
+    overflow: hidden;
+    margin-top: 50px;
+    position: absolute;
+    top: 115px;
+   /* border: 1px solid gray;*/
+}
+/*圆形模块的position*/
+#block1{
+    position: absolute;
+    left: 70px;
+}
+
+#block2{
+    position: absolute;
+    left: 370px;
+}
+#block3{
+    position: absolute;
+    left:670px;
+}
+
+/*.birthday:hover #block1{
+    position: absolute;
+    left: 70px;
+    /!* margin-left: 70px;*!/
+    transition: all 1s;
+}*/
+
+/*.birthday:hover #block2{
+    position: absolute;
+    left: 370px;
+    top: 116px;
+    transition: all 1s;
+}*/
+
+/*.birthday:hover #block3{
+    position: absolute;
+    left: 670px;
+    transition: all 1s;
+}*/
+/*#block1{
+    position: absolute;
+    left: -270px;
+
+}
+#block2{
+    position: absolute;
+    left: 370px;
+    top: 500px;
+}
+#block3{
+    position: absolute;
+    left:1000px;
+}*/
+/*方形模块第一个版块position*/
+#block4{
+    position: absolute;
+    left: 70px;
+}
+#block5{
+    position: absolute;
+    left: 370px;
+}
+#block6{
+    position: absolute;
+    left:670px;
+}
+/*#block4{
+    position: absolute;
+    left: -270px;
+}
+#block5{
+    position: absolute;
+    left: 370px;
+    top: 500px;
+}
+#block6{
+    position: absolute;
+    left:1000px;
+}*/
+/*方形模块第er个版块position*/
+/*不用js的每个block的定位*/
+#block7{
+    position: absolute;
+    left: 70px;
+}
+#block8{
+    position: absolute;
+    left: 370px;
+}
+#block9{
+    position: absolute;
+    left:670px;
+}
+/*#block7{
+    position: absolute;
+    left: -270px;
+}
+#block8{
+    position: absolute;
+    left: 370px;
+    top: 500px;
+}
+#block9{
+    position: absolute;
+    left:1000px;
+}*/
+
+/*方形模块第san个版块position*/
+/*不用js的每个block的定位*/
+#block10{
+    position: absolute;
+    left: 70px;
+}
+#block11{
+    position: absolute;
+    left: 370px;
+}
+#block12{
+    position: absolute;
+    left:670px;
+}
+/*#block10{
+    position: absolute;
+    left: -270px;
+}
+#block11{
+    position: absolute;
+    left: 370px;
+    top: 500px;
+}
+#block12{
+    position: absolute;
+    left:1000px;
+}*/
+/*花下方的详情内容*/
+.birthday .number{
+    height: 60px;
+    width: 250px;
+    border-top: 2px solid #dcc5b6;
+    border-bottom: 2px solid #dcc5b6;
+    margin-top: 20px;
+    transform: translateY(0px);
+    opacity:1;
+    transition: all 1s;
+}
+.birthday .number p{
+    padding-top: 20px;
+}
+.birthday_picture div{
+    float: left;
+    margin-right: 4px;
+    margin-left: 3.5px;
+}
+/*圆形模块*/
+.birthday_block .img{
+    width: 250px;
+    height: 250px;
+    border-radius: 250px;
+    border: 2px solid #dcc5b6;
+    overflow: hidden;
+    opacity: 1;
+    position: relative;
+    z-index: 3;
+}
+#birthday1 .birthday_block img{
+    /*width: 250px;
+    height: 250px;*/
+}
+.birthday_block .img:hover img{
+    transform: scale(0.8);
+    transition:  all 2s ;
+}
+.birthday_block .img img{
+    text-align: center;
+    transform: scale(1);
+    transition:  all 2s ;
+    width: 220px;
+    height: 220px;
+    padding-top: 15px;
+
+}
+
+/*圆形遮罩*/
+.birthday_block .img .img_shadow{
+    position: absolute;
+    top:15px;
+    left: 14px;
+    width: 220px;
+    height: 220px;
+    border-radius: 220px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: all 1s;
+    z-index: 2;
+}
+/*遮罩上面的查看详情*/
+.birthday_block .img .img_shadow p{
+    color: white;
+
+}
+.birthday_block .img .img_shadow p:first-child{
+    margin-top: 125px;
+    margin-bottom: 40px;
+}
+.birthday_block .img .img_shadow a{
+    text-decoration: none;
+    color: white;
+}
+
+/*hover圆形模块*/
+.birthday_block .img:hover .img_shadow{
+    opacity: 0.7;
+    transition: all 1s;
+}
+.birthday_block .img:hover + .number{
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 1s;
+    height: 30px;
+
+}
+.number:hover p{
+     color: red;
+     /*font-size: 20px;*/
+     transition: all 0.5s;
+    text-decoration: underline;
+}
+.number p{
+
+    transition: all 0.5s;
+}
+
+
+/*方形模块*/
+.birthday_block .img1{
+    width: 250px;
+    height: 250px;
+    border: 2px solid #dcc5b6;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+}
+
+/*方形遮罩*/
+.birthday_block .img1 .img_shadow{
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    width: 220px;
+    height: 220px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: all 1s;
+    z-index: 2;
+}
+/*遮罩上面的查看详情*/
+.birthday_block .img_shadow p{
+    color: white;
+
+}
+
+.birthday_block .img_shadow p:first-child{
+    margin-top: 125px;
+    margin-bottom: 40px;
+}
+.birthday_block .img_shadow a{
+    text-decoration: none;
+    color: white;
+}
+
+/*hover方形模块*/
+.birthday_block .img1:hover .img_shadow{
+    opacity: 0.7;
+    transition: all 1s;
+}
+.birthday_block .img1:hover + .number{
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: all 1s;
+    height: 30px;
+}
+.birthday_block .img1:hover img{
+    transform: scale(0.8);
+    transition:  all 2s ;
+}
+
+
+
+
+
+/*左右横线*/
+/*.birthday_line{
+    display: block;
+    width: 300px;
+    height: 1px;
+    background-color: lightgray;
+    position: absolute;
+   /!* left: 70px;*!/
+    top: 9px;
+}*/
+.birthday_line1{
+    display: block;
+    width: 300px;
+    height: 1px;
+    background-color: #dcc5b6;
+    position: absolute;
+    right: 70px;/*js后的位置*/
+    top:9px;
+}
+/*横线定位*/
+.more{
+    position: absolute;
+    top: 12px;
+    right:80px ;
+    font-size: 12px;
+}
+.birthday_head h1{
+    padding-bottom: 30px;
+}
+
+/*@-webkit-keyframes animation_1 {
+    0%{ margin-top: -200px;}
+    50%{margin-top: 0px}
+    60%{margin-top: 5px}
+    70%{margin-top: -5px}
+    80%{margin-top: 5px}
+    90%{margin-top: -5px}
+    100%{margin-top: 0px}
+}*/
+/*每一个版块的h1 margin_top*/
+#h1{
+    margin-top: -200px;
+}
+#h2{
+    margin-top: -200px;
+}
+#h3{
+    margin-top: -200px;
+}
+#h4{
+    margin-top: -200px;
+}
+
+/*每一个版块的透明度*/
+#birthday1{
+    opacity: 0;
+}
+#birthday2{
+    opacity: 0;
+}
+#birthday3{
+    opacity: 0;
+}
+#birthday4{
+    opacity: 0;
+}
+
+#footer{
+    width: 1349px;
+    height: 110px;
+    margin: 0 auto;
+    background-color: black;
+}
+
+
+
+

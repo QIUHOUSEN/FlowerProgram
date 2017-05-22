@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>周期购详情</title>
+
+    <link rel="stylesheet" href="../css/cycleDetails.css"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/yewei.css"/>
+    <link rel="stylesheet" href="../css/index.css"/>
+
+    
+</head>
+<body>
+<div id="wrapper">
+    <header id="header">
+        <%- include head.html %>
+    </header><!--header end-->
+    <div id="content">
+        <div class="ct_left">
+            <!--<div><img src="../images/cycleDetails/1.jpg" alt=""/></div>
+            <div><img src="../images/cycleDetails/2.jpg" alt=""/></div>
+            <div><img src="../images/cycleDetails/3.jpg" alt=""/></div>-->
+            <p id="idBox" style="display: none;"><%= data[0].flower_id %></p>
+            <div><img src="../images/112" id="img_src"/></div>
+            <div><img src="../images/111.jpg"/></div>
+            <div><img src="../images/113"/></div>
+        </div><!--ct_left end-->
+        <div class="ct_right">
+           <!-- <p>晨露园是致力于中产阶层优质生活方式的鲜花综合服务商。
+                主营高端鲜花花束、永生花等礼品花；设计新颖，花材优质，专人配送、可当日送达。
+            </p>-->
+            <p id="describe"><%= data[0].flower_describe %></p>
+            <h4>选择套餐方式</h4>
+            <div class="comboBox">
+                <button type="button" class="chooseBtn">月套餐每周一束</button>
+                <button type="button" class="chooseBtn">季套餐每周一束</button>
+                <button type="button" class="chooseBtn">年套餐每周一束</button>
+                <button type="button" class="chooseBtn">自定义套餐</button>
+            </div>
+            <p>单价：<span id="oneMoney"><%= data[0].flower_price %></span></p>
+            <p id="inputNum">
+                <span>每周<input type="text" class="number"/>束</span>
+                <span>共送<input type="text" class="number"/>周</span>
+                <input type="button" value="=>>" id="go"/>
+            </p>
+            <p id="showMoneyBox">你还未选择套餐 </p>
+
+            <p class="operate">
+                <button type="button" onclick="goOrderList();"><a href="orderSubmit.html">立即支付</a></button>
+            </p>
+            <hr/>
+            <div class="comboIntro">
+                <h4>套餐介绍</h4>
+                <div class="comboItem">
+                    <div>月</div>
+                    <div>每周一束共4束，9折优惠</div>
+                </div>
+                <div class="comboItem">
+                    <div>季</div>
+                    <div>每周一束共12束，7折优惠</div>
+                </div>
+                <div class="comboItem">
+                    <div>年</div>
+                    <div>每周一束共48束，5折优惠</div>
+                </div>
+                <div class="comboItem">
+                    <div>自定义</div>
+                    <div>
+                        <p>订花数量总计不得少于4束</p>
+                        <p>超过4束，9折优惠</p>
+                        <p>超过12束，7折优惠</p>
+                        <p>超过48束，5折优惠</p>
+                    </div>
+                </div>
+            </div><!--comboIntro end-->
+        </div><!--ct_right end-->
+    </div><!--content end-->
+    <footer id="footer">
+        <%- include foot.html %>
+    </footer><!--footer end-->
+</div><!--wrapper end-->
+<script>
+    var showMoneyBox = document.getElementById("showMoneyBox");
+    var chooseBtns = document.getElementsByClassName("chooseBtn");
+    var inputNum = document.getElementById("inputNum");
+    var goBtn = document.getElementById("go");
+    var number = document.getElementsByClassName("number");
+    var idBox = document.getElementById("idBox");
+    var describe = document.getElementById("describe");
+    var oneMoney = document.getElementById("oneMoney");
+    var showMoneyBox = document.getElementById("showMoneyBox");
+    var img_src = document.getElementById("img_src");
+    var flog=true;
+    /*=================点击支付进入订单页面，把数据传到订单列表页面===================*/
+    function goOrderList(){
+        var arrChooseMore=[];
+        var id=idBox.innerHTML;
+        var src=img_src.src;
+        var des=describe.innerHTML;
+        var count=1;
+        var onePrice=oneMoney.innerHTML;
+        var oneGoodPrice=showMoneyBox.innerHTML;
+        var arrChoose={id:id,src:src,des:des,count:count,onePrice:onePrice,oneGoodPrice:oneGoodPrice
+        };
+        console.log("arrChoose:"+arrChoose.id,arrChoose.src,arrChoose.des,arrChoose.count,arrChoose.onePrice,arrChoose.oneGoodPrice);
+        arrChooseMore.push(arrChoose);
+
+        var xhr;
+        if(window.ActiveXObject){
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }else{
+            xhr = new XMLHttpRequest();
+        }
+        xhr.open("post","/addOrderList.do",true);
+        xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+        xhr.onreadystatechange=function(){
+        }
+        console.log("在将购物车选中的商品发送到订单列表之前打印包含商品id的数组 arrC" +
+                "hoose.length："+arrChooseMore.length);
+
+        xhr.send("arrChooseMore="+JSON.stringify(arrChooseMore)+"&allMoney="+showMoneyBox.innerHTML);//序列化
+    }
+
+    /*==========为每个套餐按钮添加点击事件===========*/
+    for(var i=0;i<chooseBtns.length;i++){
+        if(document.addEventListener){
+            chooseBtns[i].addEventListener("click",change(i),true);
+        }else{
+            chooseBtns[i].attachEvent("onclick",change(i));
+        }
+    }
+    function change(obj){
+        return function(){
+            console.log("传过来的i值："+obj);
+            if(obj==0||obj==1||obj==2){
+                showMoneyBox.style.display="";
+            }
+            if(obj==0){//选的月套餐 4束9折
+                console.log("oneMoney.innerHTML:"+oneMoney.innerHTML);
+                showMoneyBox.innerHTML=Number(oneMoney.innerHTML)*4*0.9+"";
+                inputNum.style.display="";
+            }else if(obj==1){//选的季套餐 12束7折
+                showMoneyBox.innerHTML=Number(oneMoney.innerHTML)*12*0.7+"";
+                inputNum.style.display="";
+            }else if(obj==2){//选的年套餐 48束5折
+                showMoneyBox.innerHTML=Number(oneMoney.innerHTML)*48*0.5+"";
+                inputNum.style.display="";
+            }else if(obj==3){
+                showMoneyBox.style.display="none";
+                inputNum.style.display="block";
+                if(document.addEventListener){
+                    goBtn.addEventListener("click",function(){
+                        showMoneyBox.style.display="";
+                        var allNumber = (number[0]).value*(number[1].value);//总共的花束
+                        if(allNumber<4){
+                            showMoneyBox.innerHTML="不得少于4束，请重新输入";
+                            flog=false;
+                        }else if(allNumber>=4&&allNumber<12){
+                            showMoneyBox.innerHTML=Number(oneMoney.innerHTML)*allNumber*0.9+"";
+                        }else if(allNumber>=12&&allNumber<48){
+                            showMoneyBox.innerHTML=Number(oneMoney.innerHTML)*allNumber*0.7+"";
+                        }else if(allNumber>=48){
+                            showMoneyBox.innerHTML=Number(oneMoney.innerHTML)*allNumber*0.5+"";
+                        }
+                    },true);
+                }else{
+                    goBtn.attachEvent("onclick",function(){
+                        showMoneyBox.style.display="";
+                    });
+                }
+            }
+        }
+    }
+
+</script>
+<script src="../js/index.js"></script>
+<script src="../js/fenxiang.js"></script>
+
+</body>
+</html>

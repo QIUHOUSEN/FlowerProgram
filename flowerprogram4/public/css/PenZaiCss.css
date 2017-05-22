@@ -1,0 +1,342 @@
+*{
+    font-family: "微软雅黑";
+}
+#wrapper{
+    width: 1349px;
+    height:auto;
+    margin: 0 auto;
+ overflow: hidden;
+
+}
+.Banner_picutre{
+    margin-top: 110px;
+    width: 1349px;
+    position: relative;
+    height: 650px;
+}
+.Banner_picutre>img{
+    width: 100%;
+    height: 100%;
+
+
+}
+.BiaoTI{
+    width:1349px;
+    position: relative;
+    margin-top: 15px;
+    height: 130px;
+    border: solid 0px green;
+}.BiaoTI{
+     width:1349px;
+     position: relative;
+     margin-top: 25px;
+     height: 130px;
+     border: solid 0px green;
+ }.BTh3_1{
+      position: absolute;
+      left:608px;
+      top: 48px;
+      font-size: 25px;
+  }
+
+.BTh3_2{
+    position: absolute;
+    left:575px;
+    top: 22px;
+    font-size: 18px;
+    border: solid 0px green;
+
+}
+.logo_1{
+    position: absolute;
+    left: 467px;
+    top: 20px;
+    border: solid 0px green;
+}
+.logo_2{
+    position: absolute;
+    top: 20px;
+    left: 748px;
+    border: solid 0px green;
+}
+.ProductPicture{
+    width: 1349px;
+    height:850px;
+    text-align: center;
+    border: solid 0px red;
+}
+.ProductPicture>div:first-child{
+
+    margin-left: 80px;
+}
+.ProductPicture>div:nth-child(4){
+    margin-left: 80px;
+}
+.product_1{
+    float: left;
+    margin-left: 30px;
+    text-align: center;
+    position: relative;
+    width: 372px;
+    height: 451px;
+    border: solid 0px green;
+
+}
+.product_1>img{
+    width: 223px;
+    height: 261px;
+
+    margin-top: 55px;
+}
+.p_1{
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "楷体";
+    border: solid 0px green;
+}
+.p_2{
+    font-size: 13px;
+    font-family: "楷体";
+    margin-top: 7px;
+    margin-left: 90px;
+  width: 200px;
+    height: 70px;
+    text-align: center;
+    border: solid 0px green;
+
+
+}
+#content{
+
+    width: 1349px;
+    height: 310px;
+    border: solid 1px lightgrey;
+}
+.p_content_1{
+    float: left;
+font-size: 20px;
+   font-family: "楷体";
+    width: 472px;
+    margin-top: 90px;
+    height: 257px;
+    margin-left: 200px;
+}
+#content>img{
+    width: 250px;
+    float: right;
+    height: 250px;
+    margin-top: 10px;
+    margin-right: 250px;
+    border: solid 0px lightgrey;
+}
+.fenye{
+
+margin-top: 20px;
+    width: 1349px;
+
+    height: 80px;
+border: solid 0px blue;
+
+
+}
+.fenye>div:first-child{
+     float: left;
+     margin-top: 15px;
+     margin-left: 435px;
+     text-align: center;
+     width: 48px;
+    border: solid 0px green;
+     font-size: 22px;
+     border-radius: 2px;
+     height: 33px;
+     line-height: 33px;
+     background-color:  #D7D7D7;
+    font-family: Arial;
+ }
+
+.fenye>div:nth-child(2),.fenye>div:nth-child(3),.fenye>div:nth-child(4),.fenye>div:nth-child(5){
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    text-align: center;
+    width: 48px;
+    border: solid 0px green;
+    font-size: 22px;
+    border-radius: 2px;
+    height: 33px;
+    line-height: 33px;
+    background-color: #D7D7D7;
+    font-family: Arial;
+}
+.fenye>div:nth-child(4){
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+    text-align: center;
+    width: 48px;
+    border: solid 0px green;
+    font-size: 22px;
+    border-radius: 2px;
+    height: 33px;
+    line-height: 26px;
+    background-color: white;
+    font-family: Arial;
+}
+.fenye>div:nth-child(6){
+    float: left;
+    margin-top: 15px;
+    margin-left: 40px;
+    text-align: center;
+    width: 80px;
+    border: solid 0px green;
+    font-size: 22px;
+    border-radius: 2px;
+    height: 33px;
+    line-height: 33px;
+    background-color: #D7D7D7;
+    border: solid 0px green;
+    font-family: Arial;
+}
+.fenye>div:nth-child(7){
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+    text-align: center;
+    width: 80px;
+    border: solid 0px green;
+    font-size: 22px;
+    border-radius: 2px;
+    height: 33px;
+    line-height: 33px;
+    background-color: #D7D7D7;
+    border: solid 0px green;
+   font-family: Arial;
+}
+.zhezhao_1{
+    position: absolute;
+    width: 223px;
+    height: 261px;
+    background-color: black;
+    opacity: 0.6;
+
+    color: white;
+    left: 74.5px;
+    top: 55px;
+   display: none;
+    text-align: center;
+}
+.zhezhao_1>img {
+    width: 72px;
+    margin-top: 70px;
+    height: 67px;
+}
+.zhezhao_1>h2{
+    margin-top: 15px;
+    color: white;
+}
+/*.product_1:hover div{
+    display: block;
+    cursor: pointer;
+}*/
+.banner_p{
+    position: absolute;
+    right: 60px;
+    width: 350px;
+    height: 200px;
+    font-size: 20px;
+    color: white;
+  top: 350px;
+}
+.product_1>img:hover{
+    -webkit-transform: rotateY(360deg)   scale(1.2,1.2) translateY(-15px);
+    -webkit-transition: -webkit-transform linear 1s;
+}
+/*//////////////////////////////////////////////////////////////////////////////////////*/
+div.flip-3d {
+    perspective: 1200px; width: 30%; float: left;
+}
+div.flip-3d figure {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s transform;
+    font-size: 1.6rem;
+}
+div.flip-3d figure img {
+    width: 223px;
+    height: 261px;
+}
+div.flip-3d figure figcaption {
+    position: absolute;
+    width: 55%; height: 89px; top: 0;
+    transform: rotateY(.5turn) translateZ(1px);
+    background: rgba(255,255,255,0.9);
+    text-align: center;
+    padding-top: 45%;
+    margin-left:79px ;
+
+background-color: #7fa472;
+    opacity: 0.5;
+    transition: 1s .5s opacity;
+}
+div.flip-3d figure figcaption img{
+ width: 40px;
+    height: 40px;
+    position: absolute;
+/*    left: 50px;
+    top: 70px;*/
+}
+
+div.flip-3d figure figcaption>div{
+   font-size: 23px;
+/*   box-shadow: 2px 2px  #CCC;*/
+  border: solid 2px white;
+    position: absolute;
+    width: 50%;
+    height: 60px;
+
+    line-height:60px ;
+   /* font-weight: bolder;*/
+    font-family: "楷体";
+    color:white;
+    left: 50px;
+    top: 100px;
+}
+div.flip-3d figure figcaption>div:hover{
+    cursor: pointer;
+}
+div.flip-3d figure figcaption>img{
+opacity: 0.5;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 140px;
+    top: 5px;
+}
+div.flip-3d figure figcaption>#jiaohua{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 20px;
+    top: 5px;
+}
+div.flip-3d:hover figure { transform: rotateY(.5turn); }
+div.flip-3d:hover figure figcaption { opacity: 0.8; }
+/*div.flip-3d figure:after {
+    content: " "; display: block;
+    height: 8vw; width: 100%;
+    transform: rotateX(90deg);
+    background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+}*/
+
+@media screen and (max-width: 800px) {
+    div#flip-3d { perspective-origin: center top; }
+    div#flip-3d figure {
+        float: none;
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 12vw;
+    }
+    div.flip-3d figure figcaption{font-size: 0.8rem;}
+    div#flip-3d figure:last-child { display: none; }
+}

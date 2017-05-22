@@ -1,0 +1,269 @@
+body{margin: 0;padding: 0;background: #f2f2f2; font-family: "Microsoft YaHei"}
+.header
+{
+    width: 1349px;
+    height: 110px;
+    background: gray;
+}
+.ban
+{
+    width: 1349px;
+    height: 400px;
+    background: url("../images/sban.png") no-repeat;
+    background-size: 100%;
+}
+/*.con1
+{
+    width: 1100px;
+    height: 400px;
+    !*border: 1px solid darkgreen;*!
+    float: left;
+    margin:30px 160px;
+}*/
+.con1_main1
+{
+    width: 320px;
+    height: 330px;
+    border-bottom: 1px solid lightgray;
+    text-align: center;
+    float: left;
+    margin-left: 20px;
+}
+.con1_main1>span
+{
+    font-size: 14px;
+    float: left;
+    margin: 5px 80px;
+}
+a:link
+{
+    color: white;
+}
+a:visited
+{
+    color: white;
+}
+.hid
+{
+    display: none;
+}
+.con1_main1>p
+{
+    font-size: 12px;
+    float: left;
+    margin: 5px 80px;
+
+}
+#main
+{
+    width: 1100px;
+    height: 1050px;
+    float: left;
+}
+#main2
+{
+    width: 1100px;
+    height: 1050px;
+    position: absolute;
+    left: 150px;
+    display: none;
+}
+#box
+{
+    width: 1100px;
+    height: 1050px;
+    float: left;
+    margin:30px 150px;
+}
+.con_main1
+{
+    width: 220px;
+    height: 350px;
+    margin-left: 40px;
+    text-align: center;
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+.con_main1>img
+{
+    width: 220px;
+    height: 250px;
+    float: left;
+}
+.con_main1>span
+{
+    width: 160px;
+    font-size: 14px;
+    float: left;
+    margin: 10px 35px;
+}
+.con_main1>hr
+{
+    width: 30px;
+    margin-top: 5px;
+    margin-right: 30px;
+}
+.con_main1>li
+{
+    width: 60px;
+    list-style: none;
+    font-size: 12px;
+    margin-left: 45px;
+    float: left;
+    line-height: 30px;
+}
+/*.sx
+{
+    width: 1px;
+    height: 25px;
+    border-right: 1px solid darkgrey;
+    float: left;
+    margin: 5px 15px;
+}*/
+.con_main1>p:nth-of-type(1)
+{
+    font-size: 12px;
+    line-height: 25px;
+}
+.wrap1
+{
+    width: 220px;
+    height: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: dimgray;
+    opacity: 0;
+}
+.wrap1>p
+{
+    font-size: 12px;
+    color: white;
+    width: 100px;
+    height: 50px;
+    float: left;
+    margin: 110px 50px;
+}
+.wrap1>hr:nth-of-type(1)
+{
+    width: 120px;
+    position: absolute;
+    left: -125px;
+    top: 70px;
+
+}
+.wrap1>hr:nth-of-type(2)
+{
+    width: 120px;
+    position: absolute;
+    right: -125px;
+    top: 110px;
+}
+.con_main1:hover .wrap1{
+    opacity: 0.8;
+}
+.con_main1:hover .wrap1>hr:nth-of-type(1){
+    left: 30px;
+    transition: all 1s ;
+}
+.con_main1:hover .wrap1>hr:nth-of-type(2){
+    right: 30px;
+    transition: all 1s ;
+}
+.BiaoTI{
+    width:1349px;
+    position: relative;
+    margin-top: 20px;
+    height: 130px;
+    border: solid 0px green;
+}.BTh3_1{
+     position: absolute;
+     left:610px;
+     top: 48px;
+     font-size: 25px;
+ }
+
+.BTh3_2{
+    position: absolute;
+    left:575px;
+    top: 22px;
+    font-size: 18px;
+    border: solid 0px green;
+
+}
+.logo_1{
+    position: absolute;
+    left: 467px;
+    top: 20px;
+    border: solid 0px green;
+}
+.logo_2{
+    position: absolute;
+    top: 22px;
+    left: 748px;
+    border: solid 0px green;
+}
+.anniu
+{
+    width: 300px;
+    height: 35px;
+    float: left;
+    margin-left: 940px;
+}
+.button1
+{
+    width: 110px;
+    height: 30px;
+    background: darkgray;
+    color: black;
+    border: 2px solid white;
+    outline: none;
+    cursor: pointer;
+    font-family: "Microsoft YaHei";
+
+}
+.button2
+{
+    width: 110px;
+    height: 30px;
+    background: darkgray;
+    color: black;
+    border: 2px solid white;
+    margin-left: 30px;
+    outline: none;
+    cursor: pointer;
+    font-family: "Microsoft YaHei";
+
+}
+.foot
+{
+    width: 1349px;
+    height: 300px;
+    background: black;
+    float: left;
+}
+.sho
+{
+    width: 200px;
+    height: 40px;
+    /*background: red;*/
+    position: absolute;
+    top: 50px;
+    right: 90px;
+}
+.se
+{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 50px;
+    right: 90px;
+    background: black;
+}
+.ct_container
+{
+    width: 50px;
+    height: 50px;
+    background: black;
+}

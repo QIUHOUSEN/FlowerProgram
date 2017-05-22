@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/wedding.css"/>
+    <link rel="stylesheet" href="css/yewei.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+</head>
+<body>
+<div id="wrapper">
+    <div id="header">
+        <%- include head.html %>
+    </div><!--header end-->
+    <div class="blank"></div>
+    <div id="bac"></div>
+    <div class="blank"></div>
+    <div id="container">
+        <div id="main">
+            <div class="main_contain1">
+                <div class="space" id="space0">
+                    <div>
+                        <div class="space_blank"></div><!--//块里导航前面留白，margin-top失去效果了-->
+                        <div class="space1" id="space1_header">
+                            <h3>爱是心口的一粒朱砂</h3>
+                        </div>
+                    </div><!--块里导航结束-->
+                    <div><!--展示出来的花外层-->
+                        <div  id="flower_one"><!--第一层花-->
+                            <div id="flower_one0" class="flower_one">
+                                <div class="img" id="flower_one_img1">
+                                    <p style="display: none" class="idBox"><%= data[3].flower_id %></p>
+                                    <img src="<%= data[3].flower_src %>" alt="" class="imgs"/>
+                                    <div class="img_shadow">
+                                        <p></p>
+                                    </div>
+                                </div>
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#" class="img_look" index="0">立即购买</a>
+                                </div>
+                            </div>
+                            <div id="flower_one1" class="flower_one">
+                                <p style="display: none" class="idBox"><%= data[1].flower_id %></p>
+                                <div class="img"><img src="<%= data[1].flower_src %>" alt="" class="imgs"/></div>
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#" class="img_look" index="1">立即购买</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blank"></div>
+                        <div ><!--第二层花-->
+                            <div id="flower_two1" class="flower_one">
+                                <p style="display: none" class="idBox"><%= data[2].flower_id %></p>
+                                <div class="img"><img src="<%= data[2].flower_src %>" alt="" class="imgs"/></div>
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#" class="img_look" index="2">立即购买</a>
+                                </div>
+                            </div>
+                            <div id="flower_two" class="flower_two">
+                                <p style="display: none" class="idBox"><%= data[9].flower_id %></p>
+                                <div class="img"><img src="<%= data[9].flower_src %>" alt="" class="imgs"/></div>
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#" class="img_look" index="3">立即购买</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!--块里内容结束-->
+                </div><!--第一个版块结束-->
+
+                <div class="blank"></div>
+
+                <div class="space" id="space1">
+                    <div>
+                        <div class="space_blank"></div><!--//块里导航前面留白，margin-top失去效果了-->
+                        <div class="space1" id="space2_header">
+                            <h3>爱是笃定永恒的心愿</h3>
+                        </div>
+                    </div><!--块里导航结束-->
+                    <div><!--展示出来的花外层-->
+
+                        <div class="space2_first_flower"><!--第一层花-->
+                            <div class="flower_two" id="flower_space2_two">
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#" class="img_look" index="4">立即购买</a>
+                                </div>
+                                <p style="display: none" class="idBox"><%= data[4].flower_id %></p>
+                                <div class="img"><img src="<%= data[4].flower_src %>" alt="" class="imgs"/>
+                                </div>
+                            </div>
+                            <div id="flower_two2" class="flower_one">
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#" class="img_look" index="5">立即购买</a>
+                                </div>
+                                <p style="display: none" class="idBox"><%= data[5].flower_id %></p>
+                                <div class="img"><img src="<%= data[5].flower_src %>" alt="" class="imgs"/></div>
+
+                            </div>
+                        </div><!--第一层花结束-->
+
+                    <div class="blank"></div>
+
+                        <div  class="space2_second_flower"><!--第二层花-->
+                            <div class="flower_one" id="space_flower_one">
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#"class="img_look" index="6">立即购买</a>
+                                </div>
+                                <p style="display: none" class="idBox"><%= data[7].flower_id %></p>
+                                <div class="img"><img src="<%= data[7].flower_src %>" alt="" class="imgs"/></div>
+                            </div>
+                            <div id="flower_one2" class="flower_one">
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#" class="img_look" index="7">立即购买</a>
+                                </div>
+                                <p style="display: none" class="idBox"><%= data[10].flower_id %></p>
+                                <div class="img"><img src="<%= data[10].flower_src %>" alt="" class="imgs"/></div>
+
+                            </div>
+                        </div><!--第二层花结束-->
+
+
+                    <div class="blank"></div>
+                    </div><!--块里内容结束-->
+                </div><!--第二个版块结束-->
+
+                <div class="blank"></div>
+
+                <div class="space" id="space2">
+                    <div>
+                        <div class="space_blank"></div><!--//块里导航前面留白，margin-top失去效果了-->
+                        <div class="space1" id="space3_header" >
+                            <h3>爱是内心深处的温柔约定</h3>
+                        </div>
+                    </div><!--块里导航结束-->
+
+                    <div><!--展示出来的花外层-->
+                        <div><!--第一层花-->
+                            <div id="space3_flower1" class="flower_one">
+                                <p style="display: none" class="idBox"><%= data[8].flower_id %></p>
+                                <div class="img"><img src="<%= data[8].flower_src %>" alt="" class="imgs"/></div>
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#" class="img_look" index="8">立即购买</a>
+                                </div>
+                            </div>
+                            <div  id="flower_one3" class="flower_one">
+                                <p style="display: none" class="idBox"><%= data[9].flower_id %></p>
+                                <div class="img"><img src="<%= data[9].flower_src %>" alt=""class="imgs"/></div>
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#" class="img_look" index="9">立即购买</a>
+                                </div>
+                            </div>
+                        </div>
+                    <div class="blank"></div>
+                        <div id="space3" ><!--第二层花-->
+                            <div id="flower_two3" class="flower_one">
+                                <p style="display: none" class="idBox"><%= data[10].flower_id %></p>
+                                <div class="img"><img src="<%= data[10].flower_src %>" alt="" class="imgs"/></div>
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#" class="img_look" index="10">立即购买</a>
+                                </div>
+                            </div>
+                            <div id="space3_flower3" class="flower_two">
+                                <p style="display: none" class="idBox"><%= data[5].flower_id %></p>
+                                <div class="img"><img src="<%= data[5].flower_src %>" alt="" class="imgs"/></div>
+                                <div class="flower_name"><!--花的价格与立即购买-->
+                                    <p class="sell_name" >经典限量玫瑰</p>
+                                    <p class="price">￥999</p>
+                                    <a href="#" class="img_look" index="11">立即购买</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--块里内容结束-->
+                </div><!--第三个版块结束-->
+
+                <div class="blank"></div>
+
+                <div class="space" id="space_last">
+                    <h2>Rose for My Love</h2>
+                    <h3>私人定制</h3>
+                    <a href="#">了解更多&gt&gt&gt</a>
+                    <!--  <img src="../images/wedding/28.jpg" alt=""/>-->
+                </div><!--第四个版块结束-->
+            </div>
+            <div id="footer">
+                <%- include foot.html %>
+            </div><!--footer end-->
+        </div>
+    </div>
+</div><!--wrapper end-->
+</body>
+<script src="../js/wedding.js"></script>
+<!--<script src="../js/head.js"></script>-->
+<!--<script src="../js/checkLogStatus.js"></script>-->
+<!--<script src="js/index.js"></script>
+<script src="js/fenxiang.js"></script>-->
+</html>

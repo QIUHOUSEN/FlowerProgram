@@ -1,0 +1,375 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>购物车</title>
+    <link rel="stylesheet" href="../css/shoppingCart.css"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+
+    <link rel="stylesheet" href="css/yewei.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+</head>
+<body>
+<div id="wrapper">
+    <header id="header">
+        <%- include head.html %>
+        <div id="username">tian</div>
+    </header><!--header end-->
+    <div id="content">
+        <div class="ct_container">
+                <p>全部商品</p>
+                <table class="leftTable" id="goodTable">
+                    <tr>
+                        <td><input type="checkbox" class="chooseAll chooseBox" onclick="chooseAllItem(this);"/> 全选</td>
+                        <td>商品详情</td>
+                        <td>单价</td>
+                        <td>数量</td>
+                        <td>小计（元）</td>
+                        <td>操作</td>
+                    </tr>
+                    <%
+                    for(var i=0;i< data.length;i++){ %>
+                    <p class="idBox" style="display: none"><%= data[i].flower_id %></p>
+                    <tr class="goodInfo">
+                        <td><input type="checkbox" class="chooseItem chooseBox"/></td>
+                        <td class="info">
+                            <div ><img src="<%= data[i].flower_src %>" alt="" class="img_src"/></div>
+                            <div class="img_des"><%= data[i].flower_describe %></div>
+                        </td>
+                        <td class="oneMoney"><%= data[i].flower_price %></td>
+                        <td><span class="reduceNum">-</span>
+                           <!-- <span class="count">1</span>-->
+                            <input type="text" class="count" value="<%= data[i].num %>" onchange="checkNum(this);"/>
+                            <span class="plusNum">+</span></td>
+                        <td class="oneGoodMoney"><%= data[i].flower_price*data[i].num %></td>
+                        <td>
+                            <div class="oper">
+                                <a  class="del">删除</a>
+                            </div>
+                        </td>
+                    </tr><!--goodInfo end-->
+                    <% } %>
+                </table>
+       </div><!--ct_container end-->
+    </div><!--content end-->
+    <div class="settleAccounts">
+        <p>
+            总金额：￥<span id="allMoney">0</span>
+        </p>
+        <p>
+            <a href="orderSubmit.html"><input type="button" id="settle" value="结算" onclick="toOrderList();"/></a>
+        </p>
+    </div><!--settleAccounts end-->
+    <div id="lastInfo">
+        <span><input type="checkbox" class="chooseAll chooseBox" onclick="chooseAllItem(this);"/> 全选</span>
+        <span id="delAll">删除</span>
+        <span colspan="3">已选<span id="choCount">0</span>件商品</span>
+        <span><a href="index.html">&lt;&lt;再去逛逛</a></span>
+    </div>
+</div><!--wrapper end-->
+<script src="js/jquery.js"></script>
+<script>
+    var chooseAll = document.getElementsByClassName("chooseAll");
+    var chooseBoxs = document.getElementsByClassName("chooseBox");
+    var chooseItems = document.getElementsByClassName("chooseItem");
+    var goodInfos = document.getElementsByClassName("goodInfo");
+    var settleBtn = document.getElementById("settle");
+    var reduceBtns = document.getElementsByClassName("reduceNum");
+    var plusNums = document.getElementsByClassName("plusNum");
+    var uname = document.getElementById("username").innerHTML;
+    var allMoney = document.getElementById("allMoney");
+    var idBox = document.getElementsByClassName("idBox");
+    var delBtns = document.getElementsByClassName("del");
+    var delAllBtn = document.getElementById("delAll");
+    var leftTable = document.getElementsByClassName("leftTable");
+    var choCount = document.getElementById("choCount");
+    var goodTable = document.getElementById("goodTable");
+
+    var img_src = document.getElementsByClassName("img_src");
+    var img_des = document.getElementsByClassName("img_des");
+    var counts = document.getElementsByClassName("count");
+    var oneMoney = document.getElementsByClassName("oneMoney");
+    var oneGoodMoney = document.getElementsByClassName("oneGoodMoney");
+    /*=============点击头尾全选复选框，选中所有商品=============*/
+    function chooseAllItem(obj){
+        var status=0;
+        allMoney.innerHTML=0;
+        if(obj.checked){
+            status=1;
+            for(var j=0;j<chooseBoxs.length;j++){
+                chooseBoxs[j].checked="checked";
+            }
+        }else{
+            status=0;
+            for(var j=0;j<chooseBoxs.length;j++){
+                chooseBoxs[j].checked="";
+            }
+        }
+
+        if(status==0){
+            console.log("false");
+            settleBtn.style.backgroundColor="";
+        }else{
+            console.log("true");
+            settleBtn.style.backgroundColor="#FF6600";
+            for(var i=0;i<goodInfos.length;i++){
+                allMoney.innerHTML=Number(allMoney.innerHTML)+Number(oneGoodMoney[i].innerHTML);
+
+            }
+        }
+    }
+    /*============删除所有商品=============*/
+    if(document.addEventListener){
+        delAllBtn.addEventListener("click",dellAll,true);
+    }else{
+        delAllBtn.attachEvent("onclick",dellAll);
+    }
+
+    function dellAll(){
+        var checkNum=0;
+        for(var i=0;i<goodInfos.length;i++){
+            if(chooseItems[i].checked){
+                checkNum+=1;
+                var xhr;
+                if(window.ActiveXObject){
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                }else{
+                    xhr = new XMLHttpRequest();
+                }
+                xhr.open("post","/dellMoreGood.do",true);
+                xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+                xhr.onreadystatechange=function(){
+                       if(xhr.readyState==4 && xhr.status==200){
+                           var data = xhr.responseText;
+                           if(data=="ok"){
+                               console.log("页面成功接收到ok");
+                               location.reload();
+                           }
+                       }else{
+                           console.log("后台批量删除处理出现错误:");
+                       }
+                }
+                //删除所有商品就是删除某个用户对应的购物车列表
+                xhr.send("f_id="+idBox[i].innerHTML+"&username="+uname);
+            }
+        }
+        if(checkNum==0){
+            alert("还未选择任何商品");
+        }else{
+        }
+    }
+    /*有复选框被选中的时候，结算才能变为可点击状态
+    每次监控点击后复选框选中的个数，如果没有被选中的那么就改变结算按钮的颜色*/
+    for(var i=0;i<chooseItems.length;i++){
+        if(document.addEventListener){
+            chooseItems[i].addEventListener("click",changeStatus,true);
+        }else{
+            chooseItems[i].attachEvent("onclick",changeStatus);
+        }
+    }
+    function changeStatus(){
+        var status=0;
+        allMoney.innerHTML=0;//每次都要将总金额先置为空。
+        for(var i=0;i<chooseItems.length;i++){
+            if(chooseItems[i].checked){
+                console.log("每个商品的总价："+Number(oneGoodMoney[i].innerHTML));
+                allMoney.innerHTML=Number(allMoney.innerHTML)+Number(oneGoodMoney[i].innerHTML);
+                status+=1;
+            }
+        }
+        if(status>=1){
+            settleBtn.style.backgroundColor="#FF6600";
+            if(status==chooseItems.length){
+                chooseAll[0].checked="checked";
+                chooseAll[1].checked="checked";
+
+            }else{
+                chooseAll[0].checked="";
+                chooseAll[1].checked="";
+            }
+
+        }else{
+            chooseAll[0].checked="";
+            chooseAll[1].checked="";
+            settleBtn.style.backgroundColor="";
+        }
+    }
+
+    /*=======控制数量的加减=========*/
+    function checkNum(obj){//检查手动输入的number有效性
+        var a=/^[1-9]\d*$/;
+        var b=obj.value;
+        if(!a.test(b)){
+            obj.value=1;
+        }
+    }
+    for(var i=0;i<goodInfos.length;i++){
+        if(document.addEventListener) {
+            reduceBtns[i].addEventListener("click", reduceNum(i), true);
+            plusNums[i].addEventListener("click",addNum(i), true);
+        }
+        else{
+            reduceBtns[i].addEventListener("onclick", reduceNum(i));
+            plusNums[i].addEventListener("onclick", addNum(i));
+        }
+    }
+
+    function reduceNum(i){
+        return function(){
+            if (counts[i].value == 1) {
+                counts[i].value = 1;
+            } else {
+                counts[i].value = Number(counts[i].value) - 1;
+                oneGoodMoney[i].innerHTML=Number(oneMoney[i].innerHTML)*Number(counts[i].value);
+                if(chooseItems[i].checked){
+                    allMoney.innerHTML=Number(allMoney.innerHTML)-Number(oneMoney[i].innerHTML);
+                }
+            }
+            userAjax(counts[i].value,i);
+        }
+    }
+    function addNum(i){
+        return function(){
+            counts[i].value = Number(counts[i].value) + 1;
+            oneGoodMoney[i].innerHTML=Number(oneMoney[i].innerHTML)*Number(counts[i].value);
+            if(chooseItems[i].checked){
+                allMoney.innerHTML=Number(allMoney.innerHTML)+Number(oneMoney[i].innerHTML);
+            }
+            userAjax(counts[i].value,i);
+        }
+    }
+    function userAjax(number,i){
+        var xhr;
+        if(window.ActiveXObject){
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }else{
+            xhr = new XMLHttpRequest();
+        }
+        xhr.open("post","/changeNum.do",true);
+        xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+        xhr.onreadystatechange=function(){
+        }
+        xhr.send("number="+number+"&flower_id="+idBox[i].innerHTML+"&username="+uname);
+    }
+
+
+    /*=================删除单个商品========================*/
+    for(var i=0;i<goodInfos.length;i++){
+        if(document.addEventListener) {
+            delBtns[i].addEventListener("click",delOneGood(i), true);
+        }
+        else{
+            delBtns[i].addEventListener("onclick", delOneGood(i));
+        }
+    }
+    function delOneGood(i){
+        return function(){
+
+            var xhr;
+            if(window.ActiveXObject){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }else{
+                xhr = new XMLHttpRequest();
+            }
+            xhr.open("post","/delOneGood.do",true);
+            xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var data = xhr.responseText;
+                    if(data=="ok"){
+                        console.log("删除单条商品成功");
+                        $(".goodInfos:eq("+i+")").remove();
+                      //  window.location.reload();
+                    }
+                }else{
+                    console.log("后台删除处理出现错误:");
+                }
+            }
+            console.log("在删除之前获取到的fid和name："+idBox[i].innerHTML+"\t"+uname);
+            xhr.send("flower_id="+idBox[i].innerHTML+"&username="+uname);
+        }
+    }
+
+    /*==========更新已选中个数=============*/
+    for(var i=0;i<chooseBoxs.length;i++){
+        if(document.addEventListener){
+            chooseBoxs[i].addEventListener("click",changeChoNum,true);
+        }else{
+            chooseBoxs[i].attachEvent("onclick",changeChoNum);
+        }
+    }
+    function changeChoNum(){
+        var status=0;
+        for(var j=0;j<chooseItems.length;j++){
+            if(chooseItems[j].checked){
+                status+=1;
+                choCount.innerHTML=status+"";
+            }
+        }
+        if(status==0){
+            choCount.innerHTML=0;
+        }
+    }
+
+    /*=============点击结算按钮将所选商品传到orderList中=================*/
+    function toOrderList(){
+        //循环遍历所选的商品
+        console.log("触发了结算点击事件");
+
+        var arrChooseMore=[];
+        for(var i=0;i<goodInfos.length;i++){
+            console.log("进入goodInfos的for循环");
+            if(chooseItems[i].checked){
+                /*
+                *   var img_src = document.getElementsByClassName("img_src");
+                    var img_des = document.getElementsByClassName("img_des");
+                    var counts = document.getElementsByClassName("count");
+                    var oneMoney = document.getElementsByClassName("oneMoney");
+                    var oneGoodMoney = document.getElementsByClassName("oneGoodMoney");
+                * */
+
+               /* arrChoose.push(idBox[i].innerHTML);
+                arrChoose.push(img_src[i].innerHTML);
+                arrChoose.push(img_des[i].innerHTML);
+                arrChoose.push(counts[i].innerHTML);
+                arrChoose.push(oneMoney[i].innerHTML);*/
+                var id=idBox[i].innerHTML;
+                var src=img_src[i].src;
+                var des=img_des[i].innerHTML;
+                var count=counts[i].value;
+                var onePrice=oneMoney[i].innerHTML;
+                var oneGoodPrice=oneGoodMoney[i].innerHTML;
+                var arrChoose={id:id,src:src,des:des,count:count,onePrice:onePrice,oneGoodPrice:oneGoodPrice
+                };
+                console.log("arrChoose:"+arrChoose.id,arrChoose.src,arrChoose.des,arrChoose.count,arrChoose.onePrice,arrChoose.oneGoodPrice);
+
+                arrChooseMore.push(arrChoose);
+            }
+        }
+            var xhr;
+            if(window.ActiveXObject){
+                xhr = new ActiveXObject("Microsoft.XMLHTTP");
+            }else{
+                xhr = new XMLHttpRequest();
+            }
+            xhr.open("post","/addOrderList.do",true);
+            xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4 && xhr.status==200){
+                    var data = xhr.responseText;
+
+                }
+            }
+            console.log("在将购物车选中的商品发送到订单列表之前打印包含商品id的数组 arrC" +
+                    "hoose.length："+arrChooseMore.length);
+    /*    var obj = {data:arrChooseMore};*/
+        /*console.log(obj.data[0].count+"========");*/
+
+            xhr.send("arrChooseMore="+JSON.stringify(arrChooseMore)+"&allMoney="+allMoney.innerHTML);//序列化
+    }
+</script>
+
+<script src="../js/checkLogStatus.js"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/personal.css"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/foot.css"/>
+
+</head>
+<body>
+    <!--<header class="head">
+        <img src="../images/logo.png" alt=""/>
+        <ul>
+            <li class="navOne">首页</li>
+            <li class="helpChoose">帮我选花
+                <ul class="chooseFlower">
+                    <li class="holiday">节日
+                        <ul id="holidayChoose">
+                            <li>父亲节</li>
+                            <li>母亲节</li>
+                            <li>七夕节</li>
+                        </ul>
+                    </li>
+                    <li>生日</li>
+                    <li>求婚</li>
+                    <li>其它</li>
+                </ul>
+            </li>
+            <li class="navThree">预定</li>
+            <li class="navFour">私人定制
+                <ul>
+                    <li>线下定制</li>
+                </ul>
+            </li>
+            <li class="navFive">花语</li>
+            <li class="navSix">节日活动</li>
+            <li class="navSevens" id="navSeven">鲜花周边
+                <ul id="flowerRounds">
+                    <li>礼盒</li>
+                    <li>盆栽</li>
+                    <li>包装纸</li>
+                </ul>
+            </li>
+
+            <li class="navEight">VIP周期购</li>
+            <li class="navNine">分享你的故事</li>
+        </ul>
+
+        <input id="searchInput" type="text"/>
+        <span id="searchBtn" class="fa fa-search"></span>
+
+        <div class="logandreg">
+            <div class="forms" id="form1">登录</div>
+            <div class="forms" id="form2">注册</div>
+        </div>
+        <div class="vip">成为VIP</div>
+    </header>-->
+
+    <%- include head.html %>
+    <div class="rowOne">
+        <div class="myselfs">
+            <img src="../images/myorder.png" alt=""/>
+            <div id="myOrder" class="threeChoose" index="0">我的订单</div>
+        </div>
+
+        <div class="myselfs">
+            <img src="../images/mycord.png" alt=""/>
+            <div id="myCord" class="threeChoose" index="1">我的积分</div>
+        </div>
+
+        <div class="myselfs">
+            <img src="../images/mystore.png" alt=""/>
+            <div id="myStore" class="threeChoose" index="2">我的收藏</div>
+        </div>
+
+    </div>
+
+    <div class="personCover" id="personCover">
+        <div class="doMyOrder panels" index="0" id="doMyOrder">
+            <p>我的订单</p>
+            <ul>
+                <li>全部</li>
+                <!--<li>待确定订单</li>-->
+                <!--<li>待付款订单</li>-->
+                <!--<li>待发货订单</li>-->
+                <!--<li>已发货订单</li>-->
+                <!--<li>已完成订单</li>-->
+                <!--<li>已取消订单</li>-->
+            </ul>
+            <div class="orderState">
+                <div>订单详情</div>
+                <div>金额</div>
+                <div>操作</div>
+            </div>
+            <div class="doMyOrderContent" style="overflow-y: scroll">
+                <%console.log(dataOrder+"订单-=-=-=")%>
+                <%for(var i=0; i<dataOrder.length; i++){%>
+                <div class="rows">
+                    <span class="huaming"><%=dataOrder[i].flower_name%></span>
+                    <img src="<%=dataOrder[i].flower_src%>" alt=""/>
+                    <span class="jine"><%=dataOrder[i].flower_price%></span>
+                    <span class="shanchu">删除</span>
+                </div>
+                <%}%>
+            </div>
+            <!--<div class="pagePart">
+                <div>
+                    共计<span class="pageNum"></span>页 &nbsp;<input type="text"/><div class="go">Go</div>
+                </div>
+                <div class="prePage">上一页</div>
+                <div class="nextPage">下一页</div>
+            </div>-->
+            <div class="closes" index="0" id="closes"><span class="fa fa-times"></span></div>
+        </div>
+
+
+        <div class="doMyCord panels" index="1">
+            <div>
+                <p>我的积分: <span id="myRecord"></span></p>
+            </div>
+            <p class="cord">1.购买金额满100，送10积分</p>
+            <p class="cord">2.购买金额满200，送30积分</p>
+            <p class="cord">3.购买金额满300，送50积分</p>
+            <p class="cord">4.购买金额满400，送80积分</p>
+            <p class="cord">5.购买金额满500，送80积分且打8折</p>
+            <p class="rule">
+                积分兑换规则：
+                1积分抵换1元钱
+            </p>
+            <div class="closes" index="1" id="closeMyCord"><span class="fa fa-times"></span></div>
+            <div id="changeCord" class="changeCord">积分兑换</div>
+        </div>
+
+        <div class="doMyStore panels" index="2">
+            <p>我的收藏</p>
+            <ul>
+                <li>商品信息</li>
+                <li>操作</li>
+            </ul>
+            <div class="doMyStoreContent" style="overflow-y: scroll">
+                <%console.log(dataStore.length+"-=-=-=-=")%>
+                <%for(var i=0; i<dataStore.length; i++){%>
+                <div class="rows">
+                    <span class="huaming2"><%=dataStore[i].flower_name%></span>
+                    <img id="storeImg" class="storeImg" src="<%=dataStore[i].flower_src%>" alt=""/>
+                    <span class="jine2"><%=dataStore[i].flower_price%>元</span>
+                    <span id="storedel">删除</span>
+                </div>
+                <%}%>
+            </div>
+
+            <!--<div class="pagePart">
+                <div>
+                    共计<span class="pageNum"></span>页 &nbsp;<input type="text"/><div class="go">Go</div>
+                </div>
+                <div class="prePage">上一页</div>
+                <div class="nextPage">下一页</div>
+            </div>-->
+            <div class="closes" index="2" id="closesMyStore"><span class="fa fa-times"></span></div>
+        </div>
+
+    </div>
+
+    <div class="rowTwo">
+        <p>个人信息管理</p>
+        <div class="changeInf" index="0">修改基本信息</div>
+        <div class="changeInf" index="1">修改密码</div>
+        <div class="changeInf" index="2">修改联系方式</div>
+        <div class="changeInf" index="3">收获地址管理</div>
+
+    </div>
+
+    <div id="informationCover">
+        <div class="doInformation" id="changeInf">
+            <div class="changeUser">
+                <span>用户名:</span>
+                <input id="usernames" type="text"/>
+                <span id="errorText">用户名大于3个字符</span>
+            </div>
+            <div class="upHead">
+                <span>头像:</span>
+                <div class="headDiv">
+                    <img id="headImg" src="" alt=""/>
+                </div>
+                <a href="javascript:;" id="xuanze" class="file">选择文件
+                    <input type="file" name="" id="aa">
+                </a>
+
+            </div>
+            <div class="saves" id="saves">保存</div>
+            <div class="noSaves">取消</div>
+            <div class="closeChanges" index="0"><span class="fa fa-times"></span></div>
+        </div>
+
+        <div class="doInformation" id="changePwd">
+            <div class="oldPwd" style="margin-left: -10px">
+                <span>旧密码:</span>
+                <input type="text"/>
+                <!--<span id="oldPwd">原始密码错误</span>-->
+            </div>
+            <div class="newPwd" style="margin-left: -10px">
+                <span>新密码:</span>
+                <input type="text"/>
+                <!--<span id="newPwd">新密必须大于6位</span>-->
+            </div>
+            <div class="rePwd" style="margin-left: -20px">
+                <span>再次输入:</span>
+                <input type="text"/>
+                <!--<span id="reNewPwd">第二次输入密码错误</span>-->
+            </div>
+            <div class="saves">保存</div>
+            <div class="noSaves">取消</div>
+            <div class="closeChanges" index="1"><span class="fa fa-times"></span></div>
+        </div>
+
+        <div class="doInformation" id="changeTel">
+            <div class="tel">
+                <span>手机号:</span>
+                <input id="sjh" type="text"/>
+                <span>修改</span>
+            </div>
+            <div class="email">
+                <span>邮箱:</span>
+                <input id="yx" type="text"/>
+                <span>修改</span>
+            </div>
+            <div class="saves" id="lxfsSave">保存</div>
+            <div class="noSaves">取消</div>
+            <div class="closeChanges" index="2"><span class="fa fa-times"></span></div>
+        </div>
+
+        <div class="doInformation" id="changeAddr">
+            <p>收货地址管理</p>
+            <div class="addrLabels" id="addrLabels">
+                <span>收货人姓名</span>
+                <span>收货人电话</span>
+                <span>收货人地址</span>
+            </div>
+            <div class="addrInputs" id="addrInputs">
+                <input type="text" id="shrname"/>
+                <input type="text" id="shrtel"/>
+                <input type="text" id="shraddr"/>
+            </div>
+            <span class="conforms" id="conforms">确认</span>
+            <span class="cancels" id="cancels">取消</span>
+            <span class="addBtn" id="addBtn">新增收货地址</span>
+            <ul class="addrHead">
+                <li>收货人地址</li>
+                <li>收货人姓名</li>
+                <li>收货人电话</li>
+                <li>操作</li>
+            </ul>
+            <div class="addrContent" style="overflow-y: scroll">
+                <table id="shrtb" cellpadding="0" cellspacing="0"></table>
+            </div>
+            <!--<div class="pagePart">
+                <div>
+                    共计<span class="pageNum"></span>页 &nbsp;<input type="text"/><div class="go">Go</div>
+                </div>
+                <div class="prePage">上一页</div>
+                <div class="nextPage">下一页</div>
+            </div>-->
+            <div class="closeChanges" index="3"><span class="fa fa-times"></span></div>
+        </div>
+
+    </div>
+
+
+    <!--<div class="foots">
+        <div class="col1"><img src="../images/logo.png" alt=""/></div>
+        <ul class="cols col2">
+            <li>购物指南</li>
+            <li>购买流程</li>
+            <li>支付方式</li>
+            <li>常见问题</li>
+            <li>服务条款</li>
+        </ul>
+
+        <ul class="cols col3">
+            <li>配送方式</li>
+            <li>配送时间</li>
+            <li>配送范围</li>
+            <li>配送费用</li>
+        </ul>
+
+        <ul class="cols col4">
+            <li>优惠制度</li>
+            <li>会员制度</li>
+            <li>积分制度</li>
+        </ul>
+
+        <ul class="cols col5">
+            <li>售后服务</li>
+            <li>客户服务</li>
+            <li>投诉处理</li>
+        </ul>
+
+        <ul class="cols col6">
+            <li>关于我们</li>
+            <li>联系我们</li>
+            <li>版权声明</li>
+        </ul>
+
+        <div class="shares">
+            <div>
+                分享：
+                <span class="fa fa-yahoo"></span>
+                <span class="fa fa-weibo"></span>
+                <span class="fa fa-qq"></span>
+            </div>
+            <div>微信公众号：</div>
+            <div>
+                <img src="../images/code.png" alt=""/>
+            </div>
+        </div>
+        <p>某某花店：18384137777  地址：成都双流叽叽路叽叽号叽叽叽叽</p>
+    </div>-->
+    <%- include foot.html %>
+
+    <script type="text/javascript" src="../js/jquery.js"></script>
+<script type="text/javascript" src="../js/checkLogStatus.js"></script>
+<script type="text/javascript" src="../js/head.js"></script>
+<script type="text/javascript" src="../js/personal.js"></script>
+</body>
+</html>

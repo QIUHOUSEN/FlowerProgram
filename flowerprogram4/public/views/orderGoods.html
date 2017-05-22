@@ -1,0 +1,450 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>预定</title>
+    <link rel="stylesheet" href="../css/orderGoods.css"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/yewei.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div id="wrapper">
+    <header id="header">
+        <%- include head.html %>
+    </header><!--header end-->
+    <div id="content">
+        <div class="orderType">
+            <div class="orderItem">纪念</div>
+            <div class="orderItem">开业</div>
+            <div class="orderItem">婚庆</div>
+            <div class="orderItem">生日</div>
+        </div>
+        <div class="contentMain">
+            <div class="goodsList">
+                <div class="goodsBox">
+                    <div class="imgBox">
+                        <div><img src="../images/order1.jpg" alt="" class='img_src'/></div>
+                        <div class="findDetail">查看详情</div>
+                    </div>
+                    <p><input type="checkbox" class="choose" onclick="clickCheckBox(this)"/><span class="flowerName">花名</span><span class="fPrice">58.5</span></p>
+
+                    <p class="controlNum">数量
+                        <span class="reduceNum">-</span>
+                       <!-- <span class="count">1</span>-->
+                        <input type="text" class="count" value="1" onchange="checkNum(this);"/>
+                        <span class="plusNum">+</span>
+                    </p>
+                </div><!--goodsBox1 end-->
+                <div class="goodsBox">
+                    <div class="imgBox">
+                        <div><img src="../images/order2.jpg" alt="" class='img_src'/></div>
+                        <div class="findDetail">查看详情</div>
+                    </div>
+                    <p><input type="checkbox" class="choose" onclick="clickCheckBox(this)"/><span class="flowerName">花名</span><span class="fPrice">58.5</span></p>
+                    <p class="controlNum">数量
+                        <span class="reduceNum">-</span>
+                      <!--  <span class="count">1</span>-->
+                        <input type="text" class="count" value="1" onchange="checkNum(this);"/>
+                        <span class="plusNum">+</span>
+                    </p>
+                </div><!--goodsBox2 end-->
+                <div class="goodsBox">
+                    <div class="imgBox">
+                        <div><img src="../images/order3.jpg" alt="" class='img_src'/></div>
+                        <div class="findDetail">查看详情</div>
+                    </div>
+                    <p><input type="checkbox" class="choose" onclick="clickCheckBox(this)"/><span class="flowerName">花名</span><span class="fPrice">58.5</span></p>
+                    <p class="controlNum">数量
+                        <span class="reduceNum">-</span>
+                       <!-- <span class="count">1</span>-->
+                        <input type="text" class="count" value="1" onchange="checkNum(this);"/>
+                        <span class="plusNum">+</span>
+                    </p>
+                </div><!--goodsBox3 end-->
+                <div class="goodsBox">
+                    <div class="imgBox">
+                        <div><img src="../images/order4.jpg" alt="" class='img_src'/></div>
+                        <div class="findDetail">查看详情</div>
+                    </div>
+                    <p><input type="checkbox" class="choose" onclick="clickCheckBox(this)"/><span class="flowerName">花名</span><span class="fPrice">58.5</span></p>
+                    <p class="controlNum">数量
+                        <span class="reduceNum">-</span>
+                        <!--<span class="count">1</span>-->
+                        <input type="text" class="count" value="1" onchange="checkNum(this);"/>
+                        <span class="plusNum">+</span>
+                    </p>
+                </div><!--goodsBox4 end-->
+                <div class="goodsBox">
+                    <div class="imgBox">
+                        <div><img src="../images/order5.jpg" alt="" class='img_src'/></div>
+                        <div class="findDetail">查看详情</div>
+                    </div>
+                    <p><input type="checkbox" class="choose" onclick="clickCheckBox(this)"/><span class="flowerName">花名</span><span class="fPrice">58.5</span></p>
+                    <p class="controlNum">数量
+                        <span class="reduceNum">-</span>
+                       <!-- <span class="count">1</span>-->
+                        <input type="text" class="count" value="1" onchange="checkNum(this);"/>
+                        <span class="plusNum">+</span>
+                    </p>
+                </div><!--goodsBox5 end-->
+            </div><!--goodsList end-->
+            <div class="paging">
+                <div id="preBtn">上一页</div>
+                <div id="nextBtn">下一页</div>
+            </div><!--paging end-->
+            <div id="sureChoose">确认选项</div>
+        </div><!--contentMain end-->
+        <div class="showPrice">
+            <p>累计总金额：<span id="beforePrice">0</span></p>
+            <p>优惠价只需：<span id="lastPrice">0</span></p>
+            <p class="pay" onclick="toOrderList();"><a href="orderSubmit.html">前往支付</a></p>
+        </div><!--showPrice end-->
+    </div><!--content end-->
+    <footer id="footer">
+        <%- include foot.html %>
+    </footer><!--footer end-->
+</div><!--wrapper end-->
+<!--<script src="../js/myajax.js"></script>-->
+<script>
+    /*=====复选框控制数量的显示和隐藏以及 当有复选框被选中的时候确认选项按钮变色=======*/
+    var chooses = document.getElementsByClassName("choose");
+    var controlNum = document.getElementsByClassName("controlNum");
+    var reduceBtns = document.getElementsByClassName("reduceNum");
+    var counts = document.getElementsByClassName("count");
+    var fPrices = document.getElementsByClassName("fPrice");
+    var plusNums = document.getElementsByClassName("plusNum");
+    var sureChooseBtn = document.getElementById("sureChoose");
+    var beforePrice = document.getElementById("beforePrice");
+    var lastPrice = document.getElementById("lastPrice");
+    console.log("lastPrice:"+lastPrice.innerHTML);
+    var orderTypes = document.getElementsByClassName("orderItem");
+    var preBtn = document.getElementById("preBtn");
+    var nextBtn = document.getElementById("nextBtn");
+    var goodsBox = document.getElementsByClassName("goodsBox");
+   /* var idBox = document.getElementsByClassName("idBox");*/
+    var img_src = document.getElementsByClassName("img_src");
+    console.log(img_src);
+    var flowerName = document.getElementsByClassName("flowerName");
+    /*==========点击前往支付============*/
+     function toOrderList(){
+         //循环遍历所选的商品
+         console.log("触发了结算点击事件");
+         var arrChooseMore=[];
+         for(var i=0;i<goodsBox.length;i++){
+             if(chooses[i].checked){
+                 var id=1;
+                 console.log(img_src[i]);
+                 var src=img_src[i].src;
+                 var des=flowerName[i].innerHTML;
+                 var count=counts[i].value;
+                 var onePrice=fPrices[i].innerHTML;
+                 var oneGoodPrice=Number(counts[i].value)*Number(fPrices[i].innerHTML);
+                 var arrChoose={id:id,src:src,des:des,count:count,onePrice:onePrice,oneGoodPrice:oneGoodPrice
+                 };
+                 arrChooseMore.push(arrChoose);
+             }
+         }
+         var xhr;
+         if(window.ActiveXObject){
+             xhr = new ActiveXObject("Microsoft.XMLHTTP");
+         }else{
+             xhr = new XMLHttpRequest();
+         }
+         xhr.open("post","/addOrderList.do",true);
+         xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+         xhr.onreadystatechange=function(){
+         }
+         console.log("打印预定页面的lastPrice.innerHTML"+lastPrice.innerHTML);
+         xhr.send("arrChooseMore="+JSON.stringify(arrChooseMore)+"&allMoney="+lastPrice.innerHTML);//序列化
+     }
+    /*==================================*/
+    var countPage=0;
+    var nowPage=1;//默认先显示第一页的内容
+    /*检验手动输入的数量是否是正整数*/
+    function checkNum(obj){//检查手动输入的number有效性
+        var a=/^[1-9]\d*$/;
+        var b=obj.value;
+        if(!a.test(b)){
+            obj.value=1;
+        }
+    }
+    /*====给复选框添加点击事件=====*/
+    var allMoney=0;
+    var count=1;
+    var price=0;
+    function clickCheckBox(obj) {
+            var i=0;
+            console.log("检查动态更新后的模块拿到的obj和i"+obj);
+            for(var j=0;j<chooses.length;j++){
+                if(chooses[j]==obj){
+                    i=j;
+                }
+            }
+            if(obj.checked){
+                controlNum[i].style.display = "block";//选中复选框就显示下面的控制数量的p
+                if (document.addEventListener) {
+                    reduceBtns[i].addEventListener("click", function () {//减数
+                        if (counts[i].value == 1) {
+                            counts[i].value = 1;
+                        } else {
+                            counts[i].value = Number(counts[i].value) - 1;
+                        }
+                    }, true);
+                    plusNums[i].addEventListener("click", function () {//加数
+                        counts[i].value = Number(counts[i].value) + 1;
+                    }, true);
+                }
+                else{
+                    reduceBtns[i].addEventListener("onclick", function () {//减数
+                        if (counts[i].value == 1) {
+                            counts[i].value = 1;
+                        } else {
+                            counts[i].value = Number(counts[i].value) - 1;
+                        }
+                    });
+                    plusNums[i].addEventListener("onclick", function () {//加数
+                        counts[i].value = Number(counts[i].value) + 1;
+                    });
+                }
+            }else {
+                controlNum[i].style.display = "";//表示不修改原来设定的值，不是置为空的意思
+                counts[i].value=1;
+            }
+            changeSureColor();
+
+    }
+    //改变确认选项的按钮颜色
+    function changeSureColor(){
+        //每次都重新遍历判断是否有复选框被选中，如果有就将sure按钮颜色变为黄色如果一个都没有就回复以前的灰色
+        var flag=0;
+        for(var i=0;i<chooses.length;i++){
+            if(chooses[i].checked){
+                flag+=1;
+            }
+            if(flag>=1){
+                sureChooseBtn.style.backgroundColor="#FF6600";
+            }else{
+                sureChooseBtn.style.backgroundColor="";
+                beforePrice.innerHTML="0";
+                lastPrice.innerHTML="0";
+            }
+        }
+    }
+    /*====点击确认选项按钮改变右边的原价格，和0.8折后的优惠价格====*/
+    if(document.addEventListener){
+        sureChooseBtn.addEventListener("click",changeMoney,true);
+    }else{
+        sureChooseBtn.attachEvent("onclick",changeMoney);
+    }
+    function changeMoney(){
+        allMoney=0;
+        //每次点击sure按钮时都重新检测选中项的信息
+        for(var i=0;i<chooses.length;i++){
+            if(chooses[i].checked){
+                price=Number(fPrices[i].innerHTML);
+                count=Number(counts[i].value);
+                console.log("商品的价格为："+price);
+                console.log("商品数量"+count);
+                var oneGoodmoney=count*price;
+                allMoney+=oneGoodmoney;
+            }
+        }
+        beforePrice.innerHTML=allMoney.toFixed(2)+"";
+        lastPrice.innerHTML=(allMoney*0.8).toFixed(2)+"";
+    }
+
+
+
+    /*==============分类和分页=============*/
+    for(var i=0;i<orderTypes.length;i++){
+        if(document.addEventListener){
+            orderTypes[i].addEventListener("click",fn(orderTypes[i]),true);
+        }else{
+            orderTypes[i].attachEvent("onclick",fn(orderTypes[i]));
+        }
+    }
+    /*===========为上一页下一页添加点击事件，实现分页============*/
+    if(document.addEventListener){
+        preBtn.addEventListener("click",previousPage,true);
+        nextBtn.addEventListener("click",nextPage,true);
+    }else{
+        preBtn.attachEvent("onclick",previousPage);
+        nextBtn.attachEvent("onclick",nextPage);
+    }
+    /*======默认选中第一个类型=======*/
+    var arr=[];
+    orderTypes[0].style.backgroundColor="#009966";
+    function fn(obj){
+        return function(){
+            for(var i=0;i<orderTypes.length;i++){
+                console.log("type为"+i+"值："+orderTypes[i].innerHTML);
+                orderTypes[i].style.backgroundColor="darkgray";
+            }
+            console.log("obj:"+obj.innerHTML);
+            obj.style.backgroundColor="#009966";
+            findCountPage(obj);
+            changeGoods(obj);
+        }
+    }
+    function previousPage(){//上一页
+            nowPage--;
+            if(nowPage<1){
+                nowPage=1;
+            }
+            changeGoods(nowPage);
+
+    }
+    function nextPage(){//下一页
+            nowPage++;
+            if(nowPage>countPage){
+                nowPage=countPage;
+            }
+        console.log("点击下一页后nowPage的值："+nowPage);
+            changeGoods(nowPage);
+    }
+     function changeGoods(obj){//在第一次的时候查找第一页中的内容，我们设定每页显示5个数据
+         var type;
+         if(Number(obj)){//说明点击的是翻页按钮
+             type=arr[arr.length-1];
+         }else{
+             type = obj.innerHTML;
+             arr.push(type);
+         }
+        var xhr;
+        if(window.ActiveXObject){
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }else{
+            xhr = new XMLHttpRequest();
+        }
+        xhr.open("post","/changeOrderImg.do",true);
+        xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4&& xhr.status==200){
+                var data = xhr.responseText;
+                data = JSON.parse(data);
+                var main_content = document.getElementsByClassName("goodsList");
+                main_content[0].innerHTML="";//在更改之前记得先清空
+                for(var i=0;i<data.length;i++){
+                     main_content[0].innerHTML+="" +
+                         "<div class='goodsBox'>" +
+                          "<div class='imgBox'>" +
+                         "<div>" +
+                         "<img src='"+data[i].flower_src+"' class='img_src'/>" +
+                         "</div>" +
+                         "<div class='findDetail'>查看详情" +
+                         "</div>" +
+                         "</div>" +
+                         "<p><input type='checkbox' onclick='clickCheckBox(this)' class='choose'/>" +
+                         "<span class='flowerName'>"+data[i].flower_name+
+                         "</span><span class='fPrice'>"+data[i].flower_price+"</span></p>" +
+                         "<p class='controlNum'>数量" +
+                         "<span class='reduceNum'>-</span>" +
+                         "<input type='text' class='count' value='1' onchange='checkNum(this);'/>" +
+                         "<span class='plusNum'>+</span>" +
+                         "</p>" +
+                         "</div>";
+                }
+            }
+            else{window.open("404.html");}
+        }
+        xhr.send("orderType="+type+"&nowPage="+nowPage);
+    }
+    function findCountPage(obj){//查找每个类型对应的页面总数
+        var type;
+        if(obj.innerHTML=="下一页"){
+            type=arr[arr.length-1];
+        }else if(obj.innerHTML=="上一页"){
+            type=arr[arr.length-1];
+        }else{
+            type = obj.innerHTML;
+            arr.push(type);
+        }
+        var xhr;
+        if(window.ActiveXObject){
+            xhr = new ActiveXObject("Microsoft.XMLHTTP");
+        }else{
+            xhr = new XMLHttpRequest();
+        }
+        xhr.open("post","/findCountPage.do",true);
+        xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+        xhr.onreadystatechange=function(){
+            if(xhr.readyState==4&& xhr.status==200){
+                var data = xhr.responseText;
+                data = JSON.parse(data);
+                if(data.length%5==0){
+                    countPage = data.length/5;
+                }else{
+                    countPage = Math.ceil(data.length/5);
+                }
+            }
+        }
+        xhr.send("orderType="+type);
+    }
+    /*=======用封装好的ajax==========*/
+   /*    function changeGoods(obj){
+         var type;
+         if(Number(obj)){//说明点击的是翻页按钮
+         type=arr[arr.length-1];
+         }else{
+         type = obj.innerHTML;
+         arr.push(type);
+         }
+         function updom(){//对返回的数据进行处理，更新html页面
+             var main_content = document.getElementsByClassName("goodsList");
+             main_content[0].innerHTML="";//在更改之前记得先清空
+             console.log("更新内容部分的myajax"+myajax);
+             for(var i=0;i<myajax.length;i++){
+                 main_content[0].innerHTML+="" +
+                     "<div class='goodsBox'>" +
+                     "<div class='imgBox'>" +
+                     "<div>" +
+                     "<img src='"+myajax[i].flower_src+"'/>" +
+                     "</div>" +
+                     "<div class='findDetail'>查看详情" +
+                     "</div>" +
+                     "</div>" +
+                     "<p><input type='checkbox' onclick='clickCheckBox(this)' class='choose'/>" +
+                     "<span class='flowerName'>"+myajax[i].flower_name+
+                     "</span><span class='fPrice'>"+myajax[i].flower_price+"</span></p>" +
+                     "<p class='controlNum'>数量" +
+                     "<span class='reduceNum'>-</span>" +
+                     "<input type='text' class='count' value='1' onchange='checkNum(this);'/>" +
+                     "<span class='plusNum'>+</span>" +
+                     "</p>" +
+                     "</div>";
+             }
+        }
+        var myajax=new AJAXObj("post","/changeOrderImg.do","orderType="+type+"&nowPage="+nowPage,updom,true);
+        ajax(myajax);
+    }
+
+    function findCountPage(obj){
+        var type;
+        if(obj.innerHTML=="下一页"){
+        type=arr[arr.length-1];
+        }else if(obj.innerHTML=="上一页"){
+        type=arr[arr.length-1];
+        }else{
+        type = obj.innerHTML;
+        arr.push(type);
+        }
+        function updom(){//对返回的数据进行处理，更新html页面
+            console.log("获取到的myajax"+myajax);
+            if(myajax.length%5==0){
+                countPage = myajax.length/5;
+            }else{
+                countPage = Math.ceil(myajax.length/5);
+            }
+            console.log("myajax计算得到的countPage"+countPage);
+        }
+        var myajax=new AJAXObj("post","/findCountPage.do","orderType="+type,updom,true);
+        ajax(myajax);
+    }*/
+</script>
+<script src="js/index.js"></script>
+<script src="js/fenxiang.js"></script>
+<script src="../js/head.js"></script>
+<script src="../js/checkLogStatus.js"></script>
+</body>
+</html>

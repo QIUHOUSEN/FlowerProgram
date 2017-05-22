@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../css/faD.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/yewei.css"/>
+
+</head>
+<body>
+<%- include head.html %>
+<div id="bannar"></div>
+     <div class="sp1 block" data-move-x="-200px">
+         <div class="sp1_1">
+             <p style="display: none" class="idBox"><%= data[0].flower_id %></p>
+             <img src="<%= data[0].flower_src%>"><!--src="../images/fD/8.1.jpg"-->
+         </div>
+         <div class="sp1_2">
+             <div>遥寄相思</div>
+             <div>希望我的问候，<br/>
+                 像清新的雨，<br/>
+                 洗去你心头的烦忧，<br/>
+                 像轻抚的风，<br/>
+                 吹开你紧揍的眉头，<br/>
+                 让你无忧无虑，<br/>
+                 快乐永久</div>
+             <div  class="img_look" index="0"><a href="#">了解详情</a></div>
+         </div>
+     </div>
+     <div class="sp1 block" data-move-x="-200px">
+         <div class="sp1_1">
+             <p style="display: none" class="idBox"><%= data[1].flower_id %></p>
+             <img src="<%=data[1].flower_src%>" ><!--src="../images/fD/11.1.jpg"-->
+         </div>
+         <div class="sp1_2">
+             <div>温暖阳光</div>
+             <div>凝望太阳的东升东落，<br/>
+                 当太阳划过天空，<br/>
+                 洒下一丝灿烂<br/>
+                 日日追随那道光<br/>
+                 默默诉说那不变的爱慕<br/>
+                 心怀一颗太阳般快乐明亮的心<br/>
+                 勇敢追随自己的幸福
+             </div>
+             <div  class="img_look" index="1"><a href="#">了解详情</a></div>
+         </div>
+     </div>
+     <div class="sp1 block" data-move-x="-200px">
+         <div class="sp1_1">
+             <p style="display: none" class="idBox"><%= data[2].flower_id %></p>
+             <img src="<%=data[2].flower_src%>"><!--src="../images/fD/j.jpg"-->
+         </div>
+         <div class="sp1_2">
+             <div>感恩父亲</div>
+             <div>
+                 父亲给了我一片蓝天<br/>
+                 给了我一方沃土<br/>
+                 父亲是我生命里永远的太阳<br/>
+                 祝父亲节快乐
+             </div>
+             <div  class="img_look" index="2"><a href="#">了解详情</a></div>
+         </div>
+     </div>
+     <div class="sp1 block" data-move-x="-200px">
+         <div class="sp1_1">
+             <p style="display: none" class="idBox"><%= data[3].flower_id %></p>
+             <img src="<%=data[3].flower_src%>">
+         </div>
+         <div class="sp1_2">
+             <div>父爱无痕</div>
+             <div>
+                 咬定青山不放松<br/>
+                 父亲 坚定如你，伟岸如你<br/>
+                 我深深的爱你<br/>
+                 祝你节日快乐
+             </div>
+             <div  class="img_look" index="3"><a href="#">了解详情</a></div>
+         </div>
+     </div>
+     <div class="clear"></div>
+     <div class="sp2 sP2 block" data-move-y="200px">
+         <div class="sp2_1">
+             <p style="display: none" class="idBox"><%= data[4].flower_id %></p>
+             <img src="<%=data[4].flower_src%>">
+         </div>
+         <div class="sp2_2">
+             <div>感激</div>
+             <div>
+                 你用心中全部的爱
+                 染成我青春的颜色
+                 你用执着的信念
+                 铸就我性格的不屈
+             </div>
+             <div  class="img_look" index="4"><a href="#">了解详情</a></div>
+         </div>
+     </div>
+     <div class="sp2 block"  data-move-y="200px">
+         <div class="sp2_1">
+             <p style="display: none" class="idBox"><%= data[5].flower_id %></p>
+             <img src="<%=data[5].flower_src%>">
+         </div>
+         <div class="sp2_2">
+             <div>心雨心愿</div>
+             <div>
+                 当我遇到挫折与困难时
+                 当我遇到人生快乐的事
+                 我第一个想到的就是你
+                 我的爸爸
+                 我爱你
+             </div>
+             <div  class="img_look" index="5"><a href="#">了解详情</a></div>
+         </div>
+     </div>
+     <div class="sp2 block" data-move-y="200px">
+         <div class="sp2_1">
+             <p style="display: none" class="idBox"><%= data[6].flower_id %></p>
+             <img src="<%=data[6].flower_src%>">
+         </div>
+         <div class="sp2_2">
+             <div>一生爱你</div>
+             <div>
+                 在这特别的日子里
+                 送你一束花
+                 就像我想对你说的话
+                 我爱你
+                 我的爸爸
+             </div>
+             <div  class="img_look" index="6"><a href="#">了解详情</a></div>
+         </div>
+     </div>
+<%- include foot.html %>
+     <script src="../js/Fd.js"></script>
+     <script src="../js/qxjs_1/jquery.min.js"></script>
+     <script src="../js/qxjs_1/jquery.smoove.js"></script>
+     <script>$('.block').smoove({offset:'40%'});</script>
+<!--<script src="js/index.js"></script>-->
+<script src="js/fenxiang.js"></script>
+<script src="../js/head.js"></script>
+<script src="../js/checkLogStatus.js"></script>
+</body>
+</html>

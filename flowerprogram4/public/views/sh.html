@@ -1,0 +1,393 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/index.css">
+
+    <link rel="stylesheet" href="../css/sh.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="css/yewei.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+</head>
+<body>
+<div class="header"><%- include head.html %></div>
+<div class="ban"></div>
+<!--<div class="con1">
+   &lt;!&ndash; <div class="con1_main1">
+        <img src="../images/sbz_.jpg">
+        <span>全新包装，不一样的体验</span>
+        <p>意大利设计师Mhs精美设计，带给您更多的美</p>
+    </div>
+    <div class="con1_main1">
+        <img src="../images/sbz2.jpg">
+        <span>来自北纬30度附近的玫瑰</span>
+        <p>从世界各地选取最优地培花，只为爱的绽放</p>
+    </div>
+    <div class="con1_main1">
+        <img src="../images/sbz3.jpg">
+        <span>限量版永生花正式推出</span>
+        <p>真情无价，爱为永恒，只为让爱伴你一生</p>
+    </div>&ndash;&gt;
+</div>-->
+<div class="BiaoTI">
+    <p class="BTh3_2">BEST SELLER FOR YOU</p> <p class="BTh3_1">全部鲜花</p><img class="logo_1" src="../images/1_03.png" alt=""><img class="logo_2" src="../images/1_05.png" alt=""></div>
+<div id="box" class="wow bounceInLeft" style="visibility: visible; animation-name: bounceInLeft;"  data-wow-duration="4s">
+<div id="main">
+    <div class="con_main1">
+        <p style="display: none" class="idBox"><%= data[0].flower_id %></p>
+        <img src="<%= data[0].flower_src %>" class="pic">
+        <span><%= data[0].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[0].flower_price %></p>
+        <a href="goodDetails.html"><div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心挑选</p>
+            <hr class="hr2">
+    </div>
+            </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[1].flower_src %>">
+        <span><%= data[1].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[1].flower_price %></p>
+        <a href="goodDetails.html"> <div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心准备</p>
+            <hr class="hr2">
+    </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[2].flower_src %>">
+        <span><%= data[2].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[2].flower_price %></p>
+        <a href="goodDetails.html">
+        <div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心挑选</p>
+            <hr class="hr2">
+    </div>
+            </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[3].flower_src %>">
+        <span><%= data[3].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[3].flower_price %></p>
+        <a href="goodDetails.html">
+        <div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心准备</p>
+            <hr class="hr2">
+        </div>
+            </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[4].flower_src %>">
+        <span><%= data[4].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[4].flower_price %></p>
+        <a href="goodDetails.html"><div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心准备</p>
+            <hr class="hr2">
+        </div>
+            </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[5].flower_src %>">
+        <span><%= data[5].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[5].flower_price %></p>
+        <a href="goodDetails.html">
+        <div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心准备</p>
+            <hr class="hr2">
+        </div>
+            </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[6].flower_src %>">
+        <span><%= data[6].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[6].flower_price %></p>
+        <a href="goodDetails.html">
+        <div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心挑选</p>
+            <hr class="hr2">
+        </div>
+            </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[7].flower_src %>">
+        <span><%= data[7].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[7].flower_price %></p>
+        <a href="goodDetails.html"><div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心挑选</p>
+            <hr class="hr2">
+        </div>
+            </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[8].flower_src %>">
+        <span><%= data[8].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[8].flower_price %></p>
+        <a href="goodDetails.html">
+        <div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心挑选</p>
+            <hr class="hr2">
+        </div>
+            </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[9].flower_src %>">
+        <span><%= data[9].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[9].flower_price %></p>
+        <a href="goodDetails.html">
+        <div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心准备</p>
+            <hr class="hr2">
+        </div>
+            </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[10].flower_src %>">
+        <span><%= data[10].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[10].flower_price %></p>
+        <a href="goodDetails.html">
+        <div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心准备</p>
+            <hr class="hr2">
+        </div>
+            </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[11].flower_src %>">
+        <span><%= data[11].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[11].flower_price %></p>
+        <a href="goodDetails.html">
+        <div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心准备</p>
+            <hr class="hr2">
+        </div>
+            </a>
+    </div>
+</div>
+<div id="main2">
+    <div class="con_main1">
+        <img src="<%= data[13].flower_src %>">
+        <span><%= data[13].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[13].flower_price %></p>
+        <a href="goodDetails.html"><div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心挑选</p>
+            <hr class="hr2">
+        </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[13].flower_src %>">
+        <span><%= data[15].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[15].flower_price %></p>
+        <a href="goodDetails.html"> <div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心准备</p>
+            <hr class="hr2">
+        </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[10].flower_src %>">
+        <span><%= data[15].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[15].flower_price %></p>
+        <a href="goodDetails.html">
+            <div class="wrap1">
+                <hr class="hr1">
+                <p>为您精心挑选</p>
+                <hr class="hr2">
+            </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[14].flower_src %>">
+        <span><%= data[14].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[14].flower_price %></p>
+        <a href="goodDetails.html">
+            <div class="wrap1">
+                <hr class="hr1">
+                <p>为您精心准备</p>
+                <hr class="hr2">
+            </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[10].flower_src %>">
+        <span><%= data[13].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[4].flower_price %></p>
+        <a href="goodDetails.html"><div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心准备</p>
+            <hr class="hr2">
+        </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[10].flower_src %>">
+        <span><%= data[5].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[5].flower_price %></p>
+        <a href="goodDetails.html">
+            <div class="wrap1">
+                <hr class="hr1">
+                <p>为您精心准备</p>
+                <hr class="hr2">
+            </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[10].flower_src %>">
+        <span><%= data[6].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[6].flower_price %></p>
+        <a href="goodDetails.html">
+            <div class="wrap1">
+                <hr class="hr1">
+                <p>为您精心挑选</p>
+                <hr class="hr2">
+            </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[10].flower_src %>">
+        <span><%= data[7].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[7].flower_price %></p>
+        <a href="goodDetails.html"><div class="wrap1">
+            <hr class="hr1">
+            <p>为您精心挑选</p>
+            <hr class="hr2">
+        </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[9].flower_src %>">
+        <span><%= data[8].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[8].flower_price %></p>
+        <a href="goodDetails.html">
+            <div class="wrap1">
+                <hr class="hr1">
+                <p>为您精心挑选</p>
+                <hr class="hr2">
+            </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[8].flower_src %>">
+        <span><%= data[9].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[9].flower_price %></p>
+        <a href="goodDetails.html">
+            <div class="wrap1">
+                <hr class="hr1">
+                <p>为您精心准备</p>
+                <hr class="hr2">
+            </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <img src="<%= data[7].flower_src %>">
+        <span><%= data[10].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[10].flower_price %></p>
+        <a href="goodDetails.html">
+            <div class="wrap1">
+                <hr class="hr1">
+                <p>为您精心准备</p>
+                <hr class="hr2">
+            </div>
+        </a>
+    </div>
+    <div class="con_main1">
+        <p class="idBox" style="display: none;"><%= data[6].flower_id %></p>
+        <img src="<%= data[6].flower_src %>">
+        <span><%= data[11].flower_describe %></span>
+        <hr>
+        <p>￥<%= data[11].flower_price %></p>
+        <a href="goodDetails.html" class="toGoodDetail">
+            <div class="wrap1">
+                <hr class="hr1">
+                <p>为您精心准备</p>
+                <hr class="hr2">
+            </div>
+        </a>
+    </div>
+</div></div>
+<div class="anniu">
+    <button class="button1" onclick="pre()">上一页</button>
+    <button class="button2" onclick="nex()">下一页</button>
+</div><div class="foot"><%- include foot.html %></div>
+<!--<input type="text" class="sho" id="search_input">
+<button class="se" id="searchBtn">搜索</button>
+<div class="ct_container" id="ct_container"></div>-->
+<script type="text/javascript" src="../js/Shop.js"></script>
+<script src="js/index.js"></script>
+<script src="js/fenxiang.js"></script>
+<script src="../js/head.js"></script>
+<script src="../js/checkLogStatus.js"></script>
+<script>
+    var toGoodDetail=document.getElementsByClassName("toGoodDetail");
+    var con_main1=document.getElementsByClassName("con_main1");
+    var idBox=document.getElementsByClassName("idBox");
+ /*   var toGoodInfo=document.getElementsByClassName("toGoodInfo");*/
+
+    for(var i=0;i<con_main1.length;i++) {
+        if (document.addEventListener) {
+            toGoodDetail[i].addEventListener("click",sendImg(toGoodDetail[i],i),true);
+        } else {
+            toGoodDetail[i].attachEvent("onclick",sendImg(toGoodDetail[i],i));
+        }
+        function sendImg(obj,m) {
+            return function() {
+                var imgId = idBox[m].innerHTML;
+                var xhr;
+                if (window.ActiveXObject) {
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                } else if (window.XMLHttpRequest) {
+                    xhr = new XMLHttpRequest();
+                };
+                xhr.open("post","/sendImg.do",true);
+                xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                };
+                console.log("再点击页面图片发送到后台前的imgId："+imgId);
+                xhr.send("imgId="+imgId+"&goodType="+"花");
+            }
+        }
+    }
+</script>
+</body>
+</html>

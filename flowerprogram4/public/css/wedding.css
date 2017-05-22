@@ -1,0 +1,455 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.blank{
+    height: 0px;
+    clear: both;
+}
+#header{
+    width: 1349px;
+    height: 110px;
+    background-color: rgba(25, 21, 15, 0.51);
+    z-index: 4;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+}
+/*包含内容的大模块*/
+#container{
+    width: 1349px;
+    height: 1px;
+    overflow:auto;
+    /*  border: 1px solid red;*/
+    margin-top: 112px;
+
+
+}
+#main{
+    overflow:hidden;
+    /*border: 1px solid black;*/
+    width: 1349px;
+    height: auto;
+    position: absolute;
+    top: 300px;
+    left: 0px;
+    z-index: 2;
+
+}
+/*固定的背景图*/
+#bac{
+    background-image: url("../images/50.png");
+    background-size: 1349px;
+    width: 1349px;
+    height: 700px;
+    position: fixed;
+    left: 0px;
+    top: 110px;
+    z-index: 0;
+    background-color: #dfdcdd;
+
+}
+.main_contain1{
+    margin: 0 auto;
+    width: 900px;
+}
+/*内部小模块设置*/
+/*包含内容的每一个块*/
+.space{
+    width: 1000px;
+    height:800px;
+    background-color: white;
+    z-index: 2;
+    margin-top: 30px ;
+    box-shadow: 0px 0px 0px lightgray,
+    8px 8px 10px lightgray,
+    8px 8px 10px lightgray,
+    -8px 8px 10px lightgray;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/*块里的导航部分*/
+.space1{
+    background-color: rgba(255, 0, 0, 0.74);
+    height: 50px;
+    width: 850px;
+    line-height: 50px;
+    text-align: center;
+    margin: 15px auto;
+
+}
+/*块里导航前面留白，margin-top失去效果了*/
+.space_blank{
+    width: 900px;
+    height:20px;
+}
+/*块里导航部分文字*/
+.space p{
+    font-size: 14px;
+    padding-bottom: 5px;
+    letter-spacing: 3px;
+    color: #95aa92;
+    /* font-family: "微软雅黑";*/
+}
+
+
+/*花的内容*/
+.flower_one{
+    width: 400px;
+    float: left;
+    height: 250px;
+    margin-left: 30px;
+    margin-top: 20px;
+
+}
+/*第一个版块内容的定位(注释的即为js后的效果)*/
+/*/!*第一个版块的第一层2种花*!/
+#flower_one0{
+    position: absolute;
+    left:60px;
+    top: 110px;
+}
+#flower_one1{
+    position: absolute;
+    right: 30px;
+    top: 200px;
+}
+/!*第一个版块的第三个花*!/
+#flower_two1{
+    position: absolute;
+    left: 60px;
+    bottom: 160px;
+}
+/!*第一个版块的最后一种花*!/
+#flower_two{
+    position: absolute;
+    right: 30px;
+    bottom: 70px;
+}*/
+/*第一个版块的第一层2种花*/
+#flower_one0{
+    position: absolute;
+    left:-500px;
+    top: 110px;
+}
+#flower_one1{
+    position: absolute;
+    right: -500px;
+    top: 200px;
+}
+/*第一个版块的第三个花*/
+#flower_two1{
+    position: absolute;
+    left:-500px;
+    bottom: 150px;
+}
+/*第一个版块的最后一种花*/
+#flower_two{
+    position: absolute;
+    right: -500px;
+    bottom: 70px;
+}
+
+
+/*第二个版块内容的定位（注释即为js后效果）*/
+/*/!*第二个版块的第一层花*!/
+#flower_space2_two{
+    position: absolute;
+    top: 200px;
+    left: 60px;
+}
+/!*第二个版块的第二个花*!/
+#flower_two2{
+    position: absolute;
+    top: 110px;
+    right: 30px;
+    text-align: left;
+}
+/!*第二个版块的第三个花*!/
+#space_flower_one{
+    position: absolute;
+    bottom:70px;
+    left: 60px;
+}
+/!*第二个版块的第四个花*!/
+#flower_one2{
+    position: absolute;
+    bottom: 160px;
+    right: 30px;
+}*/
+/*第二个版块的第一层花*/
+#flower_space2_two{
+    position: absolute;
+    top: 200px;
+    left: -500px;
+}
+/*第二个版块的第二个花*/
+#flower_two2{
+    position: absolute;
+    top: 110px;
+    right: -500px;
+  /*  text-align: left;*/
+}
+/*第二个版块的第三个花*/
+#space_flower_one{
+    position: absolute;
+    bottom:70px;
+    left: -500px;
+}
+/*第二个版块的第四个花*/
+#flower_one2{
+    position: absolute;
+    bottom: 160px;
+    right: -500px;
+}
+
+
+/*第三个版块内容的定位(注释即为js后效果)*/
+/*/!*第三个版块的第一个花*!/
+#space3_flower1{
+    position: absolute;
+    left: 60px;
+    top: 110px;
+}
+/!*第三个版块的第二个花*!/
+#flower_one3{
+    position: absolute;
+    right: 30px;
+    top: 200px;
+}
+/!*第三个版块的第三个花*!/
+#flower_two3{
+    position: absolute;
+    left:60px;
+    bottom: 160px;
+    text-align: left;
+}
+/!*第三个版块的最后一个花*!/
+#space3_flower3{
+    position: absolute;
+    right: 30px;
+    bottom: 70px;
+}*/
+
+/*第三个版块的第一个花*/
+#space3_flower1{
+    position: absolute;
+    left: -500px;
+    top: 110px;
+}
+/*第三个版块的第二个花*/
+#flower_one3{
+    position: absolute;
+    right: -500px;
+    top: 200px;
+}
+/*第三个版块的第三个花*/
+#flower_two3{
+    position: absolute;
+    left:-500px;
+    bottom: 160px;
+
+}
+/*第三个版块的最后一个花*/
+#space3_flower3{
+    position: absolute;
+    right: -500px;
+    bottom: 70px;
+}
+
+
+
+
+.space h3{
+    color: #a83248;
+}
+/*包含文字和包含图片的div浮动*/
+.flower_one div{
+    float: left;
+}
+/*图片div*/
+.flower_one .img{
+    width: 210px;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+/*图片*/
+.flower_one img{
+    width: 210px;
+    height: 200px;
+    transform: scale(1);
+    transition: all 2s;
+}
+.flower_one .img:hover img{
+    transform: scale(1.2);
+    transition: all 2s;
+}
+.img_shadow{
+    width: 190px;
+    height: 190px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+/*包含花价格和立即购买的文字的div*/
+.flower_name{
+    width: 150px;
+    height: 130px;
+    margin-top: 60px;
+}
+
+/*价格*/
+.flower_name .price{
+    padding: 10px;
+}
+/*立即购买*/
+.flower_name  a{
+    display: block;
+    text-decoration: none;
+    color: gray;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px solid gray;
+    margin: 0px auto;
+    font-size: 14px;
+}
+.flower_name a:hover{
+    background-color: gray;
+    color: white;
+    text-decoration: underline;
+}
+
+
+
+
+/*花的第二层*/
+.flower_two{
+    float: left;
+    width: 400px;
+    height: 250px;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.flower_two div{
+    float: left;
+}
+/*图片div*/
+.flower_two .img{
+    width: 210px;
+    height: 250px;
+    overflow: hidden;
+}
+/*图片*/
+.flower_two img{
+    width: 220px;
+    height: 210px;
+    transform: scale(1);
+    transition: all 2s;
+}
+.flower_two .img:hover img{
+    transform: scale(1.2);
+    transition: all 2s;
+}
+/*专属版块文字*/
+.flower_words{
+    float: left;
+    width: 240px;
+    height: 230px;
+
+}
+
+/*/!*专属版块文字的共有样式*!/
+/*第二个版块的第一层样式*/
+.space2_first_flower{
+    margin-top: 50px;
+}
+/*第二个版块的第二层样式*/
+.space2_second_flower{
+    height: 202px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+/*第二个版块的文字部分*/
+
+#space3_words{
+    margin-left: 30px;
+}
+/*第三个版块调整*/
+#space3{
+    height: 300px;
+    margin-top: 20px;
+}
+
+
+#space1_header{
+    background-color: #dcc5b6;
+    margin:-200px auto;
+}
+#space2_header{
+    background-color: #c8ccde;
+    margin:-200px auto;
+}
+#space3_header{
+    background-color: #e3d7d3;
+    margin:-200px auto;
+}
+
+#space0{
+    opacity: 0;
+}
+#space1{
+    opacity: 0;
+}
+#space2{
+    opacity: 0;
+}
+/*最后一个版块*/
+#space_last{
+    height: 300px;
+    width: 1000px;
+    text-align: center;
+    background-image: url("../images/28.jpg");
+    background-size: 1000px 300px;
+}
+#space_last h2{
+    padding-top: 80px;
+}
+#space_last h3{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#space_last a{
+    color: gray;
+}
+/*footer设置*/
+#footer {
+    margin-top: 30px;
+    height: 100px;
+    width: 1349px;
+    background-color: rgba(25, 21, 15, 0.5);
+    z-index: 2;
+}
+
+/*
+.flower_words{
+    border: 1px solid red;
+}
+.flower_two{
+    border: 1px solid blue;
+}
+.flower_one{
+    border: 1px solid yellow;
+}
+.img{
+    border: 1px solid black;
+}
+.flower_name{
+    border: 1px solid green;
+}
+*/

@@ -1,0 +1,153 @@
+<!--<link rel="stylesheet" href="css/index.css"/>-->
+<header class="head">
+    <img src="../images/logo.png" alt=""/>
+    <ul>
+        <li class="navOne"><a href="index.html">首页</a></li>
+        <li class="helpChoose">帮我选花
+            <ul class="chooseFlower">
+                <li class="holiday">节日
+                    <ul id="holidayChoose">
+                        <li><a href="faD.html">父亲节</a></li>
+                        <li><a href="MotherDay.html">母亲节</a></li>
+                        <li><a href="qixi.html">七夕节</a></li>
+                    </ul>
+                </li>
+                <li><a href="birthday.html">生日</a></li>
+                <li><a href="wedding.html">求婚</a></li>
+                <li><a href="sh.html">其它</a></li>
+            </ul>
+        </li>
+        <li class="navThree"><a href="orderGoods.html">预定</a></li>
+        <li class="navFour">私人定制
+            <ul>
+                <li><a href="Pt.html">线下定制</a></li>
+            </ul>
+        </li>
+        <li class="navFive"><a href="../huayu.html">花语</a></li>
+        <li class="navSix"><a href="festival.html">节日活动</a></li>
+        <li class="navSevens" id="navSeven">鲜花周边
+            <ul id="flowerRounds">
+                <li><a href="lihe.html">礼盒</a></li>
+                <li><a href="huapen.html">盆栽</a></li>
+                <li><a href="BaoZhuangZhi.html">包装纸</a></li>
+            </ul>
+        </li>
+
+        <li class="navEight"><a href="../cycleBuy.html">VIP周期购</a></li>
+      <!--  <li class="navEight"><a href="cycleDetails.html">VIP周期购</a></li>-->
+        <li class="navNine"><a href="../shareStory.html">分享你的故事</a></li>
+    </ul>
+
+    <input id="searchInput" type="text"/>
+    <span id="searchBtn" class="fa fa-search"></span>
+
+    <div class="logandreg" id="logandreg" style="left:1190px;">
+        <div class="forms" id="form1">登录</div>
+        <div class="forms" id="form2">注册</div>
+    </div>
+    <div class="vip"><a href="../registerVip.html">成为VIP</a></div>
+    <span id="car" class="fa fa-shopping-cart" onclick="javascript:window.location.assign('shoppingCart.html')"></span>
+    <!--<ul id="controlls">
+        <li>控制台</li>
+        <li>用户名</li>
+        <li>个人中心</li>
+        <li>退出账号</li>
+        &lt;!&ndash;<span id="showDown" class="fa fa-sort-desc"></span>&ndash;&gt;
+    </ul>-->
+</header>
+
+<ul id="controlls">
+    <li class="one">控制台</li>
+    <li id="pUsername"></li>
+    <li id="centers">个人中心</li>
+    <li id="goBack">退出账号</li>
+    <span id="showDown" class="fa fa-sort-desc"></span>
+</ul>
+<!--<div class="personHead" id="personHead">
+    <img id="headers" src="../images/head.png" alt=""/>
+</div>-->
+
+
+
+<!--这是登录注册的面板界面-->
+<div class="logreg" id="logreg">
+    <div class="login" id="login"><!--这是登录部分-->
+        <div class="closebtn">
+            <span class="fa fa-times"></span>
+        </div>
+        <div class="login-regin-switch" id="logtoreg">
+            <span class="fa fa-toggle-on" id="temp"></span>
+            <label for="temp">切换注册</label>
+
+        </div><h1>登录</h1>
+        <span id="logStatus">账号或密码错误</span>
+        <div class="signform">
+            <span class="fa fa-user" style="left: 323px"></span>
+            <input type="text" id="logusername" onkeydown="javascript:if(event.keyCode==32)event.returnValue=false;" name="username" placeholder=" 请输入用户名">
+            <span id="logUsernamStauts">用户名不能少于3个字符</span>
+            <span id="logLock" class="fa fa-lock"></span>
+            <input type="password" id="logpassword" onkeydown="javascript:if(event.keyCode==32)event.returnValue=false;" name="password" placeholder=" 请输入密码">
+            <span id="logPwdStauts">密码不能少于6个</span>
+            <div class="checkboxa">
+                <label for="remenber"><input id="remenber" type="checkbox" >请记住我的登录</label>
+                <a href="#"> 忘记密码？</a>
+            </div>
+            <input id="logBtn" type="submit" value="登录">
+        </div>
+        <hr/>
+        <div class="qqlogin">
+            <p>您也可以使用第三方账号登录</p>
+            <div class="qqloginlogo">
+                <span class="fa fa-qq" ></span>
+                QQ账号登录
+            </div>
+        </div>
+
+    </div>
+
+    <!--这是注册部分-->
+    <div class="regin" id="regin">
+        <!-- 关闭按钮-->
+        <div class="closebtn">
+            <span class="fa fa-times"></span>
+        </div>
+        <div class="login-regin-switch" id="regtolog">
+            <span class="fa fa-toggle-off" id="temp1" ></span>
+            <label for="temp1">切换登录</label>
+        </div>
+        <h1>注册</h1><!--action="/register.do"-->
+        <span id="regStatus">该邮箱已被注册</span>
+        <div class="signform signform1">
+            <span class="fa fa-user" style="left: 323px"></span>
+            <input type="text" id="regusername" onkeydown="javascript:if(event.keyCode==32)event.returnValue=false;" name="username" placeholder=" 输入英文用户名">
+            <span id="usernamStauts">用户名不能少于3个字符</span>
+            <span id="envelope" class="fa fa-envelope" style="left: -34px"></span>
+            <input type="text" id="reguseraddr" onkeydown="javascript:if(event.keyCode==32)event.returnValue=false;" name="email" placeholder=" 输入常用邮箱">
+            <span id="emailStauts">请输入正确的邮箱</span>
+            <span id="lockone" class="fa fa-lock" style="left: -16px"></span>
+            <input type="password" id="regpassword" onkeydown="javascript:if(event.keyCode==32)event.returnValue=false;" name="password" placeholder=" 密码最小长度为6">
+            <span id="pwdStauts">密码不能少于6个</span>
+            <span id="locktwo" class="fa fa-retweet"></span>
+            <input type="password" id="regrepassword" onkeydown="javascript:if(event.keyCode==32)event.returnValue=false;" name="repassword" placeholder=" 再次输入密码">
+            <span id="repwdStauts" style="margin-top: -15px">两次密码不一致</span>
+            <span id="lockthree" class="fa fa-mobile-phone"></span>
+            <input type="tel" id="tel" name="repassword" onkeydown="javascript:if(event.keyCode==32)event.returnValue=false;" placeholder=" 输入电话号码">
+            <span id="telStauts">请输入正确格式号码</span>
+            <input type="submit" id="zhuce" value="注册">
+        </div>
+        <hr id="zhucehr"/>
+        <div class="qqlogin qqlogin1">
+            <p>您也可以使用第三方账号登录</p>
+            <div class="qqloginlogo">
+                <span class="fa fa-qq"></span>
+                QQ账号登录
+            </div>
+        </div>
+    </div><!--注册end-->
+</div><!--登录注册的大面板end-->
+
+<!--这是覆盖整个屏幕的div-即当点击登录注册后，要一个覆盖面板盖住所有可点击区域-->
+<div id="cover">
+</div>
+
+

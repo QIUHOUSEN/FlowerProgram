@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绿色盆栽</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="../css/PenZaiCss.css">
+    <link rel="stylesheet" href="css/yewei.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+
+</head>
+<body>
+<%- include head.html %>
+<div id="wrapper">
+
+    <div class="Banner_picutre"><img src="../images/banner.jpg">
+        <div class="banner_p"><p>&nbsp;&nbsp;绿是水的颜色,是山的颜色.它覆盖了整个地球.高山流水是清幽之景,绿色之致,无论你处何时在何处,绿色总伴你身边,因为绿色是生命之色.</p></div>
+
+    </div>
+    <div class="BiaoTI">
+        <p class="BTh3_2">BEST SELLER FOR YOU</p> <p class="BTh3_1">绿色盆栽</p><img class="logo_1" src="../images/1_03.png" alt=""><img class="logo_2" src="../images/1_05.png" alt=""></div>
+
+    <div class="ProductPicture">
+        <!-- <div class="product_1"><img src="../images/9.jpg"><p class="p_1">情窦初开</p><p class="p_2">死生契阔，与子成说。执子之手，与子偕老。</p>
+             <div class="zhezhao_1"><img src="../images/baozhuangzhi/logo_blackgrey.png" alt=""><h2>￥3.00</h2></div>
+         </div>
+         <div class="product_1"><img src="../images/1.jpg"><p class="p_1">长相思</p><p class="p_2">每一次呼吸、每一次闭上眼、我都会把我对你的思念加深</p>
+             <div class="zhezhao_1"><img src="../images/baozhuangzhi/logo_blackgrey.png" alt=""><h2>￥3.00</h2></div>
+
+         </div>
+         <div class="product_1"><img src="../images/3.jpg"><p class="p_1">爱琴海之吻</p><p class="p_2">爱一个人，是一辈子。如果我的等待可以换来多年前你一...</p>
+             <div class="zhezhao_1"><img src="../images/baozhuangzhi/logo_blackgrey.png" alt=""><h2>￥3.00</h2></div>
+
+         </div>
+         <div class="product_1"><img src="../images/6.jpg"><p class="p_1">心情传递</p><p class="p_2">落叶知秋，友情永久，风渐凉时须无烦；岁月难留，蓦然...</p>
+             <div class="zhezhao_1"><img src="../images/baozhuangzhi/logo_blackgrey.png" alt=""><h2>￥3.00</h2></div>
+
+         </div>
+         <div class="product_1"><img src="../images/8.jpg"><p class="p_1">光阴的故事</p><p class="p_2">光阴的故事里有你有我，青春的记忆里相依相伴！未来的...</p>
+             <div class="zhezhao_1"><img src="../images/baozhuangzhi/logo_blackgrey.png" alt=""><h2>￥3.00</h2></div>
+
+         </div>
+         <div class="product_1"><img src="../images/5.jpg"><p class="p_1">清香</p><p class="p_2">淡淡的清香，是妈妈的味道，是深深的爱！</p>
+             <div class="zhezhao_1"><img src="../images/baozhuangzhi/logo_blackgrey.png" alt=""><h2>￥3.00</h2></div>
+         </div>-->
+        <div class="jq22-container">
+            <header class="jq22-header bgcolor-11">
+            </header>
+            <div class="jq22-content">
+                <div class="flip-3d">
+                    <figure>
+                        <img src="<%=data[0].potted_src%>" alt="">
+                        <figcaption><img src="../images/jiaohua.png" alt=""><div  class="chakna_2" index="0">查看详情</div> <p style="display: none" class="idBox"><%= data[0].potted_id%></p></figcaption>
+                    </figure>
+                    <p class="p_1">情窦初开</p><p class="p_2">死生契阔，与子成说。执子之手，与子偕老。</p>
+                </div>
+
+                <div class="flip-3d">
+                    <figure>
+                        <img src="<%=data[1].potted_src%>" alt="">
+                        <figcaption><img src="../images/jiaohua.png" alt=""><div  class="chakna_2" index="1">查看详情</div> <p style="display: none" class="idBox"><%= data[1].potted_id%></p></figcaption>
+                    </figure>
+                    <p class="p_1">长相思</p><p class="p_2">每一次呼吸、每一次闭上眼、我都会把我对你的思念加深</p>
+                </div>
+                <div class="flip-3d">
+                    <figure>
+                        <img src="<%=data[2].potted_src%>" alt="">
+                        <figcaption><img src="../images/jiaohua.png" alt=""><div  class="chakna_2" index="2">查看详情</div> <p style="display: none" class="idBox"><%= data[2].potted_id%></p></figcaption>
+                    </figure>
+                    <p class="p_1">爱琴海之吻</p><p class="p_2">爱一个人，是一辈子。如果我的等待可以换来多年前你一...</p>
+                </div>
+                <div class="flip-3d">
+                    <figure>
+                        <img src="<%=data[3].potted_src%>" alt="">
+                        <figcaption><img src="../images/jiaohua.png" alt=""><div  class="chakna_2" index="3">查看详情</div> <p style="display: none" class="idBox"><%= data[3].potted_id%></p></figcaption>
+                    </figure>
+                    <p class="p_1">心情传递</p><p class="p_2">落叶知秋，友情永久，风渐凉时须无烦；岁月难留，蓦然...</p>
+                </div>
+                <div class="flip-3d">
+                    <figure>
+                        <img src="<%=data[4].potted_src%>" alt="">
+                        <figcaption><img src="../images/jiaohua.png" alt=""><div  class="chakna_2"  index="4">查看详情</div> <p style="display: none" class="idBox"><%= data[4].potted_id%></p></figcaption>
+                    </figure>
+                    <p class="p_1">光阴的故事</p><p class="p_2">光阴的故事里有你有我，青春的记忆里相依相伴！未来的...</p>
+                </div>
+                <div class="flip-3d">
+                    <figure>
+                        <img src="<%=data[5].potted_src%>" alt="">
+                        <figcaption><img id="jiaohua" src="../images/jiaohua2.png" alt=""><div class="chakna_2" index="5">查看详情</div> <p style="display: none" class="idBox"><%= data[5].potted_id%></p></figcaption>
+                    </figure>
+                    <p class="p_1">清香</p><p class="p_2">淡淡的清香，是妈妈的味道，是深深的爱！</p>
+                </div>
+            </div>
+
+        </div></div>
+    <div id="content"><p class="p_content_1">茉莉花，它虽然没有玫瑰花的美，没有牡丹花的高贵，没有杜鹃的艳姿。它含苞欲放，它清香宜人，它轻俗动人，它芳香沁人。在柔嫩的枝条上，茉莉花从层叠的绿叶中露出娇羞的小脸，雪白的花瓣在清风中微微颤抖着，使空气中弥漫起淡淡的清香。</p>
+        <img src="../images/111.jpg"  ></div>
+
+</div>
+<%- include foot.html %>
+<script src="../js/PenZai/penzai.js"></script>
+<!--<script src="js/index.js"></script>-->
+<script src="js/fenxiang.js"></script>
+<script src="../js/head.js"></script>
+<script src="../js/checkLogStatus.js"></script>
+</body>
+</html>

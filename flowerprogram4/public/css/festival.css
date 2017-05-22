@@ -1,0 +1,185 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+#container{
+    width: 100%;
+    font-family: "微软雅黑";
+}
+#header{
+    width: 1349px;
+    height: 110px;
+    margin: 0 auto;
+    background-color: darkslategrey;
+}
+.blank{
+    height: 0px;
+    width: 100%;
+    clear: both;
+}
+
+#contain{
+    width: 1349px;
+    height: 530px;
+    margin: 0 auto;
+    position: relative;
+}
+#first_festival{
+    width: 1349px;
+    height:550px;
+    background-image: url("../images/32.png");
+    /*background-size: 1349px 550px ;*/
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.festival_word{
+    width: 100px;
+    height: 50px;
+    border: 1px solid gray;
+    /* background-color: gray;*/
+    color: black;
+    text-decoration: underline;
+    position:absolute;
+    top:25px;
+    left: 25px;
+}
+
+.festival_word .one_word{
+    line-height: 50px;
+    text-align: center;
+}
+.festival_activity:hover  .festival_one{
+    opacity: 0.5;
+    transition: all 1s;
+}
+.festival_one{
+    width: 200px;
+    height: 200px;
+   /* border-radius: 200px;*/
+   /* text-align: center;*/
+    border: 1px solid black;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+    color:white;
+    background-color: black;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.festival_one a{
+    color:red;
+}
+.festival_one p{
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+.festival_one p:first-child{
+    margin-top: 40px;
+}
+/*时间轴*/
+.time{
+    position: absolute;
+    left: 0px;
+    top: 610px;
+    z-index: 10;
+}
+.time span{
+    float: left;
+}
+/*时间轴上圆形*/
+ .time .time_circle{
+     display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    border: 1px solid gray;
+    background-color: white;
+}
+/* 时间轴上横线*/
+ .time .time_line{
+     display: block;
+     width:320px;
+     height: 1px;
+     background-color: white;
+     margin-top: 10px;
+ }
+
+
+ .festival_activity1{
+     width: 300px;
+     height: 300px;
+     border: 2px solid white;
+     margin: 100px auto;
+ }
+.festival_activity1 .festival_activity1_middle{
+    width: 250px;
+    height: 250px;
+   /* border: 1px solid white;*/
+    background-color: rgba(255,255,255,0.6);
+    color: #7d912b;
+    margin-left: 25px;
+    margin-top: 25px;
+    text-align: center;
+}
+.festival_activity1 .festival_activity1_middle p{
+    margin-bottom: 5px;
+}
+.festival_activity1_middle p:nth-child(1){
+    padding-top: 50px;
+}
+.festival_activity1 .festival_activity1_middle p:last-child{
+    margin-top: 30px;
+}
+.festival_activity1 .festival_activity1_middle a{
+    color: rgba(255, 0, 0, 0.6);
+
+}
+/*父亲节*/
+#second_festival{
+     width: 1349px;
+     height:550px;
+     background-image: url("../images/36.png");
+     background-size: 1349px 550px ;
+     position: absolute;
+     top: 0px;
+     left: 0px;
+ }
+@-webkit-keyframes animation_1{
+    from{left:0px;}
+    to{left:-1349px;}
+}
+@-webkit-keyframes animation_2{
+    from{left:1349px;}
+    to{left:0px;}
+}
+
+#contain{
+    overflow: hidden;
+}
+#first_festival{
+    left: 0px;
+    z-index: 1;
+}
+#second_festival{
+    z-index: 2;
+    left: 1349px;
+}
+#third_festival{
+    left: 2689px;
+    z-index: 3;
+}
+
+/*母亲节*/
+#third_festival{
+    width: 1349px;
+    height:550px;
+    background-image: url("../images/37.png");
+    /*background-size: 1349px 550px ;*/
+    position: absolute;
+    top: 0px;
+
+}
+

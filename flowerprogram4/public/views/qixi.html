@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../css/qixi.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/yewei.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<%- include head.html %>
+<!--bannar-->
+<div id="bannar" onclick="ss()">
+    <div>
+        field's floar
+    </div>
+    <div>
+        &nbsp;&nbsp;浮动的花园 祝天下有情人终成眷属
+    </div>
+   <img id="tiaoDong" src="../images/43_03.png">
+</div>
+<!--box-->
+<div id="box">
+    <!--center-->
+    <div id="center">
+        <div id="remai" class="block" data-move-x="-200px">
+          <div id="remai1">
+              <div id="tuH1">
+                  <p style="display: none" class="idBox"><%= data[0].flower_id %></p>
+                  <img src="<%= data[0].flower_src %>" alt="" style="width: 350px;height: 350px">
+              </div>
+              <div id="tuH2">
+                  <div>一生挚爱<span>（99只）</span></div>
+                  <div>没有多大的喜事，除了你也爱我，这辈子最大的理想就是娶到你</div>
+                  <div><span>￥</span>520</div>
+                  <button class="img_look" index="0"><a href="#">送给她</a></button>
+              </div>
+          </div>
+        </div>
+        <div id="chenglie">
+            <div id="wenzi" class="block" data-move-x="200px">
+                这个最贵的<span>情人节</span>不再昂贵
+            </div>
+            <div class="block hua1" data-move-x="-200px" >
+                <div class="hua1_1">
+                    <p style="display: none" class="idBox"><%= data[1].flower_id %></p>
+                    <img src="<%=data[1].flower_src%>" style="width: 200px;height: 200px">
+                </div>
+                <div class="hua1_2">
+                    <div>永生玫瑰<span>（一盒）</span></div>
+                    <div>有些时候，爱一个人太深会醉，这是我想告诉她，我爱她</div>
+                    <div><span>￥</span>208</div>
+                    <button class="img_look" index="1"><a href="#">送给她</a></button>
+                </div>
+            </div>
+            <div class="hua2 block" data-move-x="-200px">
+                <div class="hua2_1">
+                    <div>香槟<span>（33枝）</span></div>
+                    <div>未来是什么，我没有态度，但就在现在，我知道我爱上你</div>
+                    <div><span>￥</span>188</div>
+                    <button class="img_look" index="2"><a href="#">送给她</a></button>
+                </div>
+                <div class="hua2_2">
+                    <p style="display: none" class="idBox"><%= data[2].flower_id %></p>
+                    <img src="<%=data[2].flower_src%>" style="width: 200px;height: 200px">
+                </div>
+
+            </div>
+            <div class="hua3 block" data-move-x="200px">
+                <div class="hua3_1">
+                    <p style="display: none" class="idBox"><%= data[3].flower_id %></p>
+                    <img src="<%=data[3].flower_src%>" style="width: 200px;height: 200px">
+                </div>
+                <div class="hua3_2">
+                    <div>彩虹玫瑰<span>（3枝）</span></div>
+                    <div>每个心怀爱情的人，都收到过爱情的伤，其实有些时候，表达情感，没有那么为难</div>
+                    <div><span>￥</span>128</div>
+                    <button class="img_look" index="3"><a href="#">送给她</a></button>
+                </div>
+            </div>
+            <div class="hua4 block" data-move-x="200px" data-move-y="200px">
+                <div class="hua4_1">
+                    <div>白玫瑰<span>（11枝）</span></div>
+                    <div>只有这纯洁的花朵，才配得上我们纯洁的爱情，和你在一起，我觉得世界都变得美好了</div>
+                    <div><span>￥</span>168</div>
+                    <button class="img_look" index="4"><a href="#">送给她</a></button>
+                </div>
+                <div class="hua4_2">
+                    <p style="display: none" class="idBox"><%= data[4].flower_id %></p>
+                    <img src="<%=data[4].flower_src%>" style="width: 200px;height: 200px">
+                </div>
+            </div>
+            <div class="hua5 block"  data-move-x="200px">
+                <div class="hua5_1">
+                    <p style="display: none" class="idBox"><%= data[5].flower_id %></p>
+                    <img src="<%=data[5].flower_src%>" style="width: 200px;height: 200px">
+                </div>
+                <div class="hua5_2" >
+                    <div>桃红色玫瑰<span>（29枝）</span></div>
+                    <div>小小的誓言，淡淡的笑颜，初恋的颜色带着浓浓的甜蜜，选对了人，天天都有情人节</div>
+                    <div><span>￥</span>188</div>
+                    <button class="img_look" index="5"><a href="#">送给她</a></button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>
+<%- include foot.html %>
+<script src="../js/qiXi.js"></script>
+<script src="../js/qxjs_1/jquery.min.js"></script>
+<script src="../js/qxjs_1/jquery.smoove.js"></script>
+<script src="../js/head.js"></script>
+<script src="../js/checkLogStatus.js"></script>
+<script>$('.block').smoove({offset:'40%'});</script>
+<script src="js/index.js"></script>
+<script src="js/fenxiang.js"></script>
+</body>
+</html>

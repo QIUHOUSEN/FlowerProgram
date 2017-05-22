@@ -1,0 +1,1286 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+.head{
+    width: 100%;
+    height: 110px;
+    /*background-color: rgba(0,0,0,0.7);*/
+    background-color:rgba(0,0,0,1);
+    color: white;
+    /*position: relative;*/
+    text-align: center;
+    opacity: 1;
+    z-index: 99;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+
+
+}
+/*.controlls>li>a:link{
+    color:white;
+    text-decoration: none;
+}*/
+
+#dasheds:hover{
+    color: white;
+}
+
+.goodInfo a:link{
+    color:#A4BD6B;
+    text-decoration: none;
+}
+.goodInfo a:visited{
+    color:#A4BD6B;
+}
+.goodInfo a:hover{
+    color:white;
+}
+
+.head a:link{
+    color:white;
+    text-decoration: none;
+}
+.head a:visited{
+    color:white;
+}
+.head>img{
+    width: 50px;
+    height: 50px;
+}
+.head>ul{
+    list-style-type: none;
+    background-color: blue;
+    margin-top: 15px;
+    z-index: 99;
+}
+.head>ul>li{
+    float: left;
+    margin-left: 10px;
+    width: 100px;
+}
+.head>ul>li:hover{
+    cursor: pointer;
+}
+
+.head>input{
+    width: 0px;
+    /*width: 140px;*//*这个是正常时候的*/
+    /*opacity: 0.1;*/
+    background-color: white;
+    /*border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    color: white;*/
+    /*color: white;*/
+    outline: none;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 6px;
+    position: absolute;
+    right: 180px;/*这个是正常时候的*/
+    top: 60px;
+    border: none;
+    transition: width 0.3s linear;
+    /*padding-left: 35px;*//*这个是正常时候的*/
+
+}
+.head>span{
+    color: white;
+    position: absolute;
+    right: 180px;/*这个是正常时候的*/
+    cursor: pointer;
+}
+.vip{
+    position: absolute;
+    right: 70px;
+    top: 30px;
+    font-size: 16px;
+    /*color: rgba(232, 171, 39, 0.9);*/
+    color: white;
+    cursor: pointer;
+}
+.vip:hover{
+    color: rgba(232, 171, 39, 0.9);
+}
+#car{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.fa-shopping-cart{
+    color:#FF6600;
+}
+#car:hover{
+    color: rgba(232, 171, 39, 0.9);
+}
+
+
+
+
+
+.chooseFlower{
+    list-style-type: none;
+    width: 120px;
+    height: 140px;
+    /*background-color: green;*/
+    display: none;
+    margin-left: -10px;
+    text-align: center;
+    /*margin-top: 24px;*/
+    margin-top: 20px;
+}
+.chooseFlower>li{
+    height: 35px;
+    line-height: 35px;
+    background-color: black;
+
+}
+.chooseFlower>li:hover{
+    background-color:rgba(0,0,0,0.7);
+
+}
+#holidayChoose{
+    list-style-type: none;
+    width: 120px;
+    height: 105px;
+    text-align: center;
+    margin-left: 120px;
+    margin-top: -35px;
+    background-color: black;
+    display: none;
+}
+#holidayChoose>li:hover{
+    background-color: rgba(130,130,130,0.6);
+}
+.holiday:hover #holidayChoose{
+    display: block;
+}
+
+
+.navFour>ul{
+    background-color: black;
+    list-style-type: none;
+    margin-top: 20px;
+    height: 35px;
+    line-height: 35px;
+    display: none;
+}
+.navFour>ul>li:hover{
+    background-color: rgba(130,130,130,0.6);
+}
+.navFour:hover ul{
+    display: block;
+}
+
+
+
+.navSevens>ul{
+    list-style-type: none;
+    background-color: black;
+    height: 105px;
+    margin-top: 20px;
+    width: 100px;
+    /*margin-left: -10px;*/
+    display: none;
+}
+.navSevens>ul>li{
+    height: 35px;
+    line-height: 35px;
+    width: 100px;
+}
+.navSevens>ul>li:hover{
+    background-color: rgba(130,130,130,0.6);
+}
+.navSevens:hover{
+    height: 170px;
+}
+
+.navSevens:hover #flowerRounds{
+    display: block;
+}
+
+
+
+
+
+
+.helpChoose:hover .chooseFlower{
+    display: block;
+}
+.navOne{
+    margin-right: -15px;
+}
+.helpChoose{
+    margin-right: -10px;
+}
+.navThree{
+    margin-right: -10px;
+}
+.navFour{
+    margin-right: -10px;
+}
+.navFive{
+    margin-right: -15px;
+}
+.navEight{
+    margin-right: 20px;
+}
+/*
+.navSeven{
+    margin-right: -1px;
+}
+.navSix{
+    margin-right: -1px;
+}
+*/
+
+
+
+/*这个是banner轮播图效果*/
+.wrapAll{
+    width: 1349px;
+    height: 670px;
+    position: absolute;
+    left: 0;
+    top: 110px;
+    z-index: 0;
+    /*background-color: red;*/
+    overflow: hidden;
+
+}
+.langdiv{
+    width: 6745px;
+    height: 670px;
+    position: relative;
+    left: -1349px;
+    /*transition: left 0.4s linear;*/
+}
+.imgdivs{
+    width: 1349px;
+    height: 670px;
+    float: left;
+    cursor: pointer;
+    position: relative;
+}
+.imgdivs img{
+    width: 1349px;
+    height: 670px;
+}
+.leftdiv{
+    position: absolute;
+    left: 0;
+    top: 220px;
+    z-index: 100;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    /*background-color: rgba(40, 46, 108, 0.93);*/
+    color: white;
+    cursor: pointer;
+}
+.rightdiv{
+    position: absolute;
+    right: 0;
+    top: 220px;
+    z-index: 100;
+    font-size: 40px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    /*background-color: rgba(40, 46, 108, 0.93);*/
+    color: white;
+    cursor: pointer;
+}
+
+.wrapBtns{
+    width: 300px;
+    height: 16px;
+    position: absolute;
+    /*background-color: red;*/
+    left: 600px;
+    bottom: 10px;
+}
+.wrapBtns>div{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    /*background-color: blue;*/
+    float: left;
+    margin-left: 18px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.on{
+    background-color: #00c3b6;
+}
+.imgdivs>p{
+    color: white;
+    position: absolute;
+    font-size: 31px;
+    top: 250px;
+    left: 700px;
+    width: 300px;
+    height: 60px;
+    line-height: 60px;
+}
+
+
+/*这个是第三行的东西*/
+.rowThree{
+    position: relative;
+    width: 1349px;
+    height: 480px;
+    /*background-color: gray;*/
+    margin-top: 670px;
+}
+.rowThree>h1{
+    position: absolute;
+    left: 230px;
+    top: 80px;
+    color: rgba(164,189,107,1);
+}
+.rowThree>p:nth-of-type(1){
+    position: absolute;
+    left: 230px;
+    top: 150px;
+    /*color: rgba(164,189,107,1);*/
+    color: rgba(96, 96, 96, 0.73);
+}
+.rowThree>p:nth-of-type(2){
+    position: absolute;
+    left: 230px;
+    top: 200px;
+    width: 400px;
+    height: 30px;
+    line-height: 30px;
+    /*color: rgba(164,189,107,1);*/
+    color: rgba(96, 96, 96, 0.73);
+}
+.rowThree>div:nth-of-type(1){
+    width: 140px;
+    height: 30px;
+    border: 1px solid rgba(164,189,107,1);
+    text-align: center;
+    line-height: 30px;
+    left: 490px;
+    top: 320px;
+    position: absolute;
+    border-radius: 5px;
+    color: rgba(164,189,107,1);
+    cursor: pointer;
+}
+.rowThree>div:nth-of-type(1):hover{
+    background-color: rgba(164,189,107,1);
+}
+/*.rowThree>div:nth-of-type(1):hover .goodInfo a{
+    color: white;
+    background-color: rgba(164,189,107,1);
+}*/
+
+
+.rowThree>div:nth-of-type(2){
+    /*width: 140px;
+    height: 30px;*/
+    /*border: 1px solid rgba(164,189,107,1);*/
+    text-align: center;
+    /*line-height: 30px;*/
+    right: 230px;
+    top: 80px;
+    position: absolute;
+    /*border-radius: 5px;*/
+    box-shadow: 5px 5px 8px rgba(206,206,206,0.9);
+    transition: top 0.4s linear;
+}
+.rowThree>div:nth-of-type(2)>img{
+    width: 380px;
+    height: 530px;
+
+}
+.rowThree>div:nth-of-type(3){
+    position: absolute;
+    left: 130px;
+    top: 380px;
+    z-index: 99;
+}
+.rowThree>div:nth-of-type(3)>img{
+    width: 120px;
+    height: 170px;
+}
+
+
+/*这里是第四行的内容*/
+.rowFour>img{
+    opacity: 0.3;
+}
+
+.rowFour{
+    height: 280px;
+    /*opacity: 0.3;*/
+    position: relative;
+    z-index: 0;
+}
+.rowFour>h1{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 80px;
+    left: 550px;
+    color: rgba(96, 96, 96, 0.73);
+}
+.rowFour>p{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    top: 130px;
+    left: 300px;
+    width: 800px;
+    color: rgba(96, 96, 96, 0.8);
+    text-indent: 30px;
+}
+
+
+/*这是第五行的内容*/
+.rowFive{
+    height: 650px;
+    /*background-color: red;*/
+    position: relative;
+}
+.rowFive>p{
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding-top: 60px;
+    color: rgba(164,189,107,1);
+    font-size: 31px;
+    border-bottom: 1px solid rgba(164,189,107,1);
+    width: 330px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.severalFlowers>span{
+    cursor: pointer;
+}
+.rowFive>div:nth-of-type(1){
+    text-align: center;
+    font-size: 12px;
+}
+.rowFive>div:nth-of-type(1)>span:nth-of-type(1){
+    color: rgba(164,189,107,1);
+}
+.containFlowers{
+    height: 430px;
+    /*background-color: gray;*/
+    width: 1349px;
+    position: absolute;
+}
+.flowerBox{
+    width: 250px;
+    height: 430px;
+    /*position: absolute;*/
+    float: left;
+    margin-left: 70px;
+    /*background-color: red;*/
+    margin-top: 200px;
+    transition: margin-top 0.5s linear;
+}
+.containFlowers>div:nth-of-type(1){
+    margin-left: 220px;
+}
+.flowerBox>span:nth-of-type(1){
+    margin-left: 30px;
+    color: rgba(96, 96, 96, 0.73);
+}
+.flowerBox>span:nth-of-type(2){
+    margin-left: 30px;
+    font-size: 20px;
+    color: rgba(164,189,107,1);
+}
+.flowerBox>img{
+    width: 277px;
+    height: 300px;
+}
+
+.flowerBox>div{
+    margin: 0 auto;
+    text-align: center;
+    /*background-color: red;*/
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    color: rgba(164,189,107,1);
+    border: 1px solid rgba(164,189,107,1);
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.flowerBox>div:hover{
+    color: white;
+    background-color: rgba(164,189,107,1);
+}
+#kangnaixin,#mudan,#dujuan{
+    display: none;
+}
+
+#clickShowChat{
+    position: fixed;
+    z-index: 9999;
+    bottom:30%;
+    right:10px;
+    width:100px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #6A9DCB;
+    color:white;
+    font-size:12px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 1px #AFCBE5;
+}
+#clickShowChat:hover{
+    cursor:pointer;
+    background-color: #0a6eb0;
+    color:white;
+    box-shadow: 1px 1px 2px 3px #cccccc;
+}
+/*这是第六行的内容*/
+.rowSix{
+    width: 1349px;
+    height: 670px;
+    /*background-color: red;*/
+    margin-top: 100px;
+}
+.rowSix>p:nth-of-type(1){
+    text-align: center;
+    padding: 10px;
+    color: rgba(164,189,107,1);
+    font-size: 31px;
+    width: 330px;
+    margin: 0 auto;
+    border-bottom: 2px solid rgba(164,189,107,1);
+}
+.rowSix>p:nth-of-type(2){
+    color: rgba(96, 96, 96, 1);
+    text-align: center;
+    padding-top: 20px;
+}
+.rowSix>p:nth-of-type(3){
+    color: rgba(96, 96, 96, 1);
+    text-align: center;
+    padding: 10px;
+}
+.choosedBox{
+    width: 300px;
+    height: 420px;
+    float: left;
+    margin-top: 50px;
+    position: relative;
+}
+.choosedBox>img{
+    width: 300px;
+    height: 420px;
+}
+.rowSix>div:nth-of-type(1){
+    margin-left: 75px;
+}
+.choosedBox .dasheds{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 270px;
+    height: 400px;
+    border: 1px dashed white;
+    z-index: 99;
+}
+.choosedBox .dasheds:hover{
+    background-color:rgba(164,189,107,0.4);
+
+}
+.choosedBox .dasheds:hover div{
+    display: block;
+
+}
+.dasheds>div{
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid rgba(164,189,107,1);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 150px;
+    color: white;
+    background-color: rgba(164,189,107,1);
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+.choosedBox>div:nth-of-type(2){
+    height: 120px;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(200,126,119,0.9);
+    width: 100%;
+}
+.choosedBox2>div:nth-of-type(2){
+    height: 120px;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(218,208,177,0.9);
+    width: 100%;
+}
+.choosedBox3>div:nth-of-type(2){
+    height: 120px;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(171,199,132,0.9);
+    width: 100%;
+}
+.choosedBox4>div:nth-of-type(2){
+    height: 120px;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(186,185,157,0.9);
+    width: 100%;
+}
+.choosedBox>div:nth-of-type(2)>p{
+    text-align: center;
+    margin-top: 30px;
+    width: 190px;
+    padding-left: 10px;
+    /*margin-right: 0px;*/
+    color: white;
+}
+.choosedBox>div:nth-of-type(2)>span{
+    position: absolute;
+    right: 20px;
+    top: 35px;
+    font-size: 26px;
+    color: white;
+}
+
+/*这是第七行的内容*/
+.rowSeven{
+    height: 150px;
+    width: 100%;
+}
+.rowSeven>div{
+    width: 130px;
+    height: 150px;
+    float: left;
+}
+.rowSeven>div:nth-of-type(1){
+    margin-left: 300px;
+
+}
+.rowSeven>div{
+    margin-right: 80px;
+}
+.rowSeven>div>img{
+    width: 120px;
+    height: 120px;
+}
+.rowSeven>div>p{
+    margin-left: 23px;
+}
+
+/*这里是页脚*/
+.foots{
+    margin-top: 50px;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+.col1{
+    width: 280px;
+    height: 300px;
+    /*background-color: red;*/
+    float: left;
+}
+.col1>img{
+    width: 80px;
+    height: 80px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+.col1>img:hover{
+    cursor: pointer;
+}
+
+.cols{
+    list-style-type: none;
+    width: 70px;
+    height: auto;
+    float: left;
+    padding: 25px;
+    /*text-align: center;*/
+}
+.cols>li{
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.cols>li:hover{
+    color: rgba(164, 164, 164, 0.9);
+}
+
+.cols>li:nth-of-type(1){
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.shares{
+    position: relative;
+    width: 400px;
+    float: left;
+}
+.shares>div:nth-of-type(1){
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+.shares>div:nth-of-type(1)>span{
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+.shares>div:nth-of-type(1)>span:hover{
+    color: rgba(168, 33, 41, 0.9);
+    cursor: pointer;
+}
+.shares>div:nth-of-type(2){
+    /*width: 120px;*/
+    height: 30px;
+    /*background-color: red;*/
+}
+.shares>div:nth-of-type(3)>img{
+    width: 120px;
+    height: 120px;
+}
+.shares>div:nth-of-type(3){
+    /*background-color: red;*/
+}
+
+.foots>p{
+    position: absolute;
+    top: 250px;
+    left: 305px;
+    text-align: center;
+    clear: both;
+}
+#controlls{
+    list-style-type: none;
+    /*background-color: rgba(0, 0, 0, 1);*/
+    background-color: rgba(10, 10, 11, 0.91);
+    position: absolute;
+    top: 60px;
+    right: 60px;
+    width: 80px;
+    /*height: 120px;*/
+    height: 30px;
+    z-index: 2000;
+    color: rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    border-radius: 5px;
+    display: none;
+
+}
+#controlls:hover{
+    height: 120px;
+}
+
+#controlls>li{
+    height: 30px;
+    line-height: 30px;
+    /*background-color: red;*/
+    clear: both;
+    z-index: 2000;
+    font-size: 13px;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+#controlls>li:not(.one):hover{
+    background-color: rgba(96, 93, 97, 0.37);
+}
+#controlls>span{
+    position: absolute;
+    right: 9px;
+    top: 4px;
+}
+.personHead{
+    position: absolute;
+    top: 60px;
+    right: 23px;
+    z-index: 1000;
+    border-radius: 5px;
+    display: none;
+
+}
+.personHead>img{
+    height: 35px;
+    height: 35px;
+    border-radius: 5px;
+}
+
+/*这个是登录注册按钮判断*/
+.logandreg{
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    /*color: rgba(227,163,39,1);*/
+    /*background-color: blue;*/
+    position: absolute;
+    left:1170px;
+    top: 50px;
+    /*display: none;*/
+    /*z-index: 999;*/
+
+}
+.logandreg>div{
+    float: right;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 14px;
+}
+.logandreg>div:hover{
+    color: rgba(232, 171, 39, 0.9);
+}
+
+
+
+/*登录注册开始==========================================*/
+.logreg{
+    position: fixed;
+    width: 400px;
+    height: 550px;
+    /*background-color: blue;*/
+    left: 500px;
+    /*top: 100px;
+    top: -1000px;
+    overflow:hidden;
+    /*border: 1px solid black;*/
+    z-index: 99;
+    -webkit-transition: all 0.5s linear;
+    overflow: hidden;
+    display: none;
+}
+
+.login, .regin{
+    position: absolute;
+    width: 400px;
+    height: 450px;
+    font-size:12px;
+    /*border: 1px solid black;*/
+    z-index: 30;
+    background-color: white;
+    transition: rotateY 0.5s linear;
+}
+
+.regin{
+    /*display: none;*/
+    /*z-index: 21;*/
+    display: none;
+    height: 550px;
+}
+.login{
+    display: none;
+}
+
+.closebtn{
+    position: relative;
+    margin-left: 270px;
+    color: white;
+    background-color:#444;
+    text-align:center;
+    font-size:15px;
+    width: 50px;
+    height: 55px;
+    border-radius: 0 0 50px 50px;
+
+}
+
+.closebtn span{
+    line-height: 50px;
+    -webkit-transition:all 0.3s linear;
+    -webkit-transform-style: preserve-3d;
+    cursor: pointer;
+}
+.closebtn span:hover{
+    color: #ffab99;
+    -webkit-transform:rotateY(180deg);
+    cursor: pointer;
+}
+
+.login-regin-switch{
+    position: relative;
+    left: 47px;
+    width: 70px;
+    line-height: 30px;
+    /*background-color: red;*/
+    text-align: center;
+    color:#999;
+    cursor: pointer;
+}
+.login-regin-switch span{
+    color: #ea4c89;
+    cursor: pointer;
+}
+.login-regin-switch label{
+    color: rgba(178,178,178,1);
+    cursor: pointer;
+}
+
+.login h1, .regin h1{
+    font-size:18px;
+    font-weight:normal;
+    margin-left: 50px;
+}
+
+.signform{
+    width:400px;
+    color:#ea4c89;
+    /*background-color: yellow;*/
+    position: relative;
+    z-index: 20;
+
+}
+.signform span:nth-of-type(1){
+    position: relative;
+    font-size:20px;
+    top:5px;
+    left:320px;
+    z-index: 20;
+    /*display: inline;*/
+
+}
+.signform span:nth-of-type(2){
+    position: relative;
+    font-size:20px;
+    top:60px;
+    left:-35px;
+    z-index: 20;
+
+}
+
+.signform input[type="text"], .signform input[type="password"]{
+    outline: none;
+    width:300px;
+    height:40px;
+    z-index: 20;
+}
+.signform input[type="text"]{
+    margin-left: 30px;
+    margin-top: 5px;
+    outline: none;
+}
+.signform input[type="password"]{
+    margin-left: 49px;
+    margin-top: 10px;
+    outline: none;
+}
+.signform>span{
+    color: rgba(178,178,178,1);
+}
+
+.signform>input:nth-of-type(1){
+    margin-left: 30px;
+}
+
+.checkboxa{
+    position: relative;
+    width: 300px;
+    line-height: 40px;
+    /*background-color: #6bff7d;*/
+    margin-left: 50px;
+    margin-top: 5px;
+}
+.checkboxa input{
+    position: relative;
+    top: 2px;
+}
+.checkboxa a{
+    position: relative;
+    left: 140px;
+    text-decoration: none;
+    color:#ea4c89;
+}
+.signform input[type="submit"]{
+    width: 300px;
+    height: 40px;
+    margin-left: 50px;
+    font-family:"΢���ź�";
+    outline:0px;
+    font-size:15px;
+    background-color:#00c3b6;
+    border:0px;
+    color:white;
+    cursor:pointer;
+    /*margin-top: 50px;*/
+    /*margin-bottom: -60px;*/
+}
+#zhuce{
+    margin-top: 10px;
+}
+#zhucehr{
+    margin-top: 10px;
+}
+
+.signform input[type="button"]:hover{
+    background-color: #1c8bff;
+}
+
+.logreg hr{
+    margin-top: 30px;
+}
+.qqlogin{
+    height: 80px;
+    width: 300px;
+    /*background-color: #97ff85;*/
+    text-align: center;
+    margin: 10px auto;
+    margin-top: 30px;
+    overflow: hidden;
+
+}
+.qqlogin p{
+    font-family:"΢���ź�";
+    color:#333;
+}
+.qqlogin div{
+    width: 100px;
+    height: 25px;
+    background-color: #4e93ff;
+    margin: 0px auto;
+    padding-top: 8px;
+    text-align: center;
+    cursor:pointer;
+    margin-top: 20px;
+}
+
+#reguseraddr{
+    position: relative;
+    left: 19px;
+    top: 3px;
+}
+#envelope{
+    position: relative;
+    left: -40px;
+    top:55px;
+    z-index: 21;
+}
+#lockone, #locktwo{
+    position: relative;
+    font-size:20px;
+    top: 50px;
+
+}
+#lockone{
+    left: -17px;
+    top: 60px;
+}
+#locktwo{
+    left: -40px;
+    top: 60px;
+}
+#lockthree{
+    position: relative;
+    left: -32px;
+    top: 60px;
+    font-size:20px;
+
+}
+#tel{
+    width: 300px;
+    height: 40px;
+    margin-left: 49px;
+    margin-top: 10px;
+    outline: none;
+}
+
+
+
+.signform1 input[type="button"]{
+    position: relative;
+    top:20px;
+}
+.qqlogin1{
+    /*background-color: red;*/
+    margin-top: 15px;
+}
+.qqlogin1 p{
+    position: relative;
+    top: 20px;
+}
+.qqlogin1 div{
+    position: relative;
+    top: 15px;
+}
+
+hr{
+    position: relative;
+    top: 10px;
+}
+
+#logStatus{
+    position: absolute;
+    left: 120px;
+    top: 88px;
+    color: rgba(234,76,137,1);
+    display: none;
+}
+/*#regusername{
+    background: transparent;
+}*/
+#usernamStauts{
+    position: absolute;
+    left: 220px;
+    top: 20px;
+    z-index: 999;
+    font-size: 12px;
+    background-color: rgba(234,76,137,1);
+    color: white;
+    padding: 1px;
+    display: none;
+}
+#emailStauts{
+    position: absolute;
+    left: 250px;
+    top: 70px;
+    z-index: 999;
+    font-size: 12px;
+    background-color: rgba(234,76,137,1);
+    color: white;
+    padding: 1px;
+    display: none;
+}
+#pwdStauts{
+    position: absolute;
+    left: 255px;
+    top: 113px;
+    z-index: 999;
+    font-size: 12px;
+    background-color: rgba(234,76,137,1);
+    color: white;
+    padding: 1px;
+    display: none;
+}
+#repwdStauts{
+    position: absolute;
+    left: 260px;
+    top: 178px;
+    z-index: 999;
+    font-size: 12px;
+    background-color: rgba(234,76,137,1);
+    color: white;
+    padding: 1px;
+    display: none;
+}
+#telStauts{
+    position: absolute;
+    left: 237px;
+    top: 212px;
+    z-index: 999;
+    font-size: 12px;
+    background-color: rgba(234,76,137,1);
+    color: white;
+    padding: 1px;
+    display: none;
+}
+#regStatus{
+    position: absolute;
+    left: 120px;
+    top: 87px;
+    z-index: 999;
+    font-size: 12px;
+    color: rgba(234,76,137,1);
+    padding: 1px;
+    display: none;
+
+}
+#logUsernamStauts{
+    position: absolute;
+    left: 215px;
+    top: 21px;
+    z-index: 999;
+    font-size: 12px;
+    background-color: rgba(234,76,137,1);
+    color: white;
+    padding: 1px;
+    display: none;
+}
+#logLock{
+    position: absolute;
+    right: 65px;
+    top: 71px;
+    font-size: 20px;
+}
+#logPwdStauts{
+    position: absolute;
+    left: 250px;
+    top: 71px;
+    background-color: rgba(234,76,137,1);
+    color: white;
+    padding: 1px;
+    display: none;
+}
+.qiehuan{
+    color: black;
+
+}
+#qiehuan1{
+    color: rgba(169,191,111,1);
+}
+
+
+
+
+
+
+
+
+
+
+#cover{
+    position:fixed;
+    -webkit-transition:all 0.2s linear;
+    top: 0px;
+    left: 0px;
+    z-index: 999;
+    /*width: 100%;
+    height:2796px;*/
+    /*width: 100%;
+    height:2796px;
+    background-color: #ba7e70;
+    top: 0px;
+    left: 0px;
+    z-index: 20;*/
+}
+/*登录注册结束=======================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

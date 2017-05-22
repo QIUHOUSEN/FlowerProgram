@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/MotherDay.css">
+    <link rel="stylesheet" href="../css/animate.css">
+    <link rel="stylesheet" href="../css/animate.min.css">
+    <link rel="stylesheet" href="css/yewei.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div class="nav">
+    <%- include head.html %>
+</div>
+<div class="banner">
+</div>
+<div id="container1" class="wow flipInX" style="visibility: visible; animation-name: fadeInLeft;"  data-wow-duration="2s">
+    <div class="container1_wrap">
+         <div class="wrap_top">
+             <p>牡丹花系列</p>
+             <hr>
+         </div>
+        <div class="container1_wrap_main">
+            <div class="container1_main2">
+                <p>
+                    牡丹花是非常名贵的花卉，被称为“花中之王”，一直被国人视为富贵、吉祥、幸福、繁荣的象征，自古以来就被推崇为“国色天香”，很多诗人都为牡丹花留下了脍炙人口的诗句
+                </p>
+                <a href="#"> <input type="button" class="button1" index="0" value="了解更多" ></a>
+            </div>
+           <div class="container1_main1" >
+                <img src="<%= data[0].flower_src %>">
+            </div>
+            <div class="container1_main3">
+                <img src="<%= data[1].flower_src %>">
+            </div>
+
+        </div>
+    </div>
+</div>
+<div id="container2" class="wow flipInY" style="visibility: visible; animation-name: fadeInLeft;"  data-wow-duration="2s">
+    <div class="container2_wrap">
+        <div class="wrap_top">
+            <p>康乃馨系列</p>
+            <hr>
+        </div>
+        <div class="container2_main">
+           <div class="container2_main1"><img src="<%= data[2].flower_src %>"></div>
+           <div class="container2_main1"><img src="<%= data[3].flower_src %>"></div>
+            <div class="container2_main3">
+                 <p>
+                     热情、魅力、使人柔弱的爱、真情、母亲我爱你、温馨的祝福、热爱着你、慈祥、不求代价的母爱、宽容、母亲之花、浓郁的亲情、亲情思念、清纯的爱慕之情、热恋、热心、伤心与懊悔、伟大、神圣，慰问、心灵的相通、真挚、走运、思念。                 </p>
+             <a href="#"> <input type="button" class="button2" index="1" value="了解更多"></a>
+            </div>
+        </div>
+        <div class="container3_main">
+            <div class="container2_mainthr">
+                <p>
+                    为了让送花的过程更有仪式感，浮动花园首创，保留玫瑰的长杆，置于浮动花园中，以坚不可摧的堡垒呵护爱情最初的娇艳。以圣洁的婚纱裙摆包裹鲜花，搭配精致的浮动花园丝带，每个细节无不透露着高贵优雅的爱意
+                </p>
+                <p style="display: none" class="idBox"><%= data[2].flower_id %></p>
+                 <input type="button" class="button2" index="2" value="了解更多">
+            </div>
+            <div class="container2_main1"><img src="<%= data[4].flower_src %>"></div>
+            <div class="container2_maints"><img src="<%= data[5].flower_src %>"> </div>
+        </div>
+    </div>
+</div>
+<div id="container4" class="wow flipInX" style="visibility: visible; animation-name: fadeInLeft;"  data-wow-duration="2s">
+    <div class="container4_wrap">
+        <div class="wrap_top">
+            <p>满天星系列</p>
+            <hr>
+        </div>
+        <div class="container2_main">
+            <div class="container2_main1"><img src="<%= data[6].flower_src %>"> </div>
+           <div class="container2_main1"><img src="<%= data[7].flower_src %>"> </div>
+            <div class="container2_main3">
+                <p>
+                    满天星的花语是美好的，和它的花枝一样，那么干净那么纯洁让人产生无限的敬畏之情，给最亲最爱的人，予以美好的爱
+                </p>
+                <a href="#"> <input type="button" class="button2" index="3" value="了解更多"></a>
+            </div>
+        </div>
+        </div>
+    <%- include foot.html %>
+<script src="../js/wow.min.js" type="text/javascript"></script>
+<script>
+
+    wow = new WOW({
+        animateClass: 'animated',
+    });
+    wow.init();
+</script>
+    <script src="js/index.js"></script>
+    <script src="js/fenxiang.js"></script>
+    <script src="../js/head.js"></script>
+    <script src="../js/checkLogStatus.js"></script>
+
+</div>
+</body>
+</html>

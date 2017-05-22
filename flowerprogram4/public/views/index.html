@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport">
+    <title></title>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../css/yewei.css"/>
+
+    <link rel="stylesheet" type="text/css" href="../css/socketChat.css" />
+    <!--[if lt IE 8]><script src="../js/json3.min.js"></script><![endif]-->
+    <script src="http://realtime.plhwin.com/socket.io/socket.io.js"></script>
+</head>
+<body>
+<%- include head.html %>
+<!--在线咨询-->
+<div id="clickShowChat" onclick="showChat()">在线咨询</div>
+<div id="chatHideBox">
+    <div id="mainBox">
+        <span id="cancelChat" class="fa fa-times"></span>
+        <div id="loginbox">
+            <div>
+                请先输入你在聊天室的昵称
+                <br/>
+                <br/>
+                <input type="text" style="width:180px;" placeholder="请输入用户名" id="username" name="username" />
+                <input type="button" style="width:50px;" value="提交" onclick="CHAT.usernameSubmit();"/>
+            </div>
+
+        </div>
+        <div id="chatbox" style="display:none;">
+            <div style="background:#3d3d3d;height: 28px; width: 100%;font-size:12px;">
+                <div style="line-height: 28px;color:#fff;">
+                    <span style="text-align:left;margin-left:10px;">Websocket多人聊天室</span>
+                    <span style="float:right; margin-right:10px;"><span id="showusername"></span> |
+					<a href="javascript:;" onclick="CHAT.logout()" style="color:#fff;">退出</a></span>
+                </div>
+            </div>
+            <div id="doc">
+                <div id="chat">
+                    <div id="message" class="message">
+                        <div id="onlinecount" style="background:#EFEFF4; font-size:12px; margin-top:10px; margin-left:10px; color:#666;">
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <div class="input">
+
+                            <textarea type="text" maxlength="200"  id="content" name="content"></textarea><br/>
+                            <p>操作提示：输入聊天内容,ENTER键可发送信息</p>
+                        </div>
+                        <div class="action">
+                            <button type="button" id="mjr_send" onclick="CHAT.submit();">发送</button>
+                        </div>
+
+                        <!--     <div style="font-size: 12px;float:left;position: absolute;width:100%;top:45px;left:10px">
+                             <p>如果这个Demo对你有帮助，<a href="https://github.com/plhwin" target="_blank">请到Github关注我</a></p>
+                             <p>教程：<a href="http://www.plhwin.com/2014/05/28/nodejs-socketio/" target="_blank">http://www.plhwin.com/2014/05/28/nodejs-socketio/</a></p>
+                                 <p>源码：<a href="https://github.com/plhwin/nodejs-socketio-chat" target="_blank">https://github.com/plhwin/nodejs-socketio-chat</a></p>
+                             </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!--mainBox end-->
+</div><!--chatHideBox end-->
+<!--这里是banner录播图效果-->
+<div class="wrapAll" id="wrapAll">
+    <div class="langdiv" id="langdiv" style="left: -1349px">
+        <div class="imgdivs"><img src="../images/banner03.png" alt="">
+
+        </div>
+        <div class="imgdivs"><img src="../images/banner01.png" alt="">
+            <p>美好的一天，从Filed's花园开始，我们期待每天与您邂逅</p>
+        </div>
+        <div class="imgdivs"><img src="../images/banner02.png" alt=""></div>
+        <div class="imgdivs"><img src="../images/banner03.png" alt=""></div>
+        <div class="imgdivs"><img src="../images/banner01.png" alt=""></div>
+    </div>
+    <div class="leftdiv" id="leftdiv"><span class="fa fa-angle-left"></span></div>
+    <div class="rightdiv" id="rightdiv"><span class="fa fa-angle-right"></span></div>
+    <div class="wrapBtns">
+        <div index="1" name="btns" class="on"></div>
+        <div index="2" name="btns"></div>
+        <div index="3" name="btns"></div>
+    </div>
+</div>
+
+
+<div class="rowThree" style="margin-top: 800px">
+    <h1>新品上市</h1>
+    <p>想与自然一起散步？</p>
+    <p>每月6号，新花品带您感受当季的气息。每月6号，新花品带您感受当季的气息。想与自然一起散步？新花品带您感受当季的气息。想与自然一起散步新花品带您感受当季的气息。</p>
+    <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+    <div id="img1">
+        <p class="idBox" style="display: none;"><%= zhuyetuijian[0].flower_id  %></p>
+        <img src="<%=zhuyetuijian[0].flower_src%>" alt=""/>
+    </div>
+    <div><img src="../images/decore_mockup.png" alt=""/></div>
+</div>
+
+<div class="rowFour" style="background-color:#E1E4E6; ">
+    <img src="../images/intro_bg.png" alt=""/>
+    <h1>Field's Floral</h1>
+    <p>
+        关于Field's Floral品牌花店，开店于2007年，至今在成都市已有8家分店。最初以“浮动花园”为名开通微博，以“讲故事订花”的方式满足情感与送花需求，依靠独特设计和专业知识，获得多位明星、时尚、设计界意见领袖友情转贴，口碑相传而起。今日，已发展成为中国最专业、时尚的花艺设计公司，积累奢侈品品牌、私人银行、时尚媒体等稳定企业客户；并在官方网站和实体店销售同气质的生活方式产品。
+    </p>
+</div>
+
+<div class="rowFive">
+    <p>热销商品</p>
+    <div class="severalFlowers" style="margin-top: 60px;margin-bottom: 0px">
+        <span id="qiehuan1" index="0" class="qiehuan">玫瑰花</span> | <span index="1" class="qiehuan">康乃馨</span> | <span index="2" class="qiehuan">牡丹</span> | <span index="3" class="qiehuan">杜鹃</span>
+    </div>
+    <div class="containFlowers" id="meigui" index="0">
+        <div class="flowerBox" id="flowerBox1">
+            <p class="idBox" style="display: none;"><%= zhuyemeigui[0].flower_id  %></p>
+            <img src="<%=zhuyemeigui[0].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyemeigui[0].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html" class="toGoodInfo">商品详情</a></div>
+        </div>
+        <div class="flowerBox" id="flowerBox2">
+            <p class="idBox" style="display: none;"><%= zhuyemeigui[1].flower_id  %></p>
+            <img src="<%=zhuyemeigui[1].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyemeigui[1].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html" class="toGoodInfo">商品详情</a></div>
+        </div>
+        <div class="flowerBox" id="flowerBox3">
+            <img src="<%=zhuyemeigui[2].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyemeigui[2].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+    </div>
+
+    <div class="containFlowers" id="kangnaixin" index="1">
+        <div class="flowerBox">
+            <p class="idBox" style="display: none;"><%= zhuyekangnaixin[0].flower_id  %></p>
+            <img src="<%=zhuyekangnaixin[0].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyekangnaixin[0].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html" class="toGoodInfo">商品详情</a></div>
+        </div>
+        <div class="flowerBox">
+            <p class="idBox" style="display: none;"><%= zhuyekangnaixin[1].flower_id  %></p>
+            <img src="<%=zhuyekangnaixin[1].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyekangnaixin[1].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html" class="toGoodInfo">商品详情</a></div>
+        </div>
+        <div class="flowerBox">
+            <img src="<%=zhuyekangnaixin[2].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyekangnaixin[2].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+    </div>
+
+    <div class="containFlowers" id="mudan" index="2">
+        <div class="flowerBox">
+            <img src="<%=zhuyemudan[0].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyemudan[0].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+        <div class="flowerBox">
+            <img src="<%=zhuyemudan[1].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyemudan[1].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+        <div class="flowerBox">
+            <img src="<%=zhuyemudan[2].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyemudan[2].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+    </div>
+
+    <div class="containFlowers" id="dujuan" index="3">
+        <div class="flowerBox">
+            <img src="<%=zhuyedujuan[0].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyedujuan[0].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+        <div class="flowerBox">
+            <img src="<%=zhuyedujuan[1].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyedujuan[1].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+        <div class="flowerBox">
+            <img src="<%=zhuyedujuan[2].flower_src%>" alt=""/>
+            <span>诗漾 Pomeranian</span> <span>￥<%=zhuyedujuan[2].flower_price%></span>
+            <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+    </div>
+
+
+</div>
+
+<div class="seperate">
+    <img src="../images/choice_before_bg.png" alt=""/>
+</div>
+
+<div class="rowSix">
+    <p>为您精选</p>
+    <p>选择恐惧症？</p>
+    <p>我们已为您备好惊喜，为您直达心意。</p>
+    <div class="choosedBox choosedBox1">
+        <img src="<%=zhuyejinxuan[0].flower_src%>" alt=""/>
+        <div class="dasheds">
+            <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+        <div>
+            <p>专业为您定制婚礼捧花，让您如花一般绽放美丽。</p>
+            <span>¥<%=zhuyejinxuan[0].flower_price%> 起</span>
+        </div>
+    </div>
+
+    <div class="choosedBox choosedBox2">
+        <img src="<%=zhuyejinxuan[1].flower_src%>" alt=""/>
+        <div class="dasheds">
+            <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+        <div>
+            <p>专业为您定制婚礼捧花，让您如花一般绽放美丽。</p>
+            <span>¥<%=zhuyejinxuan[1].flower_price%> 起</span>
+        </div>
+    </div>
+
+    <div class="choosedBox choosedBox3">
+        <img src="<%=zhuyejinxuan[2].flower_src%>" alt=""/>
+        <div class="dasheds">
+            <div class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+        <div>
+            <p>专业为您定制婚礼捧花，让您如花一般绽放美丽。</p>
+            <span>¥<%=zhuyejinxuan[2].flower_price%> 起</span>
+        </div>
+    </div>
+
+    <div class="choosedBox choosedBox4">
+        <img src="<%=zhuyejinxuan[3].flower_src%>" alt=""/>
+        <div id="dasheds" class="dasheds">
+            <div id="goodInfo" class="goodInfo"><a href="goodDetails.html">商品详情</a></div>
+        </div>
+        <div>
+            <p>专业为您定制婚礼捧花，让您如花一般绽放美丽。</p>
+            <span>¥<%=zhuyejinxuan[3].flower_price%> 起</span>
+        </div>
+    </div>
+</div>
+<div class="rowSeven">
+    <div>
+        <img src="../images/servce01.png" alt=""/>
+        <p>热线跟踪</p>
+    </div>
+    <div>
+        <img src="../images/servce02.png" alt=""/>
+        <p>准时送达</p>
+    </div>
+    <div>
+        <img src="../images/servce03.png" alt=""/>
+        <p>贴心服务</p>
+    </div>
+    <div>
+        <img src="../images/servce04.png" alt=""/>
+        <p>新鲜保质</p>
+    </div>
+</div>
+<!--<%- include foot.html %>-->
+<div class="foots">
+    <div class="col1"><img src="../images/logo.png" alt=""/></div>
+    <ul class="cols col2" style="width: 120px">
+        <li>购物指南</li>
+        <li>购买流程</li>
+        <li>支付方式</li>
+        <li>常见问题</li>
+        <li>服务条款</li>
+    </ul>
+
+    <ul class="cols col3" style="width: 120px">
+        <li>配送方式</li>
+        <li>配送时间</li>
+        <li>配送范围</li>
+        <li>配送费用</li>
+    </ul>
+
+    <ul class="cols col4" style="width: 120px">
+        <li>优惠制度</li>
+        <li>会员制度</li>
+        <li>积分制度</li>
+    </ul>
+
+    <ul class="cols col5" style="width: 120px">
+        <li>售后服务</li>
+        <li>客户服务</li>
+        <li>投诉处理</li>
+    </ul>
+
+    <ul class="cols col6" style="width: 120px">
+        <li>关于我们</li>
+        <li>联系我们</li>
+        <li>版权声明</li>
+    </ul>
+
+    <div class="shares">
+        <div>
+            分享：
+            <span class="fa fa-renren" onclick="renren()"></span>
+            <span class="fa fa-weibo" onclick="weibo()"></span>
+            <span class="fa fa-qq" onclick="qq()"></span>
+        </div>
+        <div>微信公众号：</div>
+        <div>
+            <img src="../images/code.png" alt=""/>
+        </div>
+    </div>
+    <p>某某花店：18384137777  地址：成都双流叽叽路叽叽号叽叽叽叽</p>
+</div>
+</div>
+
+
+<script src="../js/fenxiang.js"></script>
+<script src="../js/checkLogStatus.js"></script>
+<script src="../js/head.js"></script>
+<script type="text/javascript" src="../js/socketChat.js"></script>
+<script>
+
+    var idBoxs=document.getElementsByClassName("idBox");
+    var flowerBox=document.getElementsByClassName("flowerBox");
+    var goodInfo=document.getElementsByClassName("goodInfo");
+    var toGoodInfo=document.getElementsByClassName("toGoodInfo");
+
+    for(var i=0;i<flowerBox.length;i++) {
+        if (document.addEventListener) {
+            goodInfo[i].addEventListener("click",sendImg(goodInfo[i],i),true);
+        } else {
+            goodInfo[i].attachEvent("onclick",sendImg(goodInfo[i],i));
+        }
+        function sendImg(obj,m) {
+            return function() {
+                var imgId = idBoxs[m].innerHTML;
+                var xhr;
+                if (window.ActiveXObject) {
+                    xhr = new ActiveXObject("Microsoft.XMLHTTP");
+                } else if (window.XMLHttpRequest) {
+                    xhr = new XMLHttpRequest();
+                };
+                xhr.open("post","/sendImg.do",true);
+                xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                };
+                console.log("再点击页面图片发送到后台前的imgId："+imgId);
+                xhr.send("imgId="+imgId+"&goodType="+"花");
+            }
+        }
+    }
+
+    var chatHideBox = document.getElementById("chatHideBox");
+    function showChat(){
+
+        chatHideBox.style.display="block";
+    }
+
+    var mainBox = document.getElementById("mainBox");
+    var cancelChat = document.getElementById("cancelChat");
+    console.log("是否获取到叉叉：",cancelChat);
+    if(document.addEventListener){
+        cancelChat.addEventListener("click",function(){
+
+
+            chatHideBox.style.display="none";
+        },true);
+    }else if(document.attachEvent){
+        cancelChat.attachEvent("onclcik",function(){
+
+
+            chatHideBox.style.display="none";
+        })
+    }else{
+        cancelChat['onclick']=function(){
+
+            chatHideBox.style.display="none";
+        }
+    }
+
+
+</script>
+</body>
+</html>

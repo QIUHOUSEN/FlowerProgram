@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>鲜花后台管理系统</title>
+    <link type="text/css" href="css/manageIndex.css" rel="stylesheet"/>
+    <script src="js/angular.min.js"></script>
+ <!--   <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>-->
+</head>
+
+<body>
+<div id="main" ng-app="myApp" ng-controller="myCtrl">
+    <div id="nav">
+        <ul class="navUl">
+            <li ng-click="changeIndex(1)">首页</li>
+            <li ng-click="changeIndex(2)">用户管理</li>
+            <li ng-click="changeIndex(3)">订单管理</li>
+            <li ng-click="changeIndex(4)">鲜花管理</li>
+            <li ng-click="changeIndex(5)">包装纸管理</li>
+            <li ng-click="changeIndex(6)">盆栽管理</li>
+            <li ng-click="changeIndex(7)">礼盒管理</li>
+            <li ng-click="changeIndex(8)">故事管理</li>
+        </ul>
+    </div><!--nav end-->
+    <div id="content">
+        <div class="mainContainer">
+            <div class="contentTitle" ng-show="titleShow==1">鲜花电子商务后台管理系统</div>
+            <div class="manageItem firstDiv" ng-show="divIndex==1">
+                <div class="firstContainer">
+                    <h1>欢迎进入鲜花网站后台管理系统</h1>
+                </div><!--firstContainer end-->
+            </div>
+            <!--用户-->
+            <div class="manageItem" ng-show="divIndex==2">
+                <div class="tableBox">
+                    <table class="table" >
+                        <tr class="info">
+                            <th class="col-2">用户名编号</th>
+                            <th class="col-2">用户名</th>
+                            <th class="col-2">密码</th>
+                            <th class="col-2">邮箱</th>
+                            <th class="col-2">联系电话</th>
+                            <th class="col-2">账户充值金额</th>
+                            <th class="col-2">操作</th>
+
+                        </tr>
+
+                        <tr class="infotd" ng-repeat="item in userDatas">
+                            <td class="col-2" ng-bind="item.user_id"></td>
+                            <td class="col-2" ng-bind="item.user_name"></td>
+                            <td class="col-2" ng-bind="item.user_password"></td>
+                            <td class="col-2" ng-bind="item.user_email"></td>
+                            <td class="col-2" ng-bind="item.user_telphone"></td>
+                            <td class="col-2" ng-bind="item.user_money"></td>
+                            <td class="col-2"><a href="" ng-click="showDelModal(item,1)">删除</a>  <a href="" ng-click="showEditUserModal(item)">修改</a></td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <!--订单-->
+            <div class="manageItem" ng-show="divIndex==3">
+                <div class="tableBox">
+                    <table class="table" >
+                        <tr class="info">
+                            <th class="col-1">订单编号</th>
+                            <th class="col-1">商品名称</th>
+                            <th class="col-1">订单总价</th>
+                            <th class="col-2">贺卡内容</th>
+                            <th class="col-1">所属用户</th>
+                            <th class="col-4">收货地址</th>
+                            <th class="col-1">收货人</th>
+                            <th class="col-2">收货人联系电话</th>
+                            <th class="col-2">操作</th>
+                        </tr>
+                        <tr class="infotd" ng-repeat="item in orderDatas">
+                            <td class="col-1" ng-bind="item.order_id"></td>
+                            <td class="col-1" ng-bind="item.goods_name"></td>
+                            <td class="col-1" ng-bind="item.order_allMoney"></td>
+                            <td class="col-2" ng-bind="item.order_cardtext"></td>
+                            <td class="col-1" ng-bind="item.user_name"></td>
+                            <td class="col-4" ng-bind="item.address_name"></td>
+                            <td class="col-1" ng-bind="item.address_person_name"></td>
+                            <td class="col-2" ng-bind="item.address_person_tel"></td>
+                            <td class="col-2"><a href="" ng-click="showDelModal(item,2)">删除</a> <a href="" ng-click="showEditOrderModal(item)">修改</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--鲜花-->
+            <div class="manageItem" ng-show="divIndex==4">
+                <div class="tableBox">
+                    <table class="table" >
+                        <tr class="info">
+                            <th class="col-1">鲜花编号</th>
+                            <th class="col-2">名称</th>
+                            <th class="col-1">颜色</th>
+                            <th class="col-1">价格</th>
+                            <th class="col-3">图片路径</th>
+                            <th class="col-4">描述</th>
+                            <th class="col-2">操作</th>
+
+                        </tr>
+                        <tr class="infotd" ng-repeat="item in flowerDatas">
+                            <td class="col-1" ng-bind="item.flower_id"></td>
+                            <td class="col-2" ng-bind="item.flower_name"></td>
+                            <td class="col-1" ng-bind="item.flower_color"></td>
+                            <td class="col-1" ng-bind="item.flower_price"></td>
+                            <td class="col-3" ng-bind="item.flower_src"></td>
+                            <td class="col-4" ng-bind="item.flower_describe"></td>
+                            <td class="col-2"><a href="" ng-click="showDelModal(item,3)">删除</a> <a href="" ng-click="showEditFlowerModal(item)">修改</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--包装纸-->
+            <div class="manageItem" ng-show="divIndex==5">
+                <div class="tableBox">
+                    <table class="table" >
+                        <tr class="info">
+                            <th class="col-2">包装纸编号</th>
+                            <th class="col-2">名称</th>
+                            <th class="col-1">价格</th>
+                            <th class="col-1">颜色</th>
+                            <th class="col-1">尺寸</th>
+                            <th class="col-3">图片路径</th>
+                            <th class="col-4">描述</th>
+                            <th class="col-2">操作</th>
+
+                        </tr>
+                        <tr class="infotd" ng-repeat="item in wrapperDatas">
+                            <td class="col-2" ng-bind="item.wrapper_id"></td>
+                            <td class="col-2" ng-bind="item.wrapper_name"></td>
+                            <td class="col-1" ng-bind="item.wrapper_price"></td>
+                            <td class="col-1" ng-bind="item.wrapper_color"></td>
+                            <td class="col-1" ng-bind="item.wrapper_size"></td>
+                            <td class="col-3" ng-bind="item.wrapper_src"></td>
+                            <td class="col-4" ng-bind="item.wrapper_describe"></td>
+                            <td class="col-2"><a href="" ng-click="showDelModal(item,4)">删除</a> <a href="" ng-click="showEditWrapperModal(item)">修改</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--盆栽-->
+            <div class="manageItem" ng-show="divIndex==6">
+                <div class="tableBox">
+                    <table class="table" >
+                        <tr class="info">
+                            <th class="col-2">盆栽编号</th>
+                            <th class="col-2">名称</th>
+                            <th class="col-1">价格</th>
+                            <th class="col-3">图片路径</th>
+                            <th class="col-4">描述</th>
+                            <th class="col-2">操作</th>
+
+                        </tr>
+                        <tr class="infotd" ng-repeat="item in pottedDatas">
+                            <td class="col-2" ng-bind="item.potted_id"></td>
+                            <td class="col-2" ng-bind="item.potted_name"></td>
+                            <td class="col-1" ng-bind="item.potted_price"></td>
+                            <td class="col-3" ng-bind="item.potted_src"></td>
+                            <td class="col-4" ng-bind="item.potted_describe"></td>
+                            <td class="col-2"><a href="" ng-click="showDelModal(item,5)">删除</a> <a href="" ng-click="showEditPottedModal(item)">修改</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--礼盒-->
+            <div class="manageItem" ng-show="divIndex==7">
+                <div class="tableBox">
+                    <table class="table" >
+                        <tr class="info">
+                            <th class="col-2">礼盒编号</th>
+                            <th class="col-2">名称</th>
+                            <th class="col-1">价格</th>
+                            <th class="col-1">颜色</th>
+                            <th class="col-1">尺寸</th>
+                            <th class="col-3">图片路径</th>
+                            <th class="col-4">描述</th>
+                            <th class="col-2">操作</th>
+
+                        </tr>
+                        <tr class="infotd" ng-repeat="item in giftDatas">
+                            <td class="col-2" ng-bind="item.gift_id"></td>
+                            <td class="col-2" ng-bind="item.gift_name"></td>
+                            <td class="col-1" ng-bind="item.gift_price"></td>
+                            <td class="col-1" ng-bind="item.gift_color"></td>
+                            <td class="col-1" ng-bind="item.gift_size"></td>
+                            <td class="col-3" ng-bind="item.gift_src"></td>
+                            <td class="col-4" ng-bind="item.gift_describe"></td>
+                            <td class="col-2"><a href="" ng-click="showDelModal(item,6)">删除</a> <a href="" ng-click="showEditGiftModal(item)">修改</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <!--故事-->
+            <div class="manageItem" ng-show="divIndex==8">
+                <div class="tableBox">
+                    <table class="table" >
+                        <tr class="info">
+                            <th class="col-2">故事编号</th>
+                            <th class="col-2">编写用户</th>
+                            <th class="col-5">故事内容</th>
+                            <th class="col-2">操作</th>
+
+                        </tr>
+                        <tr class="infotd" ng-repeat="item in storyDatas">
+                            <td class="col-2" ng-bind="item.story_id"></td>
+                            <td class="col-2" ng-bind="item.user_name"></td>
+                            <td class="col-5" ng-bind="item.story_content"></td>
+                            <td class="col-2"><a href="" ng-click="showDelModal(item,7)">删除</a></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div><!--mainContainer end-->
+
+
+
+        <!--弹窗-->
+        <div id="blackDiv">
+            <!--确认删除弹窗-->
+            <div class="delModal">
+                <div class="modalTitle">确认删除</div>
+                <div class="modalContentDel">
+                  <p class="delSureInfo">确认删除该条数据？</p>
+                </div>
+                <div class="operBox">
+                    <button type="button" ng-click="submitDelInfo()" class="sureBtn">确定</button>
+                    <button type="button" ng-click="hideDelModal()" class="hideBtn">取消</button>
+
+                </div>
+            </div><!--editModal end-->
+            <!--用户修改弹窗-->
+            <div class="editUserModal">
+                <div class="modalTitle">修改信息</div>
+                <div class="modalContent">
+                    <table class="modalTable">
+
+                        <tr>
+                            <td>用户名</td>
+                            <td>
+                                <input type="text" ng-model="userData.user_name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>密码</td>
+                            <td>
+                                <input type="text" ng-model="userData.user_password"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>邮箱</td>
+                            <td>
+                                <input type="email" ng-model="userData.user_email"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>联系电话</td>
+                            <td>
+                                <input type="text" ng-model="userData.user_telphone"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>账户充值金额</td>
+                            <td>
+                                <input type="text" ng-model="userData.user_money"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="operBox">
+                    <button type="button" ng-click="submitEidtUserInfo()" class="sureBtn">确定</button>
+                    <button type="button" ng-click="hideEditUserModal()" class="hideBtn">取消</button>
+                </div>
+            </div><!--editUserModal end-->
+            <!--订单修改弹窗-->
+            <div class="editOrderModal">
+                <div class="modalTitle">修改信息</div>
+                <div class="modalContent">
+                    <table class="modalTable">
+
+                        <tr>
+                            <td>商品名称</td>
+                            <td>
+                                <input type="text" ng-model="orderData.goods_name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>订单总价</td>
+                            <td>
+                                <input type="text" ng-model="orderData.order_allMoney"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>所属用户</td>
+                            <td>
+                                <input type="text" ng-model="orderData.user_name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>收货地址</td>
+                            <td>
+                                <input type="text" ng-model="orderData.address_name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>收货人</td>
+                            <td>
+                                <input type="text" ng-model="orderData.address_person_name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>收货人联系电话</td>
+                            <td>
+                                <input type="text" ng-model="orderData.address_person_tel"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>贺卡内容</td>
+                            <td>
+                                <textarea class="flowerRemarks"  ng-model="orderData.order_cardtext"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="operBox">
+                    <button type="button" ng-click="submitEidtOrderInfo()" class="sureBtn">确定</button>
+                    <button type="button" ng-click="hideEditOrderModal()" class="hideBtn">取消</button>
+                </div>
+            </div><!--editOrderModal end-->
+
+            <!--鲜花修改弹窗-->
+            <div class="editFlowerModal">
+                <div class="modalTitle">修改信息</div>
+                <div class="modalContent">
+                    <table class="modalTable">
+                        <tr>
+                            <td>鲜花名称</td>
+                            <td>
+                                <input type="text" ng-model="flowerData.flower_name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>颜色</td>
+                            <td>
+                                <input type="text" ng-model="flowerData.flower_color"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>价格</td>
+                            <td>
+                                <input type="text" ng-model="flowerData.flower_price"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>描述</td>
+                            <td>
+
+                                <textarea class="flowerRemarks" ng-model="flowerData.flower_describe"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="operBox">
+                    <button type="button" ng-click="submitEidtFlowerInfo()" class="sureBtn">确定</button>
+                    <button type="button" ng-click="hideEditFlowerModal()" class="hideBtn">取消</button>
+                </div>
+            </div><!--editFlowerModal end-->
+            <!--包装纸修改弹窗-->
+            <div class="editWrapperModal">
+                <div class="modalTitle">修改信息</div>
+                <div class="modalContent">
+                    <table class="modalTable">
+                        <tr>
+                            <td>包装纸名称</td>
+                            <td>
+                                <input type="text" ng-model="wrapperData.wrapper_name"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>颜色</td>
+                            <td>
+                                <input type="text" ng-model="wrapperData.wrapper_color"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>价格</td>
+                            <td>
+                                <input type="text" ng-model="wrapperData.wrapper_price"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>尺寸</td>
+                            <td>
+                                <input type="text" ng-model="wrapperData.wrapper_size"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>描述</td>
+                            <td>
+                                <textarea class="flowerRemarks" ng-model="wrapperData.wrapper_describe"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="operBox">
+                    <button type="button" ng-click="submitEidtWrapperInfo()" class="sureBtn">确定</button>
+                    <button type="button" ng-click="hideEditWrapperModal()" class="hideBtn">取消</button>
+                </div>
+            </div><!--editWrapperModal end-->
+            <!--盆栽修改弹窗-->
+            <div class="editPottedModal">
+                <div class="modalTitle">修改信息</div>
+                <div class="modalContent">
+                    <table class="modalTable">
+                        <tr>
+                            <td>盆栽名称</td>
+                            <td>
+                                <input type="text" ng-model="pottedData.potted_name"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>价格</td>
+                            <td>
+                                <input type="text" ng-model="pottedData.potted_price"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>描述</td>
+                            <td>
+                                <textarea class="flowerRemarks" ng-model="pottedData.potted_describe"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="operBox">
+                    <button type="button" ng-click="submitEidtPottedInfo()" class="sureBtn">确定</button>
+                    <button type="button" ng-click="hideEditPottedModal()" class="hideBtn">取消</button>
+                </div>
+            </div><!--editPottedModal end-->
+            <!--礼盒修改弹窗-->
+            <div class="editGiftModal">
+                <div class="modalTitle">修改信息</div>
+                <div class="modalContent">
+                    <table class="modalTable">
+                        <tr>
+                            <td>礼盒名称</td>
+                            <td>
+                                <input type="text" ng-model="giftData.gift_name"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>价格</td>
+                            <td>
+                                <input type="text" ng-model="giftData.gift_price"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>颜色</td>
+                            <td>
+                                <input type="text" ng-model="giftData.gift_color"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>尺寸</td>
+                            <td>
+                                <input type="text" ng-model="giftData.gift_size"/>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>描述</td>
+                            <td>
+                                <textarea class="flowerRemarks" ng-model="giftData.gift_describe"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="operBox">
+                    <button type="button" ng-click="submitEidtGiftInfo()" class="sureBtn">确定</button>
+                    <button type="button" ng-click="hideEditGiftModal()" class="hideBtn">取消</button>
+                </div>
+            </div><!--editGiftModal end-->
+
+        </div><!--blackDiv end-->
+    </div><!--content end-->
+</div><!--main end-->
+<script src="js/jquery.js"></script>
+<script src="js/manageIndex.js"></script>
+
+</body>
+</html>

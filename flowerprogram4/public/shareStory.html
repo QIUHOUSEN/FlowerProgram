@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Field's Floral分享故事</title>
+    <link href="../css/shareStory.css" rel="stylesheet"/>
+    <link href="../css/global.css" rel="stylesheet"/>
+    <link href="../css/nav_top_foot.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link href="../css/animate.css" rel="stylesheet"/>
+</head>
+<body>
+<!--<span class="fa  fa-institution (垃圾桶)"></span>-->
+    <div id="wrapper">
+        <header></header>
+        <div id="mask"></div>
+        <!--交互原点按钮块-->
+        <div id="point_wrapper">
+            <span class="flower_center_point fa fa-home" id="bt_home"></span>
+            <span class="flower_center_point fa fa-navicon" id="bt_menu"></span>
+            <span class="flower_center_point fa fa-arrow-left" id="bt_arrLeft"></span>
+            <span class="flower_center_point fa fa-arrow-right"id="bt_arrRight"></span>
+            <span class="flower_center_point fa fa-edit" id="bt_edit"></span>
+        </div>
+        <!--动态加载花瓣块-->
+        <main id="mainBox"></main>
+        <!--故事展示块-->
+        <div id="storyShowBox">
+            <div class="storyInner">
+                <span id="bt_closeShowBox" class="bt_close fa fa-remove"></span>
+                <textarea id="textShowBox">故事1
+在赤道上的玫瑰花田，沐浴365天的阳光和雨水， 才有超长浓艳花期、及在花园中花枝挺拔至1.5米的厄瓜多尔玫瑰。 精选高达3英寸的罕世花蕾，每一朵如心脏般大小， 只选全世界百里挑一的鲜花臻品。
+
+
+在赤道上的玫瑰花田，沐浴365天的阳光和雨水， 才有超长浓艳花期、及在花园中花枝挺拔至1.5米的厄瓜多尔玫瑰。 精选高达3英寸的罕世花蕾，每一朵如心脏般大小， 只选全世界百里挑一的鲜花臻品。
+puppets.fr 扁平化
+飞鸟特效 、家具、垂直线条分割布局
+</textarea>
+                <button id="bt_back">返回</button>
+            </div>
+        </div>
+        <!--故事编辑块-->
+        <div id="storyEditBox">
+            <div class="storyInner">
+                <span id="bt_closeEditBox" class="bt_close fa fa-remove"></span>
+                <textarea id="textEditBox" typeof="">写下你的故事，与我们分享爱与生活……</textarea>
+                <button id="submitSotry">分享故事</button>
+            </div>
+        </div>
+        <!--上传提示块-->
+        <div id="prompt">
+            <span class="load"></span>
+            <p>正在上传…</p>
+        </div>
+    </div>
+<script src="../js/shareStory.js" type="text/javascript"></script>
+</body>
+</html>

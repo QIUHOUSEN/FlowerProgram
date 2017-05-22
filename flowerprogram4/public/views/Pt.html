@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="../css/Personal_tailor.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="css/yewei.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <!--<link href="../css/960.min.css" rel="stylesheet" />
+    <script src="../js/srdzjs/jquery-1.9.1.min.js"></script>
+  &lt;!&ndash;  <script src="../js/srdzjs/jquery.excoloSlider.js"></script>
+  &ndash;&gt; &lt;!&ndash; <link href="../css/jquery.excoloSlider.css" rel="stylesheet" />
+    &ndash;&gt;<script src="../js/srdzjs/adapt.min.js"></script>
+    <script>
+        $(function () {
+            $("#Carousel2").excoloSlider();
+        });
+    </script>-->
+</head>
+<body>
+
+<link rel="stylesheet" href="css/index.css"/>
+<header class="head">
+    <img src="../images/logo.png" alt=""/>
+    <ul>
+        <li class="navOne"><a href="index.html">首页</a></li>
+        <li class="helpChoose" style="color: white">帮我选花
+            <ul class="chooseFlower">
+                <li class="holiday">节日
+                    <ul id="holidayChoose">
+                        <li><a href="faD.html">父亲节</a></li>
+                        <li><a href="MotherDay.html">母亲节</a></li>
+                        <li><a href="qixi.html">七夕节</a></li>
+                    </ul>
+                </li>
+                <li><a href="birthday.html">生日</a></li>
+                <li><a href="wedding.html">求婚</a></li>
+                <li><a href="sh.html">其它</a></li>
+            </ul>
+        </li>
+        <li class="navThree"><a href="orderGoods.html">预定</a></li>
+        <li class="navFour" style="color: white">私人定制
+            <ul>
+                <li><a href="Pt.html">线下定制</a></li>
+            </ul>
+        </li>
+        <li class="navFive"><a href="../huayu.html">花语</a></li>
+        <li class="navSix"><a href="festival.html">节日活动</a></li>
+        <li class="navSevens" id="navSeven" style="color: white">鲜花周边
+            <ul id="flowerRounds">
+                <li><a href="lihe.html">礼盒</a></li>
+                <li><a href="huapen.html">盆栽</a></li>
+                <li><a href="BaoZhuangZhi.html">包装纸</a></li>
+            </ul>
+        </li>
+
+        <li class="navEight"><a href="../cycleBuy.html">VIP周期购</a></li>
+        <li class="navNine"><a href="../shareStory.html">分享你的故事</a></li>
+    </ul>
+
+    <input id="searchInput" type="text"/>
+    <span id="searchBtn" class="fa fa-search"></span>
+
+    <div class="logandreg" id="logandreg">
+        <div class="forms" id="form1" style="color: white">登录</div>
+        <div class="forms" id="form2" style="color: white">注册</div>
+    </div>
+    <div class="vip"><a href="../shareStory.html">成为VIP</a></div>
+    <span id="car" class="fa fa-shopping-cart"></span>
+    <!--<ul id="controlls">
+        <li>控制台</li>
+        <li>用户名</li>
+        <li>个人中心</li>
+        <li>退出账号</li>
+        &lt;!&ndash;<span id="showDown" class="fa fa-sort-desc"></span>&ndash;&gt;
+    </ul>-->
+</header>
+
+<ul id="controlls">
+    <li class="one">控制台</li>
+    <li id="pUsername"></li>
+    <li>个人中心</li>
+    <li id="goBack">退出账号</li>
+    <span id="showDown" class="fa fa-sort-desc"></span>
+</ul>
+<div class="personHead" id="personHead">
+    <img id="headers" src="../images/head.png" alt=""/>
+</div>
+
+
+
+<!--这是登录注册的面板界面-->
+<div class="logreg" id="logreg">
+    <div class="login" id="login"><!--这是登录部分-->
+        <div class="closebtn">
+            <span class="fa fa-times"></span>
+        </div>
+        <div class="login-regin-switch" id="logtoreg">
+            <span class="fa fa-toggle-on" id="temp"></span>
+            <label for="temp">切换注册</label>
+
+        </div><h1>登录</h1>
+        <span id="logStatus">账号或密码错误</span>
+        <div class="signform">
+            <span class="fa fa-user" style="left: 323px"></span>
+            <input type="text" id="logusername" name="username" placeholder=" 请输入用户名">
+            <span id="logUsernamStauts">用户名不能少于3个字符</span>
+            <span id="logLock" class="fa fa-lock"></span>
+            <input type="password" id="logpassword" name="password" placeholder=" 请输入密码">
+            <span id="logPwdStauts">密码不能少于6个</span>
+            <div class="checkboxa">
+                <label for="remenber"><input id="remenber" type="checkbox" >请记住我的登录</label>
+                <a href="#"> 忘记密码？</a>
+            </div>
+            <input id="logBtn" type="submit" value="登录">
+        </div>
+        <hr/>
+        <div class="qqlogin">
+            <p>您也可以使用第三方账号登录</p>
+            <div class="qqloginlogo">
+                <span class="fa fa-qq" ></span>
+                QQ账号登录
+            </div>
+        </div>
+
+    </div>
+
+    <!--这是注册部分-->
+    <div class="regin" id="regin">
+        <!-- 关闭按钮-->
+        <div class="closebtn">
+            <span class="fa fa-times"></span>
+        </div>
+        <div class="login-regin-switch" id="regtolog">
+            <span class="fa fa-toggle-off" id="temp1" ></span>
+            <label for="temp1">切换登录</label>
+        </div>
+        <h1>注册</h1><!--action="/register.do"-->
+        <span id="regStatus">该邮箱已被注册</span>
+        <div class="signform signform1">
+            <span class="fa fa-user" style="left: 323px"></span>
+            <input type="text" id="regusername" name="username" placeholder=" 输入英文用户名">
+            <span id="usernamStauts">用户名不能少于3个字符</span>
+            <span id="envelope" class="fa fa-envelope" style="left: -34px"></span>
+            <input type="text" id="reguseraddr" name="email" placeholder=" 输入常用邮箱">
+            <span id="emailStauts">请输入正确的邮箱</span>
+            <span id="lockone" class="fa fa-lock" style="left: -16px"></span>
+            <input type="password" id="regpassword" name="password" placeholder=" 密码最小长度为6">
+            <span id="pwdStauts">密码不能少于6个</span>
+            <span id="locktwo" class="fa fa-retweet"></span>
+            <input type="password" id="regrepassword" name="repassword" placeholder=" 再次输入密码">
+            <span id="repwdStauts">两次密码不一致</span>
+            <span id="lockthree" class="fa fa-mobile-phone"></span>
+            <input type="tel" id="tel" name="repassword" placeholder=" 输入电话号码">
+            <span id="telStauts">请输入正确格式号码</span>
+            <input type="submit" id="zhuce" value="注册">
+        </div>
+        <hr id="zhucehr"/>
+        <div class="qqlogin qqlogin1">
+            <p>您也可以使用第三方账号登录</p>
+            <div class="qqloginlogo">
+                <span class="fa fa-qq"></span>
+                QQ账号登录
+            </div>
+        </div>
+    </div><!--注册end-->
+</div><!--登录注册的大面板end-->
+
+<!--这是覆盖整个屏幕的div-即当点击登录注册后，要一个覆盖面板盖住所有可点击区域-->
+<div id="cover">
+</div>
+
+
+
+
+
+
+
+<!--<%- include head.html %>-->
+<!--biao-->
+<div id="background">
+  <div id="form">
+    <form  ><!--action="register.do" method="post"-->
+       <!-- <input name="name" value=""  class="input1" type="text" placeholder="姓名">
+        <input name="sex" value="男" id="sex1" class="input2" value="男" type="radio" checked="checked">
+        <label for="sex1">男</label>
+        <input name="sex" value="女" id="sex2" class="input3" value="女" type="radio">
+        <label for="sex2">女</label>
+        -->
+        <input id="dianH" name="offline_tel" class="input4" type="text" placeholder="联系电话">
+        <select id="changJ" name="offline_data" class="select1">
+            <option>婚礼鲜花布置</option>
+            <option>纪念鲜花布置</option>
+            <option>生日鲜花布置</option>
+            <option>开业鲜花布置</option>
+        </select>
+        <div>选定日期（我们将在此前完成准备工作）</div>
+        <select class="select2" size="1" name="year" id="year" style="width:150px" onfocus="years('year',new Date().getFullYear()),change_date()" onchange="change_date()"></select>
+        <select class="select3" size="1" name="month" id="month" style="width:70px" onfocus="months(),change_date()" onchange="change_date()"></select>
+        <select class="select4" size="1" name="date" id="date" style="width:50px" ></select>
+        <input id="changJin" name="offline_address" class="input5" type="text" placeholder="场景地址">
+        <div>请简要填写你的需求，我们的工作人员将尽快与你取得联系</div>
+        <textarea id="xuQiu" name="offline_others"></textarea>
+       <!-- <input onclick="checkLogin()" class="input6" type= "submit" value="提&nbsp;&nbsp;交">
+       --> <div onclick="xx()" class="input6" id="input6">提&nbsp;&nbsp;交</div>
+        <div id="chaKanAn" onclick="findMyOrder()">查看我的订单</div>
+    </form>
+  </div>
+</div>
+
+<form id="chenGong" action="register.do" method="post">
+    <div id="chenGong1">
+        <div id="c_ljie">确认你的订单详情为</div>
+        <input name="dH1" id="chen1" type="text">
+        <input name="cJ" id="chen2" type="text">
+        <input name="sJ" id="chen3" type="text">
+        <input name="dH2" id="chen4" type="text">
+        <textarea name="xQ" id="chen5"></textarea>
+        <!--<div id="chen1"></div>-->
+        <!--<div id="chen2"></div>
+        <div id="chen3"></div>
+        <div id="chen4"></div>
+        <div id="chen5"></div>-->
+        <div id="Qx"  onclick="quexiao()">取消</div>
+        <!--<div id="Que" onclick="pay()">确认</div>-->
+        <input type="submit" id="Que" onclick="pay()" value="确认" >
+
+    </div>
+</form>
+<div id="tiS">
+    <div id="otiS"></div>
+    <div id="xtiS">确定</div>
+</div>
+<div id="chaKan">
+    电话：<div id="lookD"></div>
+    场景：<div id="lookC"></div>
+    日期：<div id="lookR"></div>
+    地址：<div id="lookZ"></div>
+    需求：<div id="lookX"></div>
+    <div id="queDing" onclick="queRen()">确定</div>
+</div>
+<!--Understand-->
+<diV id="Understand">
+
+    <div id="about1"><button id="about0">了解更多</button></div>
+</diV>
+<!--clear-->
+<div class="clear"></div>
+<!--about-->
+<div id="about">
+<div>
+    <h1>我们的服务</h1>
+    <div>
+        私人定制服务是浮动的花园（field's floar）基于成都市场需求所提供的鲜花定制服务。
+        服务包括婚庆鲜花布置，开业、生日、餐厅等一系列鲜花场景布置。
+        公司秉承客服至上原则，将竭诚为你服务，提供专业的鲜花服务。
+    </div>
+</div>
+<div>
+    <h1>我们的设计团队</h1>
+    <div>浮动的花园（field's floar）拥有专业的设计团队，他们创造生活的艺术。
+        设计团队将倾力为你打造专属于你的鲜花场景。</div>
+</div>
+    <div>
+        <h1>我们的客服服务团队</h1>
+        <div>浮动的花园（field's floar）客服人员将全程合作倾听并及时反馈客户意见。
+            一切只为你良好的体验</div>
+    </div>
+</div>
+<!--Carousel0-->
+<div id="Carousel0">
+    <div id="Carousel_1" style="cursor:pointer;">婚礼</div>
+    <div id="Carousel_2" style="cursor:pointer;">纪念</div>
+    <div id="Carousel_3" style="cursor:pointer;">开业</div>
+    <div id="Carousel_4" style="cursor:pointer;">生日</div>
+    <div id="xiax1"></div>
+    <!--<div id="xiax2"></div>
+    <div id="xiax3"></div>
+    <div id="xiax4"></div>
+    <div id="xiax5"></div>-->
+</div>
+<!--Carousel1-->
+<div id="Carousel1"  >
+    <div id="Carousel2" >
+        <div id="wedding">
+        <div><img src="../images/hl.jpg"></div>
+        <div>
+            <h1>婚礼</h1>
+            婚礼是人生最重要的时刻之一，也是与那个将相守一生的人的爱情宣言与见证。
+            浮动的花园（field's floar）秉承专业铸就信任、美好，倾力为你打造梦幻美好的婚礼场景。
+        </div>
+    </div>
+        <div id="Anniversary">
+            <div><img src="../images/jn.jpg"></div>
+            <div>
+                <h1>纪念</h1>
+                有太多的日子值得去纪念，去缅怀，青春有着太多的美好与怀念。
+                浮动的花园（field's floar）秉承专业铸就信任、美好，倾力为你打造梦幻美好的纪念场景。
+
+            </div>
+        </div>
+        <div id="opening">
+        <div><img src="../images/ky.jpg"></div>
+        <div>
+            <h1>开业</h1>
+            盛大的开业典礼，怎能少了鲜花的点缀与美丽。
+            浮动的花园（field's floar）秉承专业铸就信任、美好，倾力为你打造梦幻美好的婚礼场景。
+
+        </div>
+    </div>
+        <div id="Birthday">
+        <div><img src="../images/sr.jpg"></div>
+        <div>
+            <h1>生日</h1>
+            生日，一个年轮刻下时的日子生日值得纪念，因为自那一刻起，许多东西在冥冥中，有了一种重新的安排!浮动的花园（field's floar）秉承专业铸就信任、美好，倾力为你打造梦幻美好的生日场景。
+        </div>
+    </div>
+</div>
+</div>
+<!--tail-->
+<div id="tail">
+    <div>浮动的花园（field's floar）</div><br/>
+    <div>——竭诚为你服务!</div></div>
+<div><img src="<%=data[0].flower_src%>" style="width: 0px;height: 0px"></div>
+<%- include foot.html %>
+<script type="text/javascript" src="../js/Personal_tailor.js"></script>
+<script src="js/index.js"></script>
+<script src="js/fenxiang.js"></script>
+<script src="../js/head.js"></script>
+<script src="../js/checkLogStatus.js"></script>
+</body>
+</html>

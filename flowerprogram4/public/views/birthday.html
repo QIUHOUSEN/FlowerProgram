@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/birthday.css"/>
+    <link rel="stylesheet" href="../css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/yewei.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <%- include head.html %>
+        </div><!--header-end-->
+        <div class="blank"></div>
+        <div class="birthday" id="birthday1">
+            <div class="birthday_head">
+                <div class="head_h"><h3 id="h1">生日·精选</h3></div>
+                <div class="birthday_head_line">
+                    <p id="birthday1_p">您曾拥有过的，将伴您永存</p>
+                    <span class="birthday_line" id="line1"></span>
+                    <span class="birthday_line1" id="line2"></span>
+                    <span class="more">more&gt&gt&gt</span>
+                </div>
+
+            </div><!--birthday-head-end-->
+            <div class="blank"></div>
+            <div class="birthday_picture">
+                <div id="block1" class="birthday_block">
+                    <div class="img">
+                        <p style="display: none" class="idBox"><%= data[0].flower_id %></p>
+                        <img src="<%= data[0].flower_src %>" alt="" />
+                        <div  id="img_shadow" class="img_shadow"onclick="sendImg(1)">
+                            <p class="img_look" index="0"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>蓝色妖姬 <span>￥66</span></p>
+                    </div>
+                </div>
+                <div id="block2" class="birthday_block">
+                    <div class="img">
+                        <p style="display: none" class="idBox"><%= data[1].flower_id %></p>
+                        <img src="<%= data[1].flower_src %>"/>
+                        <div class="img_shadow">
+                            <p class="img_look" index="1"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>蓝色妖姬 ￥66</p>
+                    </div>
+                </div>
+                <div id="block3" class="birthday_block">
+                    <div class="img">
+                        <p style="display: none" class="idBox"><%= data[2].flower_id %></p>
+                        <img src="<%= data[2].flower_src %>" alt="" class="imgs"/>
+                        <div class="img_shadow"  >
+                            <p class="img_look" index="2"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>蓝色妖姬 ￥66</p>
+                    </div>
+                </div>
+            </div><!--birthday_picture-end-->
+        </div><!--birthday-end-->
+        <div class="birthday" id="birthday2">
+            <div class="birthday_head">
+                <div class="head_h">  <h3  id="h2">生日·爱情篇</h3></div>
+
+                <div class="birthday_head_line">
+                    <p>特别的爱，给特别的你</p>
+                    <span class="birthday_line" id="line3"></span>
+                    <span class="birthday_line1" id="line4"></span>
+                    <span class="more">more&gt&gt&gt</span>
+                </div>
+            </div><!--birthday-head-end-->
+            <div class="birthday_picture">
+                <div id="block4" class="birthday_block">
+                    <div class="img1">
+                        <p style="display: none" class="idBox"><%= data[3].flower_id %></p>
+                        <img src="<%= data[3].flower_src %>" alt="" class="imgs"/>
+                        <div class="img_shadow" >
+                            <p class="img_look" index="3"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>紫色魅惑 ￥66</p>
+                    </div>
+                </div>
+                <div id="block5" class="birthday_block">
+                    <div class="img1">
+                        <p style="display: none" class="idBox"><%= data[4].flower_id %></p>
+                        <img src="<%= data[4].flower_src %>" alt="" class="imgs"/>
+                        <div class="img_shadow" >
+                            <p class="img_look" index="4"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>红色诱惑 ￥66</p>
+                    </div>
+                </div>
+                <div  id="block6" class="birthday_block">
+                    <div class="img1">
+                        <p style="display: none" class="idBox"><%= data[5].flower_id %></p>
+                        <img src="<%= data[5].flower_src %>" alt="" class="imgs"/>
+                        <div class="img_shadow" >
+                            <p class="img_look" index="5"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>蓝色妖姬 ￥66</p>
+                    </div>
+                </div>
+            </div><!--birthday_picture-end-->
+        </div><!--birthday-end-->
+        <div class="birthday" id="birthday3">
+            <div class="birthday_head">
+                <div class="head_h"><h3 id="h3">生日·友情篇</h3></div>
+
+                <div class="birthday_head_line">
+                    <p>特别的爱，给特别的你</p>
+                    <span class="birthday_line" id="line5"></span>
+                    <span class="birthday_line1" id="line6"></span>
+                    <span class="more">more&gt&gt&gt</span>
+                </div>
+            </div><!--birthday-head-end-->
+            <div class="birthday_picture">
+                <div id="block7" class="birthday_block">
+                    <div class="img1">
+                        <p style="display: none" class="idBox"><%= data[6].flower_id %></p>
+                        <img src="<%= data[6].flower_src %>" alt="" class="imgs"/>
+                        <div class="img_shadow">
+                            <p class="img_look" index="6"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>紫色魅惑 ￥66</p>
+                    </div>
+                </div>
+                <div id="block8"class="birthday_block">
+                    <div class="img1">
+                        <p style="display: none" class="idBox"><%= data[7].flower_id %></p>
+                        <img src="<%= data[7].flower_src %>" alt="" class="imgs"/>
+                        <div class="img_shadow">
+                            <p class="img_look" index="7"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>红色诱惑 ￥66</p>
+                    </div>
+                </div>
+                <div id="block9" class="birthday_block">
+                    <div class="img1">
+                        <p style="display: none" class="idBox"><%= data[8].flower_id %></p>
+                        <img src="<%= data[8].flower_src %>" alt="" class="imgs"/>
+                        <div class="img_shadow"  >
+                            <p class="img_look" index="8"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>蓝色妖姬 ￥66</p>
+                    </div>
+                </div>
+            </div><!--birthday_picture-end-->
+        </div><!--birthday-end-->
+        <div class="birthday" id="birthday4">
+            <div class="birthday_head">
+                <div class="head_h"> <h3 id="h4">生日·亲情篇</h3></div>
+
+
+                <div class="birthday_head_line">
+                    <p>特别的爱，给特别的你</p>
+                    <span class="birthday_line" id="line7"></span>
+                    <span class="birthday_line1" id="line8"></span>
+                    <span class="more">more&gt&gt&gt</span>
+                </div>
+            </div><!--birthday-head-end-->
+            <div class="birthday_picture">
+                <div id="block10" class="birthday_block">
+                    <div class="img1">
+                        <p style="display: none" class="idBox"><%= data[9].flower_id %></p>
+                        <img src="<%= data[9].flower_src %>" alt="" class="imgs"/>
+                        <div class="img_shadow"  >
+                            <p class="img_look" index="9"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>紫色魅惑 ￥66</p>
+                    </div>
+                </div>
+                <div id="block11" class="birthday_block">
+                    <div class="img1">
+                        <p style="display: none" class="idBox"><%= data[10].flower_id %></p>
+                        <img src="<%= data[10].flower_src %>" alt=""class="imgs"/>
+                        <div class="img_shadow"  >
+                            <p class="img_look" index="10"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>红色诱惑 ￥66</p>
+                    </div>
+                </div>
+                <div id="block12"class="birthday_block">
+                    <div class="img1">
+                        <p style="display: none" class="idBox"><%= data[11].flower_id %></p>
+                        <img src="<%= data[11].flower_src %>" alt=""class="imgs"/>
+                        <div class="img_shadow" >
+                            <p class="img_look" index="11"><a href="#"><b>查看详情</b></a></p>
+                            <p>蓝色妖姬 ￥66</p>
+                        </div>
+                    </div>
+
+                    <div class="number">
+                        <p>蓝色妖姬 ￥66</p>
+                    </div>
+                </div>
+            </div><!--birthday_picture-end-->
+        </div><!--birthday-end-->
+        <div id="footer">
+            <%- include foot.html %>
+        </div>
+    </div>
+</body>
+<script src="../js/birthday.js"></script>
+<!--<script src="../js/head.js"></script>-->
+<!--<script src="../js/checkLogStatus.js"></script>-->
+<!--<script src="js/index.js"></script>
+<script src="js/fenxiang.js"></script>-->
+</html>

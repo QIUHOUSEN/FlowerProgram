@@ -1,0 +1,232 @@
+*{
+    margin:0;
+    padding:0;
+}
+#wrapper{
+    width:1349px;
+    height: auto;
+}
+#header{
+    width:100%;
+    height: 110px;
+}
+#content{
+    margin-top:30px;
+    width:100%;
+    height: 600px;
+}
+#footer{
+    width:100%;
+    height: 300px;
+}
+/*======ct_container=======*/
+#ct_container{
+    padding-top:20px;
+    width:1100px;
+    height: 550px;
+    margin-left:110px;
+    border:1px solid darkgray;
+}
+/*.ct_left{
+    width:530px;
+    height: 100%;
+    float: left;
+}
+.ct_left>div:first-of-type{
+    width:320px;
+    height: 270px;
+    overflow: hidden;
+    margin-left:100px;
+}
+.ct_left>div:first-of-type img{
+    width:320px;
+}
+.ct_left>div:nth-of-type(2){
+    width:100%;
+    height: 110px;
+    overflow: hidden;
+    margin-top:30px;
+}
+.ct_left>div:nth-of-type(2) img{
+    width:80px;
+    margin-left:30px;
+}*/
+.ct_right{
+    width:530px;
+    height: 100%;
+    float: left;
+    margin-left:30px;
+}
+.ct_right h2{
+    margin-bottom:20px;
+}
+.ct_right .info{
+    text-indent: 10px;
+    color:gray;
+}
+.ct_right>p{
+    font-size:14px;
+    margin-top:15px;
+}
+.operate>button{
+    width:110px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color:#FF6600;
+    color:white;
+    border:none;
+    border-radius: 3px;
+    margin-top:20px;
+    margin-bottom: 10px;
+}
+.operate>button:nth-of-type(2){
+    margin-left:30px;
+}
+.operate>button:hover{
+    opacity: 0.6;
+}
+.operate .fa-heart{
+    font-size:22px;
+    color:yellow;
+    margin-bottom: 10px;
+}
+.addOne{
+    font-size:36px;
+    position:absolute;
+    top:20px;
+    top:20px;
+    right:30px;
+    opacity: 0;
+   /* -webkit-transition: all 0.6s linear;*/
+}
+@-webkit-keyframes changeOpacity {
+    0%{
+        opacity:1;
+        font-size:36px;
+    }
+    100%{
+        opacity: 0;
+        font-size:12px;
+    }
+}
+.operate .smallImg{
+    position: absolute;
+    display: none;
+    width:50px;
+    height:50px;
+    top:330px;
+    right:520px;
+    opacity: 1;
+    -webkit-transition: all 2s linear;
+}
+.fa-heart:hover{
+    cursor:pointer;
+    opacity: 0.8;
+    color:#FF6600;
+}
+.operate>button:hover,.fa-plus-square:hover{
+    cursor: pointer;
+}
+.contact{
+    padding-top:8px;
+}
+.contact>span{
+    color:gray;
+}
+.contact>span:nth-of-type(2){
+    margin-right:20px;
+}
+.material{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid lightgray;
+}
+.material+p{
+    color:gray;
+}
+.transport{
+    margin-top:20px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid lightgray;
+}
+.transport~p{
+    color:gray;
+    font-size:12px;
+}
+#flowerId{
+    display: none;
+}
+.reduceNum,.plusNum{
+    display: inline-block;
+    width:15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    background-color:lightgray;
+}
+.reduceNum:hover,.plusNum:hover{
+    cursor:pointer ;
+    opacity: 0.8;
+}
+.count{
+    /* display: inline-block;*/
+    width:40px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+    border:1px solid lightgray;
+}
+#successAddCart{
+    position:fixed;
+    padding-top:35px;
+    width:250px;
+    height: 90px;
+    line-height: 30px;
+    text-align: center;
+    top:150px;
+    right:480px;
+    display: none;
+    background-color: #EAEAEA;
+    border:1px solid lightgray;
+}
+#successAddCart a:link{
+    font-size:13px;
+    color:blue;
+    text-decoration: none;
+}
+#successAddCart a:visited{
+    color:blue;
+}
+#successAddCart a:hover{
+    text-decoration: underline;
+}
+.operate a:link{
+    color:white;
+    text-decoration: none;
+}
+.operate a:visited{
+    color:white;
+}
+#alreadyCollect,#successCollect{
+    clear: both;
+    position:fixed;
+    width:100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    top:330px;
+    right:580px;
+    font-size:13px;
+    display: none;
+    background-color: #EAEAEA;
+    border:1px solid lightgray;
+}
+#alreadyCollect{
+    z-index: 2;
+}
+#successCollect{
+  z-index: 1;
+}
+

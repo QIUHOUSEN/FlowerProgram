@@ -1,0 +1,615 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 14px;
+    color: rgba(0, 47, 0, 0.7);
+}
+/*header*/
+/*.head{
+    width: 100%;
+    height: 110px;
+    /!*background-color: rgba(0,0,0,0.7);*!/
+    background-color: black;
+    color: white;
+    text-align: center;
+    opacity: 0.7;
+    /!*z-index: 99;*!/
+
+}
+.head>img{
+    width: 50px;
+    height: 50px;
+}
+.head>ul{
+    list-style-type: none;
+    background-color: blue;
+    margin-top: 15px;
+    z-index: 99;
+}
+.head>ul>li{
+    float: left;
+    margin-left: 10px;
+    width: 100px;
+}
+.head>ul>li:hover{
+    cursor: pointer;
+}
+
+.head>input{
+    width: 0px;
+    /!*width: 140px;*!//!*这个是正常时候的*!/
+    /!*opacity: 0.1;*!/
+    background-color: white;
+    /!*border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    color: white;*!/
+    /!*color: white;*!/
+    outline: none;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 6px;
+    position: absolute;
+    right: 180px;/!*这个是正常时候的*!/
+    top: 60px;
+    border: none;
+    transition: width 0.3s linear;
+    /!*padding-left: 35px;*!//!*这个是正常时候的*!/
+
+}
+.head>span{
+    color: white;
+    position: absolute;
+    right: 180px;/!*这个是正常时候的*!/
+    cursor: pointer;
+}*/
+/*.vip{
+    position: absolute;
+    right: 90px;
+    top: 30px;
+    font-size: 16px;
+    color: rgba(232, 171, 39, 0.9);
+    cursor: pointer;
+}*/
+
+
+/*.chooseFlower{
+    list-style-type: none;
+    width: 120px;
+    height: 140px;
+    /!*background-color: green;*!/
+    display: none;
+    margin-left: -10px;
+    text-align: center;
+    margin-top: 24px;
+}
+.chooseFlower>li{
+    height: 35px;
+    line-height: 35px;
+    background-color: black;
+
+}
+.chooseFlower>li:hover{
+    background-color:rgba(0,0,0,0.7);
+
+}
+#holidayChoose{
+    list-style-type: none;
+    width: 120px;
+    height: 105px;
+    text-align: center;
+    margin-left: 120px;
+    margin-top: -35px;
+    background-color: black;
+    display: none;
+}
+#holidayChoose>li:hover{
+    background-color: rgba(130,130,130,0.6);
+}
+.holiday:hover #holidayChoose{
+    display: block;
+}
+
+
+.navFour>ul{
+    background-color: black;
+    list-style-type: none;
+    margin-top: 24px;
+    height: 35px;
+    line-height: 35px;
+    display: none;
+}
+.navFour>ul>li:hover{
+    background-color: rgba(130,130,130,0.6);
+}
+.navFour:hover ul{
+    display: block;
+}
+
+
+
+.navSevens>ul{
+    list-style-type: none;
+    background-color: black;
+    height: 105px;
+    margin-top: 24px;
+    width: 100px;
+    /!*margin-left: -10px;*!/
+    display: none;
+}
+.navSevens>ul>li{
+    height: 35px;
+    line-height: 35px;
+    width: 100px;
+}
+.navSevens>ul>li:hover{
+    background-color: rgba(130,130,130,0.6);
+}
+.navSevens:hover{
+    height: 170px;
+}
+
+.navSevens:hover #flowerRounds{
+    display: block;
+}
+
+
+
+
+
+.helpChoose:hover .chooseFlower{
+    display: block;
+}
+.navOne{
+    margin-right: -15px;
+}
+.helpChoose{
+    margin-right: -10px;
+}
+.navThree{
+    margin-right: -10px;
+}
+.navFour{
+    margin-right: -10px;
+}
+.navFive{
+    margin-right: -15px;
+}
+.navEight{
+    margin-right: 20px;
+}*/
+/*biao*/
+#background{
+    width: 1349px;
+    height: 700px;
+    background-image: url("../images/forms_bg.png");
+    background-size: 100% 100%;
+    overflow: hidden;
+   /* position: relative;
+    top:0px;*/
+   }
+#form{
+    width: 450px;
+    height: 560px;
+    border: solid 3px rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 120px;
+    margin-left: 180px;
+
+}
+.input1,.input4,.input5,.input6,.select1,.select2,.select3,.select4{
+    width: 160px;
+    height: 30px;
+    background-color: inherit;
+    border: 2px solid rgb(255, 255, 255);
+    outline: none;
+    margin-left: 33px;
+    margin-top: 32px;
+}
+.input4{
+    width: 380px;
+}
+.input5{
+    width: 380px;
+
+}
+.select2{
+    margin-left: 33px;
+    margin-top: 5px;
+}
+.select3,.select4{
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#form div{
+    margin-left: 33px;
+    width: 400px;
+    margin-top: 32px;
+}
+#form textarea{
+    width: 380px;
+    height: 100px;
+    background-color: inherit;
+    border: 2px solid rgb(255, 255, 255);
+    margin-left: 33px;
+    margin-top: 5px;
+    outline: none;
+}
+.input6{
+    width: 120px!important;
+    height: 35px;
+    border-radius: 5px;
+    line-height: 35px;
+    text-align: center;
+    margin-left: 150px!important;
+    cursor:pointer;
+
+}
+.input6:hover{
+    background-color: #989879;
+    /*border: hidden;*/
+    color: white;
+}
+#Understand{
+    margin-left: 920px;
+    margin-top: -500px;
+}
+#Understand button{
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: inherit;
+    border: 2px solid rgb(255, 255, 255);
+    outline: none;
+    margin-top: 5px;
+    margin-left: 95px;
+}
+.clear{
+    clear: left;
+}
+/*dianchuang*/
+#chenGong{
+    position: absolute;
+    width: 0px;
+    height: 700px;
+   /* background-color: rgba(0, 0, 0, 0.6);*/
+    z-index: 5;
+    top: 0px;
+    overflow: hidden;
+    background-image: url("../images/forms_bg.png");
+    display: none;
+
+}
+#chenGong1{
+    width: 350px;
+    height: 450px;
+    border: 2px solid white;
+    margin-left: 500px;
+    margin-top: 100px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#chen1,#chen2,#chen3,#chen4{
+    width: 300px;
+    height: 30px;
+    border: 2px white solid;
+    margin-top: 20px;
+    margin-left: 23px;
+    background-color: inherit;
+    outline: none;
+}
+#chen1{
+    margin-top: 20px;
+}
+#c_ljie{
+    width: 350px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    margin-top: 20px;
+    font-size: 20px;
+
+}
+#chen5{
+    width: 300px;
+    height: 100px;
+    border: 2px white solid;
+    margin-top: 20px;
+    margin-left: 23px;
+    background-color: inherit;
+    outline: none;
+}
+#Que{
+    float: left;
+    width: 143px;
+    height: 28px;
+    border: 2px solid rgb(255, 255, 255);
+   /* line-height: 25px;*/
+  /*  text-align: center;*/
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#Qx{
+    float: left;
+    width: 143px;
+    height: 25px;
+    border: 2px solid rgb(255, 255, 255);
+    line-height: 25px;
+    text-align: center;
+    margin-left: 23px;
+    margin-top: 10px;
+    outline: none;
+}
+#Que:hover{
+    background-color: #989879;
+    /*border: hidden;*/
+    color: white;
+    outline: none;
+    cursor:pointer;
+}
+#Qx:hover{
+    background-color: #989879;
+    /*border: hidden;*/
+    color: white;
+    cursor:pointer;
+    outline: none;
+}
+/*about*/
+#about{
+    width: 1349px;
+    height: 250px;
+    margin-top: 500px;
+}
+#about>div{
+    width: 400px;
+    float: left;
+    margin-top: 40px;
+    line-height: 25px;
+}
+#about>div:nth-of-type(1){
+    margin-left: 225px;
+}
+#about>div:nth-of-type(2),
+#about>div:nth-of-type(3){
+    margin-left: 100px;
+}
+#about>div:nth-of-type(3){
+   margin-top: 10px;
+}
+#about0:hover{
+    background-color: #989879;
+    color: white;
+    border: hidden;
+}
+/*Carousel0*/
+#Carousel0{
+    width: 1349px;
+    height: 60px;
+    background-color: rgba(148, 148, 148, 0.68);
+    overflow: hidden;
+}
+#Carousel0>div:nth-of-type(1),
+#Carousel0>div:nth-of-type(2),
+#Carousel0>div:nth-of-type(3),
+#Carousel0>div:nth-of-type(4){
+    float: left;
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 60px;
+    margin-left: 200px;
+}
+#Carousel0>div:nth-of-type(1){
+    margin-left: 290px;
+}
+#xiax1{
+    width: 40px;
+    height: 2px;
+    background-color: white;
+    border: none;
+    margin-top: 42px;
+    margin-left: 290px;
+
+}
+/*Carousel1*/
+#Carousel1{
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
+
+}
+#Carousel2{
+    width: 4800px;
+    height: 400px;
+    margin-left: 75px;
+}
+#wedding{
+    width: 1200px;
+    height: 400px;
+    /*overflow: hidden;*/
+    float: left;
+}
+#wedding>div{
+    float: left;
+}
+#wedding>div:nth-of-type(1){
+     margin-top: 50px;
+    margin-left: 145px;
+}
+#wedding>div:nth-of-type(2){
+    width: 310px;
+    line-height: 20px;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+#opening{
+    width: 1200px;
+    height: 400px;
+   /* overflow: hidden;*/
+    float: left;
+}
+#opening>div{
+    float: left;
+}
+#opening>div:nth-of-type(1){
+    margin-top: 50px;
+    margin-left: 145px;
+}
+#opening>div:nth-of-type(2){
+    width: 310px;
+    line-height: 20px;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+#Anniversary{
+    width: 1200px;
+    height: 400px;
+    /*overflow: hidden;*/
+    float: left;
+}
+#Anniversary>div{
+    float: left;
+}
+#Anniversary>div:nth-of-type(1){
+    margin-top: 50px;
+    margin-left: 145px;
+}
+#Anniversary>div:nth-of-type(2){
+    width: 310px;
+    line-height: 20px;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+#Birthday{
+    width: 1200px;
+    height: 400px;
+    /*overflow: hidden;*/
+    float: left;
+}
+#Birthday>div{
+    float: left;
+}
+#Birthday>div:nth-of-type(1){
+    margin-top: 50px;
+    margin-left: 145px;
+}
+#Birthday>div:nth-of-type(2){
+    width: 310px;
+    line-height: 20px;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+/*tail*/
+#tail{
+    width: 1349px;
+    height: 300px;
+    background-color: #eaeaea;
+    overflow: hidden;
+}
+#tail>div{
+    color: rgba(0, 47, 0, 0.6);
+    font-weight: 900;
+    font-size: 40px;
+}
+#tail>div:nth-of-type(1){
+    margin-left: 350px;
+    margin-top: 100px;
+}
+#tail>div:nth-of-type(2){
+    margin-left: 650px;
+}
+/*tiS*/
+#tiS{
+    width: 300px;
+    height: 100px;
+    /*position: relative;*/
+    background-color: white;
+    /*top: -400px;
+    left: 600px;*/
+    display: none;
+    /*display: block;*/
+    text-align: center;
+    overflow: hidden;
+    position: absolute;
+    z-index: 20;
+    margin-top: -400px;
+    margin-left: 600px;
+
+}
+#otiS{
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: black;
+
+}
+#xtiS{
+    width: 50px;
+    height: 20px;
+    background-color: #848484;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 125px;
+    border-radius: 3px;
+    margin-top: 10px;
+    cursor:pointer;
+
+}
+/*chaKanAn*/
+#chaKanAn{
+    width:100px !important;
+    height: 20px;
+    border: 1px solid white;
+    line-height: 20px;
+    text-align: center;
+    position: relative;
+    cursor:pointer;
+    top: -15px;
+}
+#chaKan{
+    width: 300px;
+    height: 350px;
+    background-color: rgba(255, 255, 255, 0.49);
+    border: 2px solid white;
+    position: absolute;
+    top: 200px;
+    left: 600px;
+    display: none;
+
+}
+#chaKan>div{
+    width: 295px;
+    height: 30px;
+    border: 1px solid rgba(41, 41, 41, 0.62);
+    line-height: 30px;
+
+}
+#chaKan>div:nth-of-type(5){
+    height: 80px;
+    width: 295px;
+}
+#queDing{
+    width: 295px !important;
+    height: 20px;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: 20px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid rgba(41, 41, 41, 0.62);
+    cursor:pointer;
+}
+/*
+#chaKan>div:last-child{
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: 20px;
+    margin-left: 50px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid rgba(41, 41, 41, 0.92);
+}*/

@@ -1,0 +1,1062 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.head{
+    width: 100%;
+    height: 110px;
+    /*background-color: rgba(0,0,0,0.7);*/
+    background-color: black;
+    color: white;
+    position: relative;
+    text-align: center;
+    opacity: 0.7;
+    z-index: 99;
+
+}
+.head>img{
+    width: 50px;
+    height: 50px;
+}
+.head>ul{
+    list-style-type: none;
+    background-color: blue;
+    margin-top: 15px;
+    z-index: 99;
+}
+.head>ul>li{
+    float: left;
+    margin-left: 10px;
+    width: 100px;
+}
+.head>ul>li:hover{
+    cursor: pointer;
+}
+
+.head>input{
+    width: 0px;
+    /*width: 140px;*//*这个是正常时候的*/
+    /*opacity: 0.1;*/
+    background-color: white;
+    /*border-bottom: 1px solid white;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    color: white;*/
+    /*color: white;*/
+    outline: none;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 6px;
+    position: absolute;
+    right: 180px;/*这个是正常时候的*/
+    top: 60px;
+    border: none;
+    transition: width 0.3s linear;
+    /*padding-left: 35px;*//*这个是正常时候的*/
+
+}
+.head>span{
+    color: white;
+    position: absolute;
+    right: 180px;/*这个是正常时候的*/
+    cursor: pointer;
+}
+.vip{
+    position: absolute;
+    right: 90px;
+    top: 30px;
+    font-size: 16px;
+    color: rgba(232, 171, 39, 0.9);
+    cursor: pointer;
+}
+
+
+.chooseFlower{
+    list-style-type: none;
+    width: 120px;
+    height: 140px;
+    /*background-color: green;*/
+    display: none;
+    margin-left: -10px;
+    text-align: center;
+    margin-top: 24px;
+}
+.chooseFlower>li{
+    height: 35px;
+    line-height: 35px;
+    background-color: black;
+
+}
+.chooseFlower>li:hover{
+    background-color:rgba(0,0,0,0.7);
+
+}
+#holidayChoose{
+    list-style-type: none;
+    width: 120px;
+    height: 105px;
+    text-align: center;
+    margin-left: 120px;
+    margin-top: -35px;
+    background-color: black;
+    display: none;
+}
+#holidayChoose>li:hover{
+    background-color: rgba(130,130,130,0.6);
+}
+.holiday:hover #holidayChoose{
+    display: block;
+}
+
+
+.navFour>ul{
+    background-color: black;
+    list-style-type: none;
+    margin-top: 24px;
+    height: 35px;
+    line-height: 35px;
+    display: none;
+}
+.navFour>ul>li:hover{
+    background-color: rgba(130,130,130,0.6);
+}
+.navFour:hover ul{
+    display: block;
+}
+
+
+
+.navSevens>ul{
+    list-style-type: none;
+    background-color: black;
+    height: 105px;
+    margin-top: 24px;
+    width: 100px;
+    /*margin-left: -10px;*/
+    display: none;
+}
+.navSevens>ul>li{
+    height: 35px;
+    line-height: 35px;
+    width: 100px;
+}
+.navSevens>ul>li:hover{
+    background-color: rgba(130,130,130,0.6);
+}
+.navSevens:hover{
+    height: 170px;
+}
+
+.navSevens:hover #flowerRounds{
+    display: block;
+}
+
+
+
+
+
+.helpChoose:hover .chooseFlower{
+    display: block;
+}
+.navOne{
+    margin-right: -15px;
+}
+.helpChoose{
+    margin-right: -10px;
+}
+.navThree{
+    margin-right: -10px;
+}
+.navFour{
+    margin-right: -10px;
+}
+.navFive{
+    margin-right: -15px;
+}
+.navEight{
+    margin-right: 20px;
+}
+
+
+/*这个是登录注册按钮判断*/
+.logandreg{
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    /*color: rgba(227,163,39,1);*/
+    /*background-color: blue;*/
+    position: absolute;
+    left:1200px;
+    top: 50px;
+
+}
+.logandreg>div{
+    float: right;
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 14px;
+}
+.logandreg>div:hover{
+    color: rgba(232, 171, 39, 0.9);
+}
+
+
+/*这里是第一行的内容*/
+.rowOne{
+    width: 100%;
+    height: 300px;
+    /*background-color: red;*/
+    /*margin-top: 50px;*/
+    position: absolute;
+    top: 200px;
+}
+.myselfs{
+    width: 240px;
+    height: 240px;
+    border-radius: 120px;
+    background-color: rgba(120, 188, 54, 0.5);
+    text-align: center;
+    float: left;
+    margin-left: 50px;
+    color: white;
+
+}
+.rowOne>div:nth-of-type(1){
+    margin-left: 270px;
+}
+.myselfs>img{
+    margin-top: 50px;
+}
+.myselfs>div{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid rgba(47, 45, 43, 0.53);
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    /*margin-left: 0px;*/
+    cursor: pointer;
+}
+.rowTwo{
+    width: 100%;
+    height: 300px;
+    margin-top: 450px;
+
+}
+.rowTwo>p{
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.rowTwo>div{
+    width: 450px;
+    height: 100px;
+    background-color: rgba(47, 45, 43, 0.53);
+    float: left;
+    text-align: center;
+    line-height: 100px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    color: white;
+    cursor: pointer;
+}
+.rowTwo>div:nth-of-type(1){
+    margin-left: 230px;
+    background-color: rgba(181,111,101,1);
+}
+.rowTwo>div:nth-of-type(2){
+    background-color: rgba(114,203,172,1);
+}
+.rowTwo>div:nth-of-type(3){
+    margin-left: 230px;
+    background-color: rgba(171,199,132,1);
+}
+.rowTwo>div:nth-of-type(4){
+    background-color: rgba(187,100,158,1);
+}
+
+
+/*这里是个人中心的覆盖部分*/
+.personCover{
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top: 110px;
+    left: 0px;
+    background-color: rgba(77, 82, 81, 0.61);
+    display: none;
+    z-index: 1;
+}
+.doMyOrder{
+    width: 1100px;
+    height: 500px;
+    background-color: white;
+    margin: 30px auto;
+    display: none;
+    position: relative;
+}
+.doMyCord{
+    width: 800px;
+    height: 400px;
+    background-color: white;
+    margin: 50px auto;
+    position: relative;
+    display: none;
+}
+.doMyStore{
+    width: 1100px;
+    height: 500px;
+    background-color: white;
+    margin: 50px auto;
+    position: relative;
+    display: none;
+}
+
+.doMyOrder>p{
+    /*padding: 30px 50px;*/
+    padding-top: 30px;
+    /*padding-left: 50px;*/
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    width: 1000px;
+    margin: 0 auto;
+}
+.doMyOrder>ul{
+    margin: 0 auto;
+    list-style-type: none;
+    margin-top: 20px;
+    background-color: rgba(77, 82, 81, 0.21);
+    height: 30px;
+    line-height: 30px;
+    width: 1000px;
+    z-index: 100;
+
+}
+.doMyOrder>ul>li{
+    float: left;
+    margin-left: 50px;
+    cursor: pointer;
+    width: 80px;
+    text-align: center;
+}
+.doMyOrder>ul>li:hover{
+    background-color: rgba(77, 82, 81, 0.51);
+}
+
+.orderState{
+    clear: both;
+    margin-top:40px;
+}
+.orderState>div{
+    float: left;
+    margin-left: 50px;
+    /*margin-right: 270px;*/
+    text-align: center;
+    /*background-color: red;*/
+}
+
+.orderState>div:nth-of-type(1){
+    width: 300px;
+    height: 20px;
+}
+.orderState>div:nth-of-type(2){
+    width: 300px;
+    height: 20px;
+}
+.orderState>div:nth-of-type(3){
+    width: 300px;
+    height: 20px;
+}
+
+/*这里是分页以及跳转页面部分*/
+.doMyOrder>div:nth-of-type(2){
+    width: 1000px;
+    height: 250px;
+    border: 1px solid rgba(192, 194, 184, 0.51);
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.pagePart{
+    width: 1000px;
+    height: 50px;
+    /*background-color: red;*/
+    margin: 0 auto;
+    line-height: 50px;
+
+}
+.pagePart>div:nth-of-type(1){
+    float: left;
+    margin-left: 50px;
+    margin-right: 40px;
+    /*background-color: blue;*/
+    /*width: 100px;*/
+}
+
+.prePage{
+    /*margin-left: 70px;*/
+    background-color: rgba(77, 82, 81, 0.51);
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 12px;
+    float: left;
+    margin-left: 50px;
+    margin-right: 20px;
+
+}
+
+.nextPage{
+    background-color: rgba(77, 82, 81, 0.51);
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 12px;
+    /*margin-left: -50px;*/
+    float: left;
+
+}
+.prePage:hover,.nextPage:hover{
+    background-color:rgba(77, 82, 81, 0.8);
+}
+
+.pagePart>div:nth-of-type(1)>input{
+    width: 40px;
+    height: 25px;
+    outline: none;
+}
+.pagePart>div:nth-of-type(1)>div{
+    width: 30px;
+    height: 29px;
+    line-height: 28px;
+    text-align: center;
+    background-color: rgba(77, 82, 81, 0.51);
+    position: absolute;
+    right: -30px;
+    top: 12px;
+    cursor: pointer;
+
+}
+.pagePart>div:nth-of-type(1)>div:hover{
+    background-color:rgba(77, 82, 81, 0.8);
+}
+
+.pagePart>div:nth-of-type(1){
+    position: relative;
+}
+.closes{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    /*background-color: red;*/
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.doMyCord>div:nth-of-type(1){
+    width: 800px;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.doMyCord>div:nth-of-type(1)>p{
+    width: 800px;
+    padding-top: 50px;
+    text-align: center;
+}
+.cord{
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.rule{
+    width: 800px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: rgba(151, 66, 74, 0.9);
+}
+.changeCord{
+    width: 120px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 10px auto;
+    background-color: rgba(151, 66, 74, 0.6);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.changeCord:hover{
+    background-color: rgba(151, 66, 74, 0.9);
+}
+.doMyCord>p:nth-of-type(5){
+    padding-left: 58px;
+}
+
+.doMyStore>p{
+    /*padding-left: 50px;*/
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    width: 1000px;
+    margin: 0 auto;
+}
+.doMyStore>ul{
+   list-style-type: none;
+    margin-top: 30px;
+}
+.doMyStore>ul>li{
+    float: left;
+    margin-bottom: 50px;
+    width: 300px;
+    text-align: center;
+    /*margin-right: 450px;*/
+}
+.doMyStore>ul>li:nth-of-type(1){
+    margin-left: 50px;
+}
+.doMyStore>ul>li:nth-of-type(2){
+    margin-left: 300px;
+}
+.doMyStoreContent{
+    width: 1000px;
+    height: 250px;
+    border: 1px solid rgba(192, 194, 184, 0.51);
+    margin: 0 auto;
+    margin-top: 70px;
+    position: relative;
+}
+.rows{
+    height: 50px;
+    width: 100%;
+    /*background: red;*/
+    position: relative;
+}
+.huaming2{
+    position: absolute;
+    top: 15px;
+    left: 90px;
+}
+.jine2{
+    position: absolute;
+    top: 15px;
+    left: 190px;
+}
+#storeImg{
+    position: absolute;
+    top: 15px;
+    left: -30px;
+}
+#storedel{
+    position: absolute;
+    top: 15px;
+    right: 230px;
+    cursor: pointer;
+}
+#storedel:hover{
+    color: rgba(195, 107, 168, 0.7);
+}
+
+
+
+
+.doMyStore .pagePart{
+    clear:  both;
+}
+
+
+
+/*下面是个人中心管理的部分*/
+#informationCover{
+    width: 100%;
+    height: 800px;
+    position: absolute;
+    top: 110px;
+    left: 0px;
+    background-color: rgba(77, 82, 81, 0.61);
+    z-index: 1;
+    display: none;
+}
+
+#changeInf{
+    width: 450px;
+    height: 350px;
+    /*position: absolute;*/
+    /*top: 110px;
+    left: 0px;*/
+    background-color: white;
+    margin: 250px auto;
+    position: relative;
+    display: none;
+}
+#changePwd{
+    width: 450px;
+    height: 300px;
+    background-color: white;
+    margin: 250px auto;
+    display: none;
+    position: relative;
+}
+#changeTel{
+    width: 450px;
+    height: 300px;
+    background-color: white;
+    margin: 250px auto;
+    display: none;
+    position: relative;
+}
+#changeAddr{
+    width: 750px;
+    height: 400px;
+    background-color: white;
+    margin: 250px auto;
+    display: none;
+    position: relative;
+}
+
+/*这里是修改个人信息*/
+.changeUser{
+    /*padding: 30px;*/
+    /*padding-left: ;*/
+    padding-top: 30px;
+    text-align: center;
+    position: relative;
+}
+#errorText{
+    position: absolute;
+    right: 185px;
+    background: red;
+    font-size: 12px;
+    color: white;
+    top: 60px;
+    display: none;
+}
+.changeUser>span:nth-of-type(1){
+    margin-left: -60px;
+}
+.headDiv>img{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+
+}
+
+.changeUser>input{
+    width: 130px;
+    height: 20px;
+    line-height: 20px;
+    outline: none;
+}
+.changeUser>span:nth-of-type(2){
+    color: rgba(99, 164, 214, 0.9);
+    margin-left: 15px;
+    cursor: pointer;
+}
+.changeUser>span:nth-of-type(2):hover{
+    color: rgba(84, 142, 214, 1);
+}
+
+.upHead{
+    padding-top: 70px;
+    text-align: center;
+}
+.upHead>span{
+    float: left;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+.upHead>div{
+    float: left;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    /*background-color: red;*/
+    margin-left: 20px;
+    border: 1px solid rgba(121, 125, 107, 0.44);
+}
+.upHead>a{
+    margin-top: 40px;
+}
+.saves{
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    background-color: rgba(84, 142, 214, 1);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    right: 100px;
+    bottom: 30px;
+}
+.noSaves{
+    width: 40px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    position: absolute;
+    background-color: rgba(121, 125, 107, 0.6);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    right: 40px;
+    bottom: 30px;
+}
+
+
+.closeChanges{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    /*background-color: red;*/
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#changePwd{
+    text-align: center;
+}
+#changePwd input{
+    outline: none;
+}
+.oldPwd{
+    padding: 25px;
+}
+.newPwd{
+    padding: 25px;
+}
+.rePwd{
+    padding: 25px;
+}
+
+#changeTel{
+    text-align: center;
+}
+.tel{
+    /*padding: 35px;*/
+    padding-top: 80px;
+}
+.email{
+    padding: 35px;
+    padding-left: 50px;
+}
+
+#changeAddr>p{
+    /*padding-left: 50px;*/
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid gray;
+    width: 700px;
+    margin: 0 auto;
+
+}
+.addrLabels{
+    width: 750px;
+    height: 30px;
+    /*background-color: red;*/
+    margin-top: 10px;
+    /*display: none;*/
+}
+.addrLabels>span:nth-of-type(1){
+    margin-left: 28px;
+
+}
+.addrLabels>span{
+    margin-right: 100px;
+}
+.addrInputs{
+    margin-top: -10px;
+    /*display: none;*/
+}
+.addrInputs>input{
+    width: 120px;
+    /*margin-right: 90px;*/
+    outline: none;
+}
+.addrInputs>input:nth-of-type(1){
+    margin-left: 28px;
+    width: 80px;
+    margin-right: 80px;
+}
+.addrInputs>input:nth-of-type(2){
+    width: 110px;
+    margin-right: 40px;
+}
+.addrInputs>input:nth-of-type(3){
+    width: 160px;
+}
+.addBtn{
+    position: absolute;
+    right: 25px;
+    top: 80px;
+    color: rgba(11, 47, 210, 0.75);
+    cursor: pointer;
+    /*display: none;*/
+}
+.addBtn:hover{
+    color: rgba(0,153,204,1);
+}
+
+.conforms{
+    position: absolute;
+    right: 105px;
+    top: 80px;
+    color: rgba(11, 47, 210, 0.75);
+    cursor: pointer;
+    display: none;
+}
+.conforms:hover{
+    color: rgba(0,153,204,1);
+}
+
+.cancels{
+    position: absolute;
+    right: 55px;
+    top: 80px;
+    color: rgba(11, 47, 210, 0.75);
+    cursor: pointer;
+    display: none;
+}
+.cancels:hover{
+    color: rgba(0,153,204,1);
+}
+
+
+
+.addrHead{
+    list-style-type: none;
+    width: 750px;
+    height: 30px;
+    /*background: red;*/
+    margin-top: 45px;
+    text-align: center;
+}
+.addrHead>li{
+    float: left;
+    width: 150px;
+    text-align: center;
+    margin-left: 30px;
+}
+.addrContent{
+    width: 700px;
+    height: 150px;
+    /*background: red;*/
+    border: 1px solid rgba(92, 89, 84, 0.29);
+    margin: 0px auto;
+
+}
+.rows{
+    width: 100%;
+    height: 50px;
+    /*background-color: red;*/
+    position: relative;
+    border-bottom: 1px dashed rgba(128, 129, 134, 0.22);
+}
+.rows>img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    margin-left: 180px;
+
+}
+.huaming{
+    position: absolute;
+    top: 15px;
+    margin-left: 90px;
+}
+.jine{
+    position: absolute;
+    top: 15px;
+    margin-left: 490px;
+}
+.shanchu{
+    position: absolute;
+    top: 15px;
+    margin-left: 835px;
+    cursor: pointer;
+}
+.shanchu:hover{
+    color: rgba(195, 107, 168, 0.7);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*a  upload  上传头像部分*/
+.file {
+    position: relative;
+    display: inline-block;
+    /*background: #D0EEFF;*/
+    background-color:rgba(58, 58, 54, 0.35);
+    /*border: 1px solid #99D3F5;*/
+    border-radius: 4px;
+    padding: 2px 12px;
+    overflow: hidden;
+    color: white;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: rgba(58, 58, 54, 0.6);;
+    /*border-color: #78C3F3;*/
+    /*color: #004974;*/
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*这里是页脚*/
+.foots{
+    margin-top: 50px;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+.col1{
+    width: 280px;
+    height: 300px;
+    /*background-color: red;*/
+    float: left;
+}
+.col1>img{
+    width: 80px;
+    height: 80px;
+    margin-top: 50px;
+    margin-left: 150px;
+}
+.col1>img:hover{
+    cursor: pointer;
+}
+
+.cols{
+    list-style-type: none;
+    width: 70px;
+    height: auto;
+    float: left;
+    padding: 25px;
+    /*text-align: center;*/
+}
+.cols>li{
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.cols>li:hover{
+    color: rgba(164, 164, 164, 0.9);
+}
+
+.cols>li:nth-of-type(1){
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.shares{
+    position: relative;
+    width: 400px;
+    float: left;
+}
+.shares>div:nth-of-type(1){
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+.shares>div:nth-of-type(1)>span{
+    margin-left: 20px;
+    font-size: 20px;
+
+}
+.shares>div:nth-of-type(1)>span:hover{
+    color: rgba(168, 33, 41, 0.9);
+    cursor: pointer;
+}
+.shares>div:nth-of-type(2){
+    /*width: 120px;*/
+    height: 30px;
+    /*background-color: red;*/
+}
+.shares>div:nth-of-type(3)>img{
+    width: 120px;
+    height: 120px;
+}
+.shares>div:nth-of-type(3){
+    /*background-color: red;*/
+}
+
+.foots>p{
+    position: absolute;
+    top: 250px;
+    left: 305px;
+    text-align: center;
+    clear: both;
+}
+
+
+#oldPwd{
+    position: absolute;
+
+}
+
+#shrtb{
+    border: 1px solid lightslategray;
+    width: 100%;
+}
+#shrtb tr,#shrtb td{
+    border: 1px solid lightslategray;
+}
+#shrtb td{
+    text-align: center;
+}
+
+
+
+
+

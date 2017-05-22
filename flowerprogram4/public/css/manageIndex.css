@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#main{
+
+    width:100%;
+    min-width:1200px;
+    height: 750px;
+    min-height: 500px;
+    overflow: hidden;
+    border:1px solid transparent;
+}
+#nav{
+    float: left;
+    width:180px;
+    height:100%;
+    background-color:#0a6eb0;
+    color:white;
+}
+ .navUl{
+    width:100%;
+    height:100%;
+    list-style: none;
+
+}
+ .navUl li{
+    width:100%;
+    height:70px;
+    line-height: 70px;
+    text-align: center;
+    font-size:18px;
+    font-weight: bold;
+}
+.navUl li:hover{
+    background-color: #262A33;
+    cursor:pointer;
+}
+#content{
+    float: left;
+    width:85%;
+    min-width:1000px;
+    height:100%;
+
+}
+#content .mainContainer{
+    position: relative;
+    width:100%;
+    height:100%;
+
+}
+.mainContainer .firstDiv{
+    top:0;
+}
+.mainContainer>div{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:80px;
+    left:0;
+    background-color: white;
+}
+.firstDiv{
+    background: url("../images/order2.jpg") no-repeat;
+}
+
+.firstContainer h1{
+    width:80%;
+    height:50px;
+    line-height: 50px;
+    font-size:48px;
+    color:white;
+    -webkit-transform: scale(1.2,1.2);
+    text-shadow:3px 3px 8px #CBAD74;
+    margin-top:50px;
+    margin-left:27%;
+}
+.manageItem{
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding-top:10px;
+}
+.table{
+    width:80%;
+    height:auto;
+    min-height: 50px;
+    margin-left:8%;
+    border:1px solid #cccccc;
+ /*   border:1px solid red;*/
+}
+.table .info{
+    width:100%;
+    height:35px;
+    background-color: #0a6eb0;
+}
+.table .info th{
+
+    height:35px;
+    line-height: 35px;
+    text-align: center;
+    color:white;
+
+}
+.table .infotd td{
+    width:12%;
+    height:35px;
+    line-height: 35px;
+    text-align: center;
+    border:1px solid #cccccc;
+}
+#content .col-1{
+    width:6%;
+}
+#content .col-2{
+    width:12%;
+}
+#content .col-3{
+    width:18%;
+}
+#content .col-4{
+    width:24%;
+}
+#content .col-5{
+    width:30%;
+}
+#content .contentTitle{
+    position: absolute;
+    top:0;
+    left: 0;
+    width:100%;
+    height:80px;
+    line-height: 80px;
+    background-color: #E38E27;
+    color:white;
+    font-size:48px;
+    text-align: center;
+    font-weight: bold;
+    text-shadow:2px 2px 5px #E05A5A;
+}
+
+/*µ¯´°ÑùÊ½*/
+#blackDiv{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.7);
+    z-index:100;
+    display: none;
+}
+.editUserModal{
+    position: absolute;
+    width:400px;
+    height:auto;
+    min-height:380px;
+    left:50%;
+    top:40%;
+    margin:-175px 0 0 -200px;
+    background-color: white;
+    display: none;
+}
+.editOrderModal{
+    position: absolute;
+    width:400px;
+    height:auto;
+    display: none;
+    left:50%;
+    top:40%;
+    margin:-175px 0 0 -200px;
+    background-color: white;
+}
+.editFlowerModal{
+    position: absolute;
+    width:400px;
+    height:auto;
+    display: none;
+    left:50%;
+    top:40%;
+    margin:-175px 0 0 -200px;
+    background-color: white;
+}
+.editWrapperModal{
+    position: absolute;
+    width:400px;
+    height:auto;
+    display: none;
+    left:50%;
+    top:40%;
+    margin:-175px 0 0 -200px;
+    background-color: white;
+}
+.editPottedModal{
+    position: absolute;
+    width:400px;
+    height:auto;
+    display: none;
+    left:50%;
+    top:40%;
+    margin:-175px 0 0 -200px;
+    background-color: white;
+}
+.editGiftModal{
+    position: absolute;
+    width:400px;
+    height:auto;
+    display: none;
+    left:50%;
+    top:40%;
+    margin:-175px 0 0 -200px;
+    background-color: white;
+}
+
+.delModal{
+    position: absolute;
+    width:300px;
+    height:200px;
+    left:50%;
+    top:50%;
+    margin:-125px 0 0 -150px;
+    background-color: white;
+    display: none;
+}
+.modalTitle{
+    position: relative;
+    width:100%;
+    height:60px;
+    color:white;
+    font-size:28px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 60px;
+    background-color: #E38E27;
+}
+.modalContent{
+    position: relative;
+    width:100%;
+    height:auto;
+    min-height: 270px;
+}
+.modalContentDel{
+    position: relative;
+    width:100%;
+    height:90px;
+    border:1px solid transparent;
+}
+.delSureInfo{
+    width:100%;
+    height:30px;
+    line-height: 28px;
+    text-align: center;
+    margin-top:15px;
+
+}
+.modalTable{
+    padding:10px;
+    width:100%;
+    height:auto;
+
+}
+.modalTable tr{
+    width:90%;
+    height:50px;
+    border:1px solid gainsboro;
+}
+.modalTable tr td:first-of-type{
+    width:150px;
+    height:50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #F5F5F5;
+}
+.modalTable tr td:last-of-type{
+
+    width:240px;
+    height:50px;
+}
+.modalTable tr input{
+    width:230px;
+    height:50px;
+    line-height: 50px;
+    border-color:#CBC9C9;
+    border-width: 0 0 1px 0;
+    border-style: solid solid solid solid;
+    outline: none;
+}
+.operBox{
+    padding-top:6px;
+    width:100%;
+    width:100%;
+    height:50px;
+
+}
+.operBox button{
+    width:50px;
+    height:30px;
+    color:white;
+    float: right;
+    margin-top:8px;
+    margin-right:10px;
+    background-color: #E48013;
+}
+.flowerRemarks{
+    width:220px;
+    height:80px;
+    border-top:none;
+    border-color:#cccccc;
+    outline: none;
+}
